@@ -1,0 +1,13 @@
+<map id="MainWindow::reload_data" name="MainWindow::reload_data">
+<area shape="rect" id="node1" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="1460,255,1631,282"/>
+<area shape="rect" id="node2" href="$class_main_window.html#ae011301f6a94a4164df56eb5c208af66" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="1252,248,1412,289"/>
+<area shape="rect" id="node10" href="$class_main_window.html#a67e91bd10742922d2350cafa3e20e84e" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="836,5,996,47"/>
+<area shape="rect" id="node11" href="$class_main_window.html#a56eafc79c2a3a17068d786653355ebb1" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="1044,340,1204,381"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="1055,255,1193,282"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,166,184,193"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="847,223,985,250"/>
+<area shape="rect" id="node7" href="$class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="419,247,601,274"/>
+<area shape="rect" id="node9" href="$class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,349,180,375"/>
+<area shape="rect" id="node6" href="$class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,210,371,237"/>
+<area shape="rect" id="node8" href="$class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="649,349,788,375"/>
+</map>

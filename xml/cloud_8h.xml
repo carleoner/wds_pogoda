@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="cloud_8h" kind="file" language="C++">
+    <compoundname>cloud.h</compoundname>
+    <includes local="no">QPainter</includes>
+    <includes local="no">QGraphicsItem</includes>
+    <includes local="no">QGraphicsScene</includes>
+    <includedby refid="cloud_8cpp" local="yes">cloud.cpp</includedby>
+    <includedby refid="mainwindow_8cpp" local="yes">mainwindow.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>cloud.h</label>
+        <link refid="cloud_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QGraphicsItem</label>
+      </node>
+      <node id="2">
+        <label>QPainter</label>
+      </node>
+      <node id="4">
+        <label>QGraphicsScene</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp"/>
+      </node>
+      <node id="1">
+        <label>cloud.h</label>
+        <link refid="cloud_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cloud.cpp</label>
+        <link refid="cloud_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_cloud" prot="public">Cloud</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CLOUD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOUD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QPainter&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QGraphicsItem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QGraphicsScene&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_cloud" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cloud" kindref="compound">Cloud</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QGraphicsItem</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cloud_1aa959fea9fd633f9fd750ea7f55c05c65" kindref="member">Cloud</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cloud_1ac3b4ccc03e48584cacf48d803c2c9737" kindref="member">~Cloud</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>QRectF<sp/><ref refid="class_cloud_1a7b2338e5c6f0eef552847e59d27c3c86" kindref="member">boundingRect</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>QPainterPath<sp/><ref refid="class_cloud_1a03c9d8d10c66776ef805a40c21df3f48" kindref="member">shape</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cloud_1adf08c8d8750a5d961d94831d6e6b2e9a" kindref="member">paint</ref>(QPainter<sp/>*painter,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QStyleOptionGraphicsItem<sp/>*option,<sp/>QWidget<sp/>*widget)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cloud_1ae3b380d8325307a925f8cba75ff388ba" kindref="member">advance</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>phase);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>qreal<sp/><ref refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kindref="member">angle</ref>;</highlight></codeline>
+<codeline lineno="23" refid="class_cloud_1aeef4c006e7b7d9999bfd25e5962339c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>qreal<sp/><ref refid="class_cloud_1aeef4c006e7b7d9999bfd25e5962339c4" kindref="member">velocity</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cloud_1aaed9dd75c8761f1760e6dfc2d52db77e" kindref="member">Collision</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CLOUD_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="cloud.h"/>
+  </compounddef>
+</doxygen>

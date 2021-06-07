@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mainwindow_8h" kind="file" language="C++">
+    <compoundname>mainwindow.h</compoundname>
+    <includes local="no">QMainWindow</includes>
+    <includes local="no">QtNetwork</includes>
+    <includes local="no">QNetworkAccessManager</includes>
+    <includes local="no">QNetworkReply</includes>
+    <includes local="no">QPixmap</includes>
+    <includes local="no">QJsonParseError</includes>
+    <includes local="no">QJsonDocument</includes>
+    <includes local="no">QDebug</includes>
+    <includes local="no">QStackedWidget</includes>
+    <includes local="no">QPropertyAnimation</includes>
+    <includes local="no">QGraphicsItem</includes>
+    <includes local="no">QtCore</includes>
+    <includes local="no">QtGui</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="mainwindow_8cpp" local="yes">mainwindow.cpp</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>QStackedWidget</label>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="12">
+        <label>QGraphicsItem</label>
+      </node>
+      <node id="13">
+        <label>QtCore</label>
+      </node>
+      <node id="4">
+        <label>QNetworkAccessManager</label>
+      </node>
+      <node id="3">
+        <label>QtNetwork</label>
+      </node>
+      <node id="9">
+        <label>QDebug</label>
+      </node>
+      <node id="1">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QJsonDocument</label>
+      </node>
+      <node id="6">
+        <label>QPixmap</label>
+      </node>
+      <node id="7">
+        <label>QJsonParseError</label>
+      </node>
+      <node id="5">
+        <label>QNetworkReply</label>
+      </node>
+      <node id="14">
+        <label>QtGui</label>
+      </node>
+      <node id="11">
+        <label>QPropertyAnimation</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_weather" prot="public">Weather</innerclass>
+    <innerclass refid="class_main_window" prot="public">MainWindow</innerclass>
+    <innernamespace refid="namespace_ui">Ui</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MAINWINDOW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAINWINDOW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QMainWindow&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtNetwork&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QNetworkAccessManager&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QNetworkReply&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QPixmap&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QJsonParseError&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QJsonDocument&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDebug&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QStackedWidget&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QPropertyAnimation&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QGraphicsItem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">QT_BEGIN_NAMESPACE</highlight></codeline>
+<codeline lineno="19" refid="namespace_ui" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_ui" kindref="compound">Ui</ref><sp/>{<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_main_window" kindref="compound">MainWindow</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">QT_END_NAMESPACE</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_weather" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_weather" kindref="compound">Weather</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="class_weather_1a62d3461c8561c8ff21ebea18ca1e7d24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_weather_1a62d3461c8561c8ff21ebea18ca1e7d24" kindref="member">description</ref>;</highlight></codeline>
+<codeline lineno="32" refid="class_weather_1a6e312f122da386cbc6c4bfc7ba70f0f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_weather_1a6e312f122da386cbc6c4bfc7ba70f0f8" kindref="member">icon</ref>;</highlight></codeline>
+<codeline lineno="33" refid="class_weather_1a080ffa5bc630d1af193d2411b66bbaf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_weather_1afdac2f27873a3a32db764fccb8e4716a" kindref="member">temp</ref>,<sp/><ref refid="class_weather_1a033c4d36b69f0d2b0acfbba3015cff6a" kindref="member">temp_min</ref>,<sp/><ref refid="class_weather_1a96c8767d0f085cb8dd3c1e4bcd173f40" kindref="member">temp_max</ref>,<sp/><ref refid="class_weather_1af76815c6471edf864a79e0dab873b75e" kindref="member">temp_realfeel</ref>,<sp/><ref refid="class_weather_1a3793950c05f6bdd6ffd0814913efd346" kindref="member">pressure</ref>,<sp/><ref refid="class_weather_1a080ffa5bc630d1af193d2411b66bbaf8" kindref="member">humidity</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//for<sp/>wind<sp/>and<sp/>clouds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_weather_1af1b9d6fdc1eda0fc358dc3af1c65507c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_weather_1ae39bc0304c4329d58b75e908386c47e8" kindref="member">speed</ref>,<sp/><ref refid="class_weather_1af1b9d6fdc1eda0fc358dc3af1c65507c" kindref="member">gust</ref>;<sp/></highlight><highlight class="comment">//gust<sp/>-<sp/>rapid<sp/>wind<sp/>rush</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_weather_1a4e74ab63f3fef565b430322bccb815b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_weather_1a80abcc10a63e788675fbd9cbcafeba88" kindref="member">deg</ref>,<sp/><ref refid="class_weather_1a4e74ab63f3fef565b430322bccb815b6" kindref="member">cloudiness</ref>,<sp/><ref refid="class_weather_1ab679b951879b0f8cc8882a9eb6ade7fe" kindref="member">visibility</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_main_window" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_main_window" kindref="compound">MainWindow</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QMainWindow</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" kindref="member">MainWindow</ref>(QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kindref="member">~MainWindow</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50" refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_weather" kindref="compound">Weather</ref><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//jezioro<sp/>żywieckie,<sp/>Żywiec</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_main_window_1a1fd6d42eb6a8750123443b19bbcde58a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_main_window_1a1fd6d42eb6a8750123443b19bbcde58a" kindref="member">myURL</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;http://api.openweathermap.org/data/2.5/weather?q=%C5%BBywiec&amp;units=metric&amp;mode=json&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//jezioro<sp/>Roś,<sp/>Pisz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_main_window_1a66646290aba8774217eaa3f501dd7f51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_main_window_1a66646290aba8774217eaa3f501dd7f51" kindref="member">myURL1</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;http://api.openweathermap.org/data/2.5/weather?q=Pisz&amp;units=metric&amp;mode=json&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//jezioro<sp/>Konorowskie,<sp/>Konorowo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_main_window_1a1d7405dc6db1e9f3329ef5ccfe2712fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_main_window_1a1d7405dc6db1e9f3329ef5ccfe2712fc" kindref="member">myURL2</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;http://api.openweathermap.org/data/2.5/weather?q=Koronowo&amp;units=metric&amp;mode=json&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57" refid="class_main_window_1a35466a70ed47252a0191168126a352a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Ui::MainWindow<sp/>*<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_main_window_1a51ac2b126495216832501cea3929c6f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QGraphicsScene<sp/>*<ref refid="class_main_window_1a51ac2b126495216832501cea3929c6f6" kindref="member">scene</ref>;</highlight></codeline>
+<codeline lineno="60" refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QTimer<sp/>*<ref refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" kindref="member">timer</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_main_window_1af322b8f680567bd1afb5cbf6a3a933c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPropertyAnimation<sp/>*<ref refid="class_main_window_1af322b8f680567bd1afb5cbf6a3a933c0" kindref="member">animation</ref>;</highlight></codeline>
+<codeline lineno="63" refid="class_main_window_1abb0a7ab11c6ed6bb3ee72ec084977361" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPropertyAnimation<sp/>*<ref refid="class_main_window_1abb0a7ab11c6ed6bb3ee72ec084977361" kindref="member">animation_button</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//public:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" kindref="member">reload_data</ref>(QNetworkReply*);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ae011301f6a94a4164df56eb5c208af66" kindref="member">check_for_an_update</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a67e91bd10742922d2350cafa3e20e84e" kindref="member">check_for_an_update1</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a56eafc79c2a3a17068d786653355ebb1" kindref="member">check_for_an_update2</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" kindref="member">page1</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a7be71462af296329114d19a0a503f522" kindref="member">page2</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" kindref="member">page3</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" kindref="member">page4</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" kindref="member">page_loading</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" kindref="member">page_content</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>MAINWINDOW_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="mainwindow.h"/>
+  </compounddef>
+</doxygen>

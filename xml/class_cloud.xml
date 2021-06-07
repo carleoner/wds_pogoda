@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_cloud" kind="class" language="C++" prot="public">
+    <compoundname>Cloud</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QGraphicsItem</basecompoundref>
+    <includes refid="cloud_8h" local="no">cloud.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" prot="private" static="no" mutable="no">
+        <type>qreal</type>
+        <definition>qreal Cloud::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cloud.h" line="22" column="11" bodyfile="cloud.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_cloud_1ae3b380d8325307a925f8cba75ff388ba" compoundref="cloud_8cpp" startline="124" endline="168">advance</referencedby>
+        <referencedby refid="class_cloud_1aa959fea9fd633f9fd750ea7f55c05c65" compoundref="cloud_8cpp" startline="17" endline="40">Cloud</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_cloud_1aeef4c006e7b7d9999bfd25e5962339c4" prot="private" static="no" mutable="no">
+        <type>qreal</type>
+        <definition>qreal Cloud::velocity</definition>
+        <argsstring></argsstring>
+        <name>velocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cloud.h" line="23" column="11" bodyfile="cloud.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_cloud_1ae3b380d8325307a925f8cba75ff388ba" compoundref="cloud_8cpp" startline="124" endline="168">advance</referencedby>
+        <referencedby refid="class_cloud_1aa959fea9fd633f9fd750ea7f55c05c65" compoundref="cloud_8cpp" startline="17" endline="40">Cloud</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cloud_1aa959fea9fd633f9fd750ea7f55c05c65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Cloud::Cloud</definition>
+        <argsstring>(double, int)</argsstring>
+        <name>Cloud</name>
+        <param>
+          <type>double</type>
+          <defname>speed</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>deg</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_cloud_1aa959fea9fd633f9fd750ea7f55c05c65" kindref="member">Cloud::Cloud</ref> Konstruktor klasy chmura ustawienie poczatkowych parametrow. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] predkosc poruszania sie chmur pobrana z wywolania </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] kat poruszania sie chmur pobrana z wywolania </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+random start of position and speed</para>
+        </inbodydescription>
+        <location file="cloud.h" line="11" column="5" bodyfile="cloud.cpp" bodystart="17" bodyend="40"/>
+        <references refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" compoundref="cloud_8h" startline="22">angle</references>
+        <references refid="class_cloud_1aeef4c006e7b7d9999bfd25e5962339c4" compoundref="cloud_8h" startline="23">velocity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cloud_1ac3b4ccc03e48584cacf48d803c2c9737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Cloud::~Cloud</definition>
+        <argsstring>()</argsstring>
+        <name>~Cloud</name>
+        <briefdescription>
+<para><ref refid="class_cloud_1ac3b4ccc03e48584cacf48d803c2c9737" kindref="member">Cloud::~Cloud</ref> dekonstruktor klasy chmura. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cloud.h" line="12" column="5" bodyfile="cloud.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cloud_1a7b2338e5c6f0eef552847e59d27c3c86" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QRectF</type>
+        <definition>QRectF Cloud::boundingRect</definition>
+        <argsstring>() const override</argsstring>
+        <name>boundingRect</name>
+        <briefdescription>
+<para><ref refid="class_cloud_1a7b2338e5c6f0eef552847e59d27c3c86" kindref="member">Cloud::boundingRect</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QRect [out] zwraca rozmiary </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cloud.h" line="14" column="12" bodyfile="cloud.cpp" bodystart="57" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cloud_1a03c9d8d10c66776ef805a40c21df3f48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QPainterPath</type>
+        <definition>QPainterPath Cloud::shape</definition>
+        <argsstring>() const override</argsstring>
+        <name>shape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cloud.h" line="15" column="18" bodyfile="cloud.cpp" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cloud_1adf08c8d8750a5d961d94831d6e6b2e9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cloud::paint</definition>
+        <argsstring>(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override</argsstring>
+        <name>paint</name>
+        <param>
+          <type>QPainter *</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>const QStyleOptionGraphicsItem *</type>
+          <declname>option</declname>
+        </param>
+        <param>
+          <type>QWidget *</type>
+          <declname>widget</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_cloud_1adf08c8d8750a5d961d94831d6e6b2e9a" kindref="member">Cloud::paint</ref> Funkcja rysująca chmurę za pomocą gradientu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>painter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>rysowanie chmury za pomoca gradientu</para>
+        </inbodydescription>
+        <location file="cloud.h" line="16" column="10" bodyfile="cloud.cpp" bodystart="79" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_cloud_1ae3b380d8325307a925f8cba75ff388ba" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Cloud::advance</definition>
+        <argsstring>(int phase)</argsstring>
+        <name>advance</name>
+        <param>
+          <type>int</type>
+          <declname>phase</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_cloud_1ae3b380d8325307a925f8cba75ff388ba" kindref="member">Cloud::advance</ref> Funkcja aktualizująca położenie chmur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>phase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] krok </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>jesli nie ma kroku</para>
+<para>setting coordinates X Y for cloud respawn</para>
+<para>przesuniecie chmury w tyl</para>
+        </inbodydescription>
+        <location file="cloud.h" line="19" column="18" bodyfile="cloud.cpp" bodystart="124" bodyend="168"/>
+        <references refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" compoundref="cloud_8h" startline="22">angle</references>
+        <references refid="class_cloud_1aeef4c006e7b7d9999bfd25e5962339c4" compoundref="cloud_8h" startline="23">velocity</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_cloud_1aaed9dd75c8761f1760e6dfc2d52db77e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cloud::Collision</definition>
+        <argsstring>()</argsstring>
+        <name>Collision</name>
+        <briefdescription>
+<para><ref refid="class_cloud_1aaed9dd75c8761f1760e6dfc2d52db77e" kindref="member">Cloud::Collision</ref> nieuzywana funkcja kolizji. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cloud.h" line="24" column="10" bodyfile="cloud.cpp" bodystart="175" bodyend="179"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Cloud</label>
+        <link refid="class_cloud"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QGraphicsItem</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Cloud</label>
+        <link refid="class_cloud"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QGraphicsItem</label>
+      </node>
+    </collaborationgraph>
+    <location file="cloud.h" line="8" column="1" bodyfile="cloud.h" bodystart="9" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_cloud_1ae3b380d8325307a925f8cba75ff388ba" prot="protected" virt="virtual"><scope>Cloud</scope><name>advance</name></member>
+      <member refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" prot="private" virt="non-virtual"><scope>Cloud</scope><name>angle</name></member>
+      <member refid="class_cloud_1a7b2338e5c6f0eef552847e59d27c3c86" prot="public" virt="non-virtual"><scope>Cloud</scope><name>boundingRect</name></member>
+      <member refid="class_cloud_1aa959fea9fd633f9fd750ea7f55c05c65" prot="public" virt="non-virtual"><scope>Cloud</scope><name>Cloud</name></member>
+      <member refid="class_cloud_1aaed9dd75c8761f1760e6dfc2d52db77e" prot="private" virt="non-virtual"><scope>Cloud</scope><name>Collision</name></member>
+      <member refid="class_cloud_1adf08c8d8750a5d961d94831d6e6b2e9a" prot="public" virt="non-virtual"><scope>Cloud</scope><name>paint</name></member>
+      <member refid="class_cloud_1a03c9d8d10c66776ef805a40c21df3f48" prot="public" virt="non-virtual"><scope>Cloud</scope><name>shape</name></member>
+      <member refid="class_cloud_1aeef4c006e7b7d9999bfd25e5962339c4" prot="private" virt="non-virtual"><scope>Cloud</scope><name>velocity</name></member>
+      <member refid="class_cloud_1ac3b4ccc03e48584cacf48d803c2c9737" prot="public" virt="non-virtual"><scope>Cloud</scope><name>~Cloud</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

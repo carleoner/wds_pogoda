@@ -1,0 +1,387 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mainwindow_8cpp" kind="file" language="C++">
+    <compoundname>mainwindow.cpp</compoundname>
+    <includes refid="mainwindow_8h" local="yes">mainwindow.h</includes>
+    <includes local="yes">ui_mainwindow.h</includes>
+    <includes refid="cloud_8h" local="yes">cloud.h</includes>
+    <includes local="no">QElapsedTimer</includes>
+    <includes local="no">QDebug</includes>
+    <incdepgraph>
+      <node id="20">
+        <label>QElapsedTimer</label>
+      </node>
+      <node id="11">
+        <label>QStackedWidget</label>
+      </node>
+      <node id="1">
+        <label>mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QMainWindow</label>
+      </node>
+      <node id="17">
+        <label>cloud.h</label>
+        <link refid="cloud_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>QGraphicsItem</label>
+      </node>
+      <node id="18">
+        <label>QPainter</label>
+      </node>
+      <node id="14">
+        <label>QtCore</label>
+      </node>
+      <node id="5">
+        <label>QNetworkAccessManager</label>
+      </node>
+      <node id="4">
+        <label>QtNetwork</label>
+      </node>
+      <node id="16">
+        <label>ui_mainwindow.h</label>
+      </node>
+      <node id="10">
+        <label>QDebug</label>
+      </node>
+      <node id="19">
+        <label>QGraphicsScene</label>
+      </node>
+      <node id="2">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QJsonDocument</label>
+      </node>
+      <node id="7">
+        <label>QPixmap</label>
+      </node>
+      <node id="8">
+        <label>QJsonParseError</label>
+      </node>
+      <node id="6">
+        <label>QNetworkReply</label>
+      </node>
+      <node id="15">
+        <label>QtGui</label>
+      </node>
+      <node id="12">
+        <label>QPropertyAnimation</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mainwindow_8h" kindref="compound">mainwindow.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ui_mainwindow.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cloud_8h" kindref="compound">cloud.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QElapsedTimer&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDebug&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" refkind="member"><highlight class="normal"><ref refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" kindref="member">MainWindow::MainWindow</ref>(QWidget<sp/>*parent)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>QMainWindow(parent)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>ui(new<sp/><ref refid="namespace_ui" kindref="compound">Ui</ref>::<ref refid="class_main_window" kindref="compound">MainWindow</ref>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;setupUi(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>QPixmap<sp/>image(</highlight><highlight class="stringliteral">&quot;:/images/map.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_map_big-&gt;setPixmap(image.scaled(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_map_big-&gt;size(),<sp/>Qt::KeepAspectRatio,<sp/>Qt::SmoothTransformation));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;stackedWidget-&gt;setCurrentWidget(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;page_1);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;Button_zywieckie,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1a7be71462af296329114d19a0a503f522" kindref="member">page2</ref>()));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;Button_ros,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" kindref="member">page3</ref>()));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;Button_koronowskie,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" kindref="member">page4</ref>()));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;lake_icon_zywieckie,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1a7be71462af296329114d19a0a503f522" kindref="member">page2</ref>()));</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;lake_icon_zywieckie_2,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" kindref="member">page3</ref>()));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;lake_icon_zywieckie_3,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" kindref="member">page4</ref>()));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;Button_home2,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" kindref="member">page1</ref>()));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;Button_home2_2,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" kindref="member">page1</ref>()));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;Button_home2_3,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" kindref="member">page1</ref>()));</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//check_for_an_update();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//check_for_an_update1();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//check_for_an_update2();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" refkind="member"><highlight class="normal"><ref refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kindref="member">MainWindow::~MainWindow</ref>()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" kindref="member">MainWindow::reload_data</ref>(QNetworkReply<sp/>*reply)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!reply-&gt;error())<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QJsonParseError<sp/>jsonError;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QJsonDocument<sp/>document<sp/>=<sp/>QJsonDocument::fromJson(reply-&gt;readAll(),<sp/>&amp;jsonError);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(jsonError.error<sp/>!=<sp/>QJsonParseError::NoError){</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>jsonError.errorString();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(document.isObject())</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QJsonObject<sp/>obj<sp/>=<sp/>document.object();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QJsonObject<sp/>tempObject;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QJsonArray<sp/>tempArray;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QJsonValue<sp/>val;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj.contains(QStringLiteral(</highlight><highlight class="stringliteral">&quot;weather&quot;</highlight><highlight class="normal">)))</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>obj.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;weather&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QJsonArray<sp/>tempArray<sp/>=<sp/>val.toArray();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>tempArray.at(0);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempObject<sp/>=<sp/>val.toObject();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a62d3461c8561c8ff21ebea18ca1e7d24" kindref="member">description</ref><sp/>=<sp/>tempObject.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;description&quot;</highlight><highlight class="normal">)).toString();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a6e312f122da386cbc6c4bfc7ba70f0f8" kindref="member">icon</ref><sp/>=<sp/>tempObject.value(</highlight><highlight class="stringliteral">&quot;icon&quot;</highlight><highlight class="normal">).toString();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a62d3461c8561c8ff21ebea18ca1e7d24" kindref="member">description</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj.contains(QStringLiteral(</highlight><highlight class="stringliteral">&quot;main&quot;</highlight><highlight class="normal">)))</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>obj.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;main&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempObject<sp/>=<sp/>val.toObject();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1afdac2f27873a3a32db764fccb8e4716a" kindref="member">temp</ref><sp/>=<sp/>tempObject.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;temp&quot;</highlight><highlight class="normal">)).toDouble();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a033c4d36b69f0d2b0acfbba3015cff6a" kindref="member">temp_min</ref><sp/>=<sp/>tempObject.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;temp_min&quot;</highlight><highlight class="normal">)).toDouble();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a96c8767d0f085cb8dd3c1e4bcd173f40" kindref="member">temp_max</ref><sp/>=<sp/>tempObject.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;temp_max&quot;</highlight><highlight class="normal">)).toDouble();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1af76815c6471edf864a79e0dab873b75e" kindref="member">temp_realfeel</ref><sp/>=<sp/>tempObject.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;feels_like&quot;</highlight><highlight class="normal">)).toDouble();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a3793950c05f6bdd6ffd0814913efd346" kindref="member">pressure</ref><sp/>=<sp/>tempObject.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;pressure&quot;</highlight><highlight class="normal">)).toDouble();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a080ffa5bc630d1af193d2411b66bbaf8" kindref="member">humidity</ref><sp/>=<sp/>tempObject.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;humidity&quot;</highlight><highlight class="normal">)).toDouble();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ui-&gt;label-&gt;setText(QString::number(data_weather.cloudiness));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1afdac2f27873a3a32db764fccb8e4716a" kindref="member">temp</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj.contains(QStringLiteral(</highlight><highlight class="stringliteral">&quot;visibility&quot;</highlight><highlight class="normal">)))</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>obj.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;visibility&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1ab679b951879b0f8cc8882a9eb6ade7fe" kindref="member">visibility</ref><sp/>=<sp/>val.toInt();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj.contains(QStringLiteral(</highlight><highlight class="stringliteral">&quot;wind&quot;</highlight><highlight class="normal">)))</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>obj.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;wind&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tempObject<sp/>=<sp/>val.toObject();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1ae39bc0304c4329d58b75e908386c47e8" kindref="member">speed</ref><sp/>=<sp/>tempObject.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;speed&quot;</highlight><highlight class="normal">)).toDouble();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1af1b9d6fdc1eda0fc358dc3af1c65507c" kindref="member">gust</ref><sp/>=<sp/>tempObject.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;gust&quot;</highlight><highlight class="normal">)).toDouble();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a80abcc10a63e788675fbd9cbcafeba88" kindref="member">deg</ref><sp/>=<sp/>tempObject.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">)).toInt();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qDebug()<sp/>&lt;&lt;<sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a80abcc10a63e788675fbd9cbcafeba88" kindref="member">deg</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj.contains(QStringLiteral(</highlight><highlight class="stringliteral">&quot;clouds&quot;</highlight><highlight class="normal">)))</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a4e74ab63f3fef565b430322bccb815b6" kindref="member">cloudiness</ref><sp/>=<sp/><sp/>obj.value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;clouds&quot;</highlight><highlight class="normal">)).toObject().value(QStringLiteral(</highlight><highlight class="stringliteral">&quot;all&quot;</highlight><highlight class="normal">)).toInt();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>reply-&gt;deleteLater();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="class_main_window_1ae011301f6a94a4164df56eb5c208af66" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ae011301f6a94a4164df56eb5c208af66" kindref="member">MainWindow::check_for_an_update</ref>()</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>QNetworkAccessManager<sp/>*man<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QNetworkAccessManager(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>connect(man,<sp/>&amp;QNetworkAccessManager::finished,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" kindref="member">MainWindow::reload_data</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QUrl<sp/>url<sp/>=<sp/>QUrl(<ref refid="class_main_window_1a1fd6d42eb6a8750123443b19bbcde58a" kindref="member">myURL</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>QNetworkRequest<sp/>request(url);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>man-&gt;get(request);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="class_main_window_1a67e91bd10742922d2350cafa3e20e84e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a67e91bd10742922d2350cafa3e20e84e" kindref="member">MainWindow::check_for_an_update1</ref>()</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>QNetworkAccessManager<sp/>*man<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QNetworkAccessManager(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>connect(man,<sp/>&amp;QNetworkAccessManager::finished,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" kindref="member">MainWindow::reload_data</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QUrl<sp/>url1<sp/>=<sp/>QUrl(<ref refid="class_main_window_1a66646290aba8774217eaa3f501dd7f51" kindref="member">myURL1</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>QNetworkRequest<sp/>request1(url1);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>man-&gt;get(request1);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="class_main_window_1a56eafc79c2a3a17068d786653355ebb1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a56eafc79c2a3a17068d786653355ebb1" kindref="member">MainWindow::check_for_an_update2</ref>()</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>QNetworkAccessManager<sp/>*man<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QNetworkAccessManager(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>connect(man,<sp/>&amp;QNetworkAccessManager::finished,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" kindref="member">MainWindow::reload_data</ref>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QUrl<sp/>url2<sp/>=<sp/>QUrl(<ref refid="class_main_window_1a1d7405dc6db1e9f3329ef5ccfe2712fc" kindref="member">myURL2</ref>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>QNetworkRequest<sp/>request2(url2);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>man-&gt;get(request2);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" kindref="member">MainWindow::page1</ref>()</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;Button_zywieckie,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1a7be71462af296329114d19a0a503f522" kindref="member">page2</ref>()));</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;stackedWidget-&gt;setCurrentWidget(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;page_1);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="class_main_window_1a7be71462af296329114d19a0a503f522" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a7be71462af296329114d19a0a503f522" kindref="member">MainWindow::page2</ref>()</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ready<sp/>=<sp/><ref refid="class_main_window_1ae011301f6a94a4164df56eb5c208af66" kindref="member">check_for_an_update</ref>();</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" kindref="member">page_loading</ref>();</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(ready<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" kindref="member">page_loading</ref>();</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;Button_home2,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" kindref="member">page1</ref>()));</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;stackedWidget-&gt;setCurrentWidget(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;page_2);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>QPixmap<sp/>image(</highlight><highlight class="stringliteral">&quot;:/images/zywieckie.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_zywieckie-&gt;setPixmap(image.scaled(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_map_big-&gt;size(),<sp/>Qt::KeepAspectRatio,<sp/>Qt::SmoothTransformation));</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" kindref="member">page_content</ref>();</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"><sp/><sp/><sp/><sp/>//cloud</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/><sp/><sp/>QPixmap<sp/>image_cloud(&quot;:/images/oie_transparent.png&quot;);</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/><sp/><sp/>ui-&gt;lbl_Clouds-&gt;setPixmap(image_cloud.scaled(ui-&gt;label_map_big-&gt;size(),<sp/>Qt::KeepAspectRatio,<sp/>Qt::SmoothTransformation));</highlight></codeline>
+<codeline lineno="213"><highlight class="comment"><sp/><sp/><sp/><sp/>animation<sp/>=<sp/>new<sp/>QPropertyAnimation(ui-&gt;lbl_Clouds,<sp/>&quot;geometry&quot;);</highlight></codeline>
+<codeline lineno="214"><highlight class="comment"><sp/><sp/><sp/><sp/>animation-&gt;setStartValue(ui-&gt;lbl_Clouds-&gt;geometry());</highlight></codeline>
+<codeline lineno="215"><highlight class="comment"><sp/><sp/><sp/><sp/>animation-&gt;start();</highlight></codeline>
+<codeline lineno="216"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" kindref="member">MainWindow::page3</ref>()</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ready<sp/>=<sp/><ref refid="class_main_window_1a67e91bd10742922d2350cafa3e20e84e" kindref="member">check_for_an_update1</ref>();</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" kindref="member">page_loading</ref>();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(ready<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" kindref="member">page_loading</ref>();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;Button_home2_2,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" kindref="member">page1</ref>()));</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;stackedWidget-&gt;setCurrentWidget(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;page_2);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>QPixmap<sp/>image(</highlight><highlight class="stringliteral">&quot;:/images/ros.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_zywieckie-&gt;setPixmap(image.scaled(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_map_big-&gt;size(),<sp/>Qt::KeepAspectRatio,<sp/>Qt::SmoothTransformation));</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" kindref="member">page_content</ref>();</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" kindref="member">MainWindow::page4</ref>()</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ready<sp/>=<sp/><ref refid="class_main_window_1a56eafc79c2a3a17068d786653355ebb1" kindref="member">check_for_an_update2</ref>();</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" kindref="member">page_loading</ref>();</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(ready<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" kindref="member">page_loading</ref>();</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;Button_home2_3,<sp/>SIGNAL(clicked()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(<ref refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" kindref="member">page1</ref>()));</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;stackedWidget-&gt;setCurrentWidget(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;page_2);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>QPixmap<sp/>image(</highlight><highlight class="stringliteral">&quot;:/images/koronowskie.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_zywieckie-&gt;setPixmap(image.scaled(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_map_big-&gt;size(),<sp/>Qt::KeepAspectRatio,<sp/>Qt::SmoothTransformation));</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" kindref="member">page_content</ref>();</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" kindref="member">MainWindow::page_loading</ref>()</highlight></codeline>
+<codeline lineno="271"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;stackedWidget-&gt;setCurrentWidget(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;page_loading);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>QEventLoop<sp/>loop;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>QTimer<sp/><ref refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" kindref="member">timer</ref>;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" kindref="member">timer</ref>.setSingleShot(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>connect(&amp;<ref refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" kindref="member">timer</ref>,<sp/>SIGNAL(timeout()),<sp/>&amp;loop,<sp/>SLOT(quit()));</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//connect(this,<sp/>SIGNAL(replayReceived()),<sp/>&amp;loop,<sp/>SLOT(quit()));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" kindref="member">timer</ref>.start(1000);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>loop.exec();</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" kindref="member">timer</ref>.isActive())<sp/></highlight><highlight class="comment">//replay<sp/>received<sp/>before<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//timer<sp/>elapsed,<sp/>no<sp/>replay<sp/>from<sp/>client</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scene<sp/>=<sp/>new<sp/>QGraphicsScene();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scene-&gt;clear();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302" refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" kindref="member">MainWindow::page_content</ref>()</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_deg-&gt;setText(</highlight><highlight class="stringliteral">&quot;Kierunek<sp/>wiatru:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_temp-&gt;setText(</highlight><highlight class="stringliteral">&quot;Temperatura:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_speed-&gt;setText(</highlight><highlight class="stringliteral">&quot;Pręd.<sp/>wiatru:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_cloudiness-&gt;setText(</highlight><highlight class="stringliteral">&quot;Zachmurzenie:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_deg_2-&gt;setText(QString::number(<ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a80abcc10a63e788675fbd9cbcafeba88" kindref="member">deg</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;°&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_temp_2-&gt;setText(QString::number(<ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1af76815c6471edf864a79e0dab873b75e" kindref="member">temp_realfeel</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;°C&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_speed_2-&gt;setText(QString::number(<ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1ae39bc0304c4329d58b75e908386c47e8" kindref="member">speed</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>m/s&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_cloudiness_2-&gt;setText(QString::number(<ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a4e74ab63f3fef565b430322bccb815b6" kindref="member">cloudiness</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;%&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a51ac2b126495216832501cea3929c6f6" kindref="member">scene</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QGraphicsScene();</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;graphicsView-&gt;setScene(<ref refid="class_main_window_1a51ac2b126495216832501cea3929c6f6" kindref="member">scene</ref>);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;graphicsView-&gt;setRenderHint(QPainter::Antialiasing);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scene-&gt;setSceneRect(20,130,200,200);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a51ac2b126495216832501cea3929c6f6" kindref="member">scene</ref>-&gt;setSceneRect(<ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;label_zywieckie-&gt;geometry());</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//scene-&gt;setSceneRect(this-&gt;frameGeometry());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;graphicsView-&gt;setStyleSheet(</highlight><highlight class="stringliteral">&quot;background:<sp/>transparent&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;graphicsView-&gt;setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kindref="member">ui</ref>-&gt;graphicsView-&gt;setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CloudCount<sp/>=<sp/><ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a4e74ab63f3fef565b430322bccb815b6" kindref="member">cloudiness</ref>;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;CloudCount;<sp/>i++)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cloud" kindref="compound">Cloud</ref><sp/>*cloud<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cloud" kindref="compound">Cloud</ref>(<ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1ae39bc0304c4329d58b75e908386c47e8" kindref="member">speed</ref>,<ref refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kindref="member">data_weather</ref>.<ref refid="class_weather_1a80abcc10a63e788675fbd9cbcafeba88" kindref="member">deg</ref>);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a51ac2b126495216832501cea3929c6f6" kindref="member">scene</ref>-&gt;addItem(cloud);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" kindref="member">timer</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QTimer(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>connect(<ref refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" kindref="member">timer</ref>,<sp/>SIGNAL(timeout()),<sp/><ref refid="class_main_window_1a51ac2b126495216832501cea3929c6f6" kindref="member">scene</ref>,<sp/>SLOT(advance()));</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" kindref="member">timer</ref>-&gt;start(100);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="mainwindow.cpp"/>
+  </compounddef>
+</doxygen>

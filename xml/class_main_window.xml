@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_main_window" kind="class" language="C++" prot="public">
+    <compoundname>MainWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+    <includes refid="mainwindow_8h" local="no">mainwindow.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_weather" kindref="compound">Weather</ref></type>
+        <definition>Weather MainWindow::data_weather</definition>
+        <argsstring></argsstring>
+        <name>data_weather</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="50" column="13" bodyfile="mainwindow.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" compoundref="mainwindow_8cpp" startline="302" endline="338">page_content</referencedby>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a1fd6d42eb6a8750123443b19bbcde58a" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString MainWindow::myURL</definition>
+        <argsstring></argsstring>
+        <name>myURL</name>
+        <initializer>= &quot;http://api.openweathermap.org/data/2.5/weather?q=%C5%BBywiec&amp;units=metric&amp;mode=json&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="52" column="13" bodyfile="mainwindow.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="class_main_window_1ae011301f6a94a4164df56eb5c208af66" compoundref="mainwindow_8cpp" startline="129" endline="137">check_for_an_update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a66646290aba8774217eaa3f501dd7f51" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString MainWindow::myURL1</definition>
+        <argsstring></argsstring>
+        <name>myURL1</name>
+        <initializer>= &quot;http://api.openweathermap.org/data/2.5/weather?q=Pisz&amp;units=metric&amp;mode=json&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="54" column="13" bodyfile="mainwindow.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a67e91bd10742922d2350cafa3e20e84e" compoundref="mainwindow_8cpp" startline="145" endline="153">check_for_an_update1</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a1d7405dc6db1e9f3329ef5ccfe2712fc" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString MainWindow::myURL2</definition>
+        <argsstring></argsstring>
+        <name>myURL2</name>
+        <initializer>= &quot;http://api.openweathermap.org/data/2.5/weather?q=Koronowo&amp;units=metric&amp;mode=json&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="56" column="13" bodyfile="mainwindow.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a56eafc79c2a3a17068d786653355ebb1" compoundref="mainwindow_8cpp" startline="161" endline="169">check_for_an_update2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private" static="no" mutable="no">
+        <type>Ui::MainWindow *</type>
+        <definition>Ui::MainWindow* MainWindow::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="57" column="20" bodyfile="mainwindow.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" compoundref="mainwindow_8cpp" startline="14" endline="38">MainWindow</referencedby>
+        <referencedby refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" compoundref="mainwindow_8cpp" startline="176" endline="184">page1</referencedby>
+        <referencedby refid="class_main_window_1a7be71462af296329114d19a0a503f522" compoundref="mainwindow_8cpp" startline="191" endline="218">page2</referencedby>
+        <referencedby refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" compoundref="mainwindow_8cpp" startline="225" endline="240">page3</referencedby>
+        <referencedby refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" compoundref="mainwindow_8cpp" startline="247" endline="262">page4</referencedby>
+        <referencedby refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" compoundref="mainwindow_8cpp" startline="302" endline="338">page_content</referencedby>
+        <referencedby refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" compoundref="mainwindow_8cpp" startline="270" endline="293">page_loading</referencedby>
+        <referencedby refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" compoundref="mainwindow_8cpp" startline="45" endline="48">~MainWindow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a51ac2b126495216832501cea3929c6f6" prot="private" static="no" mutable="no">
+        <type>QGraphicsScene *</type>
+        <definition>QGraphicsScene* MainWindow::scene</definition>
+        <argsstring></argsstring>
+        <name>scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="59" column="20" bodyfile="mainwindow.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" compoundref="mainwindow_8cpp" startline="302" endline="338">page_content</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" prot="private" static="no" mutable="no">
+        <type>QTimer *</type>
+        <definition>QTimer* MainWindow::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="60" column="12" bodyfile="mainwindow.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" compoundref="mainwindow_8cpp" startline="302" endline="338">page_content</referencedby>
+        <referencedby refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" compoundref="mainwindow_8cpp" startline="270" endline="293">page_loading</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1af322b8f680567bd1afb5cbf6a3a933c0" prot="private" static="no" mutable="no">
+        <type>QPropertyAnimation *</type>
+        <definition>QPropertyAnimation* MainWindow::animation</definition>
+        <argsstring></argsstring>
+        <name>animation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="62" column="24" bodyfile="mainwindow.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1abb0a7ab11c6ed6bb3ee72ec084977361" prot="private" static="no" mutable="no">
+        <type>QPropertyAnimation *</type>
+        <definition>QPropertyAnimation* MainWindow::animation_button</definition>
+        <argsstring></argsstring>
+        <name>animation_button</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="63" column="24" bodyfile="mainwindow.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_main_window_1a996c5a2b6f77944776856f08ec30858d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainWindow::MainWindow</definition>
+        <argsstring>(QWidget *parent=nullptr)</argsstring>
+        <name>MainWindow</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" kindref="member">MainWindow::MainWindow</ref> konstruktor głównego okna ustawia tło, inicjalizuje przyciski. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rodzic </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="46" column="5" bodyfile="mainwindow.cpp" bodystart="14" bodyend="38"/>
+        <references refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" compoundref="mainwindow_8cpp" startline="176" endline="184">page1</references>
+        <references refid="class_main_window_1a7be71462af296329114d19a0a503f522" compoundref="mainwindow_8cpp" startline="191" endline="218">page2</references>
+        <references refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" compoundref="mainwindow_8cpp" startline="225" endline="240">page3</references>
+        <references refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" compoundref="mainwindow_8cpp" startline="247" endline="262">page4</references>
+        <references refid="class_main_window_1a35466a70ed47252a0191168126a352a5" compoundref="mainwindow_8h" startline="57">ui</references>
+      </memberdef>
+      <memberdef kind="function" id="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainWindow::~MainWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~MainWindow</name>
+        <briefdescription>
+<para><ref refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kindref="member">MainWindow::~MainWindow</ref> destruktor głównego okna. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="47" column="5" bodyfile="mainwindow.cpp" bodystart="45" bodyend="48"/>
+        <references refid="class_main_window_1a35466a70ed47252a0191168126a352a5" compoundref="mainwindow_8h" startline="57">ui</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::reload_data</definition>
+        <argsstring>(QNetworkReply *)</argsstring>
+        <name>reload_data</name>
+        <param>
+          <type>QNetworkReply *</type>
+          <defname>reply</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" kindref="member">MainWindow::reload_data</ref> pobieranie danych z internetu za pomoca api. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reply</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zapytanie o dane </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>if there is no errors</para>
+<para>check if the document is an object {} / if [] dosument is an Array</para>
+        </inbodydescription>
+        <location file="mainwindow.h" line="67" column="10" bodyfile="mainwindow.cpp" bodystart="56" bodyend="121"/>
+        <references refid="class_weather_1a4e74ab63f3fef565b430322bccb815b6" compoundref="mainwindow_8h" startline="37">Weather::cloudiness</references>
+        <references refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" compoundref="mainwindow_8h" startline="50">data_weather</references>
+        <references refid="class_weather_1a80abcc10a63e788675fbd9cbcafeba88" compoundref="mainwindow_8h" startline="37">Weather::deg</references>
+        <references refid="class_weather_1a62d3461c8561c8ff21ebea18ca1e7d24" compoundref="mainwindow_8h" startline="31">Weather::description</references>
+        <references refid="class_weather_1af1b9d6fdc1eda0fc358dc3af1c65507c" compoundref="mainwindow_8h" startline="36">Weather::gust</references>
+        <references refid="class_weather_1a080ffa5bc630d1af193d2411b66bbaf8" compoundref="mainwindow_8h" startline="33">Weather::humidity</references>
+        <references refid="class_weather_1a6e312f122da386cbc6c4bfc7ba70f0f8" compoundref="mainwindow_8h" startline="32">Weather::icon</references>
+        <references refid="class_weather_1a3793950c05f6bdd6ffd0814913efd346" compoundref="mainwindow_8h" startline="33">Weather::pressure</references>
+        <references refid="class_weather_1ae39bc0304c4329d58b75e908386c47e8" compoundref="mainwindow_8h" startline="36">Weather::speed</references>
+        <references refid="class_weather_1afdac2f27873a3a32db764fccb8e4716a" compoundref="mainwindow_8h" startline="33">Weather::temp</references>
+        <references refid="class_weather_1a96c8767d0f085cb8dd3c1e4bcd173f40" compoundref="mainwindow_8h" startline="33">Weather::temp_max</references>
+        <references refid="class_weather_1a033c4d36b69f0d2b0acfbba3015cff6a" compoundref="mainwindow_8h" startline="33">Weather::temp_min</references>
+        <references refid="class_weather_1af76815c6471edf864a79e0dab873b75e" compoundref="mainwindow_8h" startline="33">Weather::temp_realfeel</references>
+        <references refid="class_weather_1ab679b951879b0f8cc8882a9eb6ade7fe" compoundref="mainwindow_8h" startline="37">Weather::visibility</references>
+        <referencedby refid="class_main_window_1ae011301f6a94a4164df56eb5c208af66" compoundref="mainwindow_8cpp" startline="129" endline="137">check_for_an_update</referencedby>
+        <referencedby refid="class_main_window_1a67e91bd10742922d2350cafa3e20e84e" compoundref="mainwindow_8cpp" startline="145" endline="153">check_for_an_update1</referencedby>
+        <referencedby refid="class_main_window_1a56eafc79c2a3a17068d786653355ebb1" compoundref="mainwindow_8cpp" startline="161" endline="169">check_for_an_update2</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ae011301f6a94a4164df56eb5c208af66" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MainWindow::check_for_an_update</definition>
+        <argsstring>()</argsstring>
+        <name>check_for_an_update</name>
+        <briefdescription>
+<para><ref refid="class_main_window_1ae011301f6a94a4164df56eb5c208af66" kindref="member">MainWindow::check_for_an_update</ref> funkcja wywołująca zapytanie dla jeziora Żywieckiego. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[out] true po dostaniu odpowiedzi </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="68" column="10" bodyfile="mainwindow.cpp" bodystart="129" bodyend="137"/>
+        <references refid="class_main_window_1a1fd6d42eb6a8750123443b19bbcde58a" compoundref="mainwindow_8h" startline="52">myURL</references>
+        <references refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">reload_data</references>
+        <referencedby refid="class_main_window_1a7be71462af296329114d19a0a503f522" compoundref="mainwindow_8cpp" startline="191" endline="218">page2</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a67e91bd10742922d2350cafa3e20e84e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MainWindow::check_for_an_update1</definition>
+        <argsstring>()</argsstring>
+        <name>check_for_an_update1</name>
+        <briefdescription>
+<para><ref refid="class_main_window_1a67e91bd10742922d2350cafa3e20e84e" kindref="member">MainWindow::check_for_an_update1</ref> funkcja wywołująca zapytanie dla jeziora Roś </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[out] true po dostaniu odpowiedzi </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="69" column="10" bodyfile="mainwindow.cpp" bodystart="145" bodyend="153"/>
+        <references refid="class_main_window_1a66646290aba8774217eaa3f501dd7f51" compoundref="mainwindow_8h" startline="54">myURL1</references>
+        <references refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">reload_data</references>
+        <referencedby refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" compoundref="mainwindow_8cpp" startline="225" endline="240">page3</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a56eafc79c2a3a17068d786653355ebb1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MainWindow::check_for_an_update2</definition>
+        <argsstring>()</argsstring>
+        <name>check_for_an_update2</name>
+        <briefdescription>
+<para><ref refid="class_main_window_1a56eafc79c2a3a17068d786653355ebb1" kindref="member">MainWindow::check_for_an_update2</ref> funkcja wywołująca zapytanie dla jeziora Konorowskiego. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>[out] true po dostaniu odpowiedzi </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="70" column="10" bodyfile="mainwindow.cpp" bodystart="161" bodyend="169"/>
+        <references refid="class_main_window_1a1d7405dc6db1e9f3329ef5ccfe2712fc" compoundref="mainwindow_8h" startline="56">myURL2</references>
+        <references refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">reload_data</references>
+        <referencedby refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" compoundref="mainwindow_8cpp" startline="247" endline="262">page4</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::page1</definition>
+        <argsstring>()</argsstring>
+        <name>page1</name>
+        <briefdescription>
+<para><ref refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" kindref="member">MainWindow::page1</ref> Strona główna połączenie przycisku z docelowym miejscem. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>QObject::connect polaczenie przycisku z docelowym miejscem</para>
+        </inbodydescription>
+        <location file="mainwindow.h" line="71" column="10" bodyfile="mainwindow.cpp" bodystart="176" bodyend="184"/>
+        <references refid="class_main_window_1a7be71462af296329114d19a0a503f522" compoundref="mainwindow_8cpp" startline="191" endline="218">page2</references>
+        <references refid="class_main_window_1a35466a70ed47252a0191168126a352a5" compoundref="mainwindow_8h" startline="57">ui</references>
+        <referencedby refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" compoundref="mainwindow_8cpp" startline="14" endline="38">MainWindow</referencedby>
+        <referencedby refid="class_main_window_1a7be71462af296329114d19a0a503f522" compoundref="mainwindow_8cpp" startline="191" endline="218">page2</referencedby>
+        <referencedby refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" compoundref="mainwindow_8cpp" startline="225" endline="240">page3</referencedby>
+        <referencedby refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" compoundref="mainwindow_8cpp" startline="247" endline="262">page4</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a7be71462af296329114d19a0a503f522" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::page2</definition>
+        <argsstring>()</argsstring>
+        <name>page2</name>
+        <briefdescription>
+<para><ref refid="class_main_window_1a7be71462af296329114d19a0a503f522" kindref="member">MainWindow::page2</ref> strona jeziora Żywieckiego. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>strona 2 - szczegolowy ekran jeziora i biezacych informacji</para>
+        </inbodydescription>
+        <location file="mainwindow.h" line="72" column="10" bodyfile="mainwindow.cpp" bodystart="191" bodyend="218"/>
+        <references refid="class_main_window_1ae011301f6a94a4164df56eb5c208af66" compoundref="mainwindow_8cpp" startline="129" endline="137">check_for_an_update</references>
+        <references refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" compoundref="mainwindow_8cpp" startline="176" endline="184">page1</references>
+        <references refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" compoundref="mainwindow_8cpp" startline="302" endline="338">page_content</references>
+        <references refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" compoundref="mainwindow_8cpp" startline="270" endline="293">page_loading</references>
+        <references refid="class_main_window_1a35466a70ed47252a0191168126a352a5" compoundref="mainwindow_8h" startline="57">ui</references>
+        <referencedby refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" compoundref="mainwindow_8cpp" startline="14" endline="38">MainWindow</referencedby>
+        <referencedby refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" compoundref="mainwindow_8cpp" startline="176" endline="184">page1</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::page3</definition>
+        <argsstring>()</argsstring>
+        <name>page3</name>
+        <briefdescription>
+<para><ref refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" kindref="member">MainWindow::page3</ref> strona jeziora Roś </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="73" column="10" bodyfile="mainwindow.cpp" bodystart="225" bodyend="240"/>
+        <references refid="class_main_window_1a67e91bd10742922d2350cafa3e20e84e" compoundref="mainwindow_8cpp" startline="145" endline="153">check_for_an_update1</references>
+        <references refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" compoundref="mainwindow_8cpp" startline="176" endline="184">page1</references>
+        <references refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" compoundref="mainwindow_8cpp" startline="302" endline="338">page_content</references>
+        <references refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" compoundref="mainwindow_8cpp" startline="270" endline="293">page_loading</references>
+        <references refid="class_main_window_1a35466a70ed47252a0191168126a352a5" compoundref="mainwindow_8h" startline="57">ui</references>
+        <referencedby refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" compoundref="mainwindow_8cpp" startline="14" endline="38">MainWindow</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::page4</definition>
+        <argsstring>()</argsstring>
+        <name>page4</name>
+        <briefdescription>
+<para><ref refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" kindref="member">MainWindow::page4</ref> strona jeziora Konorowskiego. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="74" column="10" bodyfile="mainwindow.cpp" bodystart="247" bodyend="262"/>
+        <references refid="class_main_window_1a56eafc79c2a3a17068d786653355ebb1" compoundref="mainwindow_8cpp" startline="161" endline="169">check_for_an_update2</references>
+        <references refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" compoundref="mainwindow_8cpp" startline="176" endline="184">page1</references>
+        <references refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" compoundref="mainwindow_8cpp" startline="302" endline="338">page_content</references>
+        <references refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" compoundref="mainwindow_8cpp" startline="270" endline="293">page_loading</references>
+        <references refid="class_main_window_1a35466a70ed47252a0191168126a352a5" compoundref="mainwindow_8h" startline="57">ui</references>
+        <referencedby refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" compoundref="mainwindow_8cpp" startline="14" endline="38">MainWindow</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::page_loading</definition>
+        <argsstring>()</argsstring>
+        <name>page_loading</name>
+        <briefdescription>
+<para><ref refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" kindref="member">MainWindow::page_loading</ref> strona z napisem POBIERANIE DANYCH licznik czasu. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="75" column="10" bodyfile="mainwindow.cpp" bodystart="270" bodyend="293"/>
+        <references refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" compoundref="mainwindow_8h" startline="60">timer</references>
+        <references refid="class_main_window_1a35466a70ed47252a0191168126a352a5" compoundref="mainwindow_8h" startline="57">ui</references>
+        <referencedby refid="class_main_window_1a7be71462af296329114d19a0a503f522" compoundref="mainwindow_8cpp" startline="191" endline="218">page2</referencedby>
+        <referencedby refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" compoundref="mainwindow_8cpp" startline="225" endline="240">page3</referencedby>
+        <referencedby refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" compoundref="mainwindow_8cpp" startline="247" endline="262">page4</referencedby>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::page_content</definition>
+        <argsstring>()</argsstring>
+        <name>page_content</name>
+        <briefdescription>
+<para><ref refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" kindref="member">MainWindow::page_content</ref> zawartosc strony szczegółowej tu znajduje się ustaniwenie napisów oraz wywołanie chmur. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="76" column="10" bodyfile="mainwindow.cpp" bodystart="302" bodyend="338"/>
+        <references refid="class_weather_1a4e74ab63f3fef565b430322bccb815b6" compoundref="mainwindow_8h" startline="37">Weather::cloudiness</references>
+        <references refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" compoundref="mainwindow_8h" startline="50">data_weather</references>
+        <references refid="class_weather_1a80abcc10a63e788675fbd9cbcafeba88" compoundref="mainwindow_8h" startline="37">Weather::deg</references>
+        <references refid="class_main_window_1a51ac2b126495216832501cea3929c6f6" compoundref="mainwindow_8h" startline="59">scene</references>
+        <references refid="class_weather_1ae39bc0304c4329d58b75e908386c47e8" compoundref="mainwindow_8h" startline="36">Weather::speed</references>
+        <references refid="class_weather_1af76815c6471edf864a79e0dab873b75e" compoundref="mainwindow_8h" startline="33">Weather::temp_realfeel</references>
+        <references refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" compoundref="mainwindow_8h" startline="60">timer</references>
+        <references refid="class_main_window_1a35466a70ed47252a0191168126a352a5" compoundref="mainwindow_8h" startline="57">ui</references>
+        <referencedby refid="class_main_window_1a7be71462af296329114d19a0a503f522" compoundref="mainwindow_8cpp" startline="191" endline="218">page2</referencedby>
+        <referencedby refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" compoundref="mainwindow_8cpp" startline="225" endline="240">page3</referencedby>
+        <referencedby refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" compoundref="mainwindow_8cpp" startline="247" endline="262">page4</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="1">
+        <label>MainWindow</label>
+        <link refid="class_main_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="1">
+        <label>MainWindow</label>
+        <link refid="class_main_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-data_weather</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Weather</label>
+        <link refid="class_weather"/>
+      </node>
+    </collaborationgraph>
+    <location file="mainwindow.h" line="41" column="1" bodyfile="mainwindow.h" bodystart="42" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_main_window_1af322b8f680567bd1afb5cbf6a3a933c0" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>animation</name></member>
+      <member refid="class_main_window_1abb0a7ab11c6ed6bb3ee72ec084977361" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>animation_button</name></member>
+      <member refid="class_main_window_1ae011301f6a94a4164df56eb5c208af66" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>check_for_an_update</name></member>
+      <member refid="class_main_window_1a67e91bd10742922d2350cafa3e20e84e" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>check_for_an_update1</name></member>
+      <member refid="class_main_window_1a56eafc79c2a3a17068d786653355ebb1" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>check_for_an_update2</name></member>
+      <member refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>data_weather</name></member>
+      <member refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>MainWindow</name></member>
+      <member refid="class_main_window_1a1fd6d42eb6a8750123443b19bbcde58a" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>myURL</name></member>
+      <member refid="class_main_window_1a66646290aba8774217eaa3f501dd7f51" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>myURL1</name></member>
+      <member refid="class_main_window_1a1d7405dc6db1e9f3329ef5ccfe2712fc" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>myURL2</name></member>
+      <member refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>page1</name></member>
+      <member refid="class_main_window_1a7be71462af296329114d19a0a503f522" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>page2</name></member>
+      <member refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>page3</name></member>
+      <member refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>page4</name></member>
+      <member refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>page_content</name></member>
+      <member refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>page_loading</name></member>
+      <member refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>reload_data</name></member>
+      <member refid="class_main_window_1a51ac2b126495216832501cea3929c6f6" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>scene</name></member>
+      <member refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>timer</name></member>
+      <member refid="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>ui</name></member>
+      <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>~MainWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

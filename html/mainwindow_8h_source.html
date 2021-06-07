@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pogoda: Plik źródłowy mainwindow.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pogoda
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('mainwindow_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">mainwindow.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mainwindow_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MAINWINDOW_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MAINWINDOW_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QtNetwork&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QNetworkAccessManager&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QNetworkReply&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QPixmap&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;QJsonParseError&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;QJsonDocument&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;QStackedWidget&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;QPropertyAnimation&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;QGraphicsItem&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;QtCore&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;QtGui&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;QDateTime&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;QtCharts&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;QChartView&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;QLineSeries&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;QLegend&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;QCategoryAxis&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;QBarSeries&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;QBarSet&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;QT_BEGIN_NAMESPACE</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespace_ui.html">   42</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> { <span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a>; }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;QT_END_NAMESPACE</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_weather.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_weather.html">Weather</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_weather.html#a62d3461c8561c8ff21ebea18ca1e7d24">   58</a></span>&#160;    QString <a class="code" href="class_weather.html#a62d3461c8561c8ff21ebea18ca1e7d24">description</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">   62</a></span>&#160;    QString <a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_weather.html#afdac2f27873a3a32db764fccb8e4716a">   66</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#afdac2f27873a3a32db764fccb8e4716a">temp</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_weather.html#a033c4d36b69f0d2b0acfbba3015cff6a">   70</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#a033c4d36b69f0d2b0acfbba3015cff6a">temp_min</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_weather.html#a96c8767d0f085cb8dd3c1e4bcd173f40">   74</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#a96c8767d0f085cb8dd3c1e4bcd173f40">temp_max</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_weather.html#af76815c6471edf864a79e0dab873b75e">   78</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#af76815c6471edf864a79e0dab873b75e">temp_realfeel</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_weather.html#a3793950c05f6bdd6ffd0814913efd346">   82</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#a3793950c05f6bdd6ffd0814913efd346">pressure</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_weather.html#a080ffa5bc630d1af193d2411b66bbaf8">   86</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#a080ffa5bc630d1af193d2411b66bbaf8">humidity</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_weather.html#ac2f82193ebc3b5c5635c47db00e0d827">   90</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#ac2f82193ebc3b5c5635c47db00e0d827">rain1h</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//for wind and clouds</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">   96</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">  100</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>; <span class="comment">//gust - rapid wind rush</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_weather.html#a652542d035943d58edc5a1e0d1985b01">  104</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#a652542d035943d58edc5a1e0d1985b01">speed_forecast</a>[20];</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_weather.html#aff429004bb381cfad27fce23a7fcf03e">  108</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#aff429004bb381cfad27fce23a7fcf03e">gust_forecast</a>[20];</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_weather.html#a846e047a3943acfc3e9310728db6d594">  112</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_weather.html#a846e047a3943acfc3e9310728db6d594">rain1h_forecast</a>[20];</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_weather.html#aa699168dc321b15a50fa9cbd9bfec789">  116</a></span>&#160;    quint32 <a class="code" href="class_weather.html#aa699168dc321b15a50fa9cbd9bfec789">data_time</a>[20];</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_weather.html#a58c75ba794d123fe3446ba4604ce252f">  120</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_weather.html#a58c75ba794d123fe3446ba4604ce252f">wind_angle_deg</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_weather.html#a4e74ab63f3fef565b430322bccb815b6">  124</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_weather.html#a4e74ab63f3fef565b430322bccb815b6">cloudiness</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_weather.html#ab679b951879b0f8cc8882a9eb6ade7fe">  128</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_weather.html#ab679b951879b0f8cc8882a9eb6ade7fe">visibility</a>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="class_main_window.html">  141</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a>();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda">resizeEvent</a>(QResizeEvent* event);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">  166</a></span>&#160;    <a class="code" href="class_weather.html">Weather</a> <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="comment">// Linki do miejsc [aktualna pogoda]</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">//Current:</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">//Jezioro Zywieckie, Żywiec</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="class_main_window.html#a04895d129c822b8c15bd4f028ad1ad03">  177</a></span>&#160;<span class="comment"></span>    QString <a class="code" href="class_main_window.html#a04895d129c822b8c15bd4f028ad1ad03">myURL0</a> = <span class="stringliteral">&quot;http://api.openweathermap.org/data/2.5/weather?q=%C5%BBywiec&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">//Jezioro Roś, Pisz</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="class_main_window.html#a66646290aba8774217eaa3f501dd7f51">  182</a></span>&#160;<span class="comment"></span>    QString <a class="code" href="class_main_window.html#a66646290aba8774217eaa3f501dd7f51">myURL1</a> = <span class="stringliteral">&quot;http://api.openweathermap.org/data/2.5/weather?q=Pisz&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</span>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="comment">//Jezioro Konorowskie, Konorowo</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="class_main_window.html#a1d7405dc6db1e9f3329ef5ccfe2712fc">  187</a></span>&#160;<span class="comment"></span>    QString <a class="code" href="class_main_window.html#a1d7405dc6db1e9f3329ef5ccfe2712fc">myURL2</a> = <span class="stringliteral">&quot;http://api.openweathermap.org/data/2.5/weather?q=Koronowo&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">// Linki do miejsc [prognoza pogody]</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">//Forecast:</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">//Jezioro żywieckie, Żywiec</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="class_main_window.html#ae3eb5b5eb2a1adf7e376b2087fdc3fa7">  198</a></span>&#160;<span class="comment"></span>    QString <a class="code" href="class_main_window.html#ae3eb5b5eb2a1adf7e376b2087fdc3fa7">myURL00</a> = <span class="stringliteral">&quot;https://api.openweathermap.org/data/2.5/onecall?lat=49.6853&amp;lon=19.1924&amp;exclude=daily,alerts,minutely&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">//Jezioro Roś, Pisz</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="class_main_window.html#a6e42d9d26ad3239db2bf053527f950bd">  203</a></span>&#160;<span class="comment"></span>    QString <a class="code" href="class_main_window.html#a6e42d9d26ad3239db2bf053527f950bd">myURL11</a> = <span class="stringliteral">&quot;https://api.openweathermap.org/data/2.5/onecall?lat=53.6274&amp;lon=21.8125&amp;exclude=daily,alerts,minutely&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">//Jezioro Konorowskie, Konorowo</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="class_main_window.html#a58d00edde9b974b539c5f5750a3912bf">  208</a></span>&#160;<span class="comment"></span>    QString <a class="code" href="class_main_window.html#a58d00edde9b974b539c5f5750a3912bf">myURL22</a> = <span class="stringliteral">&quot;https://api.openweathermap.org/data/2.5/onecall?lat=53.3137&amp;lon=17.937&amp;exclude=daily,alerts,minutely&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">  213</a></span>&#160;    Ui::MainWindow *<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="class_main_window.html#a51ac2b126495216832501cea3929c6f6">  218</a></span>&#160;    QGraphicsScene *<a class="code" href="class_main_window.html#a51ac2b126495216832501cea3929c6f6">scene</a>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">  222</a></span>&#160;    QTimer *<a class="code" href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">timer</a>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="comment">//QPropertyAnimation *animation;</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="comment">//QPropertyAnimation *animation_button;</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="comment">//QLabel *label_map;</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">//public:</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5">reload_data</a>(QNetworkReply *reply);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36">reload_data_forecast</a>(QNetworkReply *reply);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66">check_for_an_update</a>();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e">check_for_an_update_forecast</a>();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e">check_for_an_update1</a>();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636">check_for_an_update_forecast1</a>();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1">check_for_an_update2</a>();</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7">check_for_an_update_forecast2</a>();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">page1</a>();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a7be71462af296329114d19a0a503f522">page2</a>();</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">page3</a>();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">page4</a>();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">page_loading</a>();</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b">page_content</a>(<span class="keywordtype">int</span> page_number);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;};</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MAINWINDOW_H</span></div>
+<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdoc">Klasa zawiera informacje o linkach do wysłania zapytań do strony: openweathermap.org.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00141">mainwindow.h:142</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a04895d129c822b8c15bd4f028ad1ad03"><div class="ttname"><a href="class_main_window.html#a04895d129c822b8c15bd4f028ad1ad03">MainWindow::myURL0</a></div><div class="ttdeci">QString myURL0</div><div class="ttdoc">Link do aktualnej pogody dla jeziora Żywieckiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00177">mainwindow.h:177</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a0f14d6de91b2a9f6a5bc6adb90b4e636"><div class="ttname"><a href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636">MainWindow::check_for_an_update_forecast1</a></div><div class="ttdeci">bool check_for_an_update_forecast1()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Roś - prognoza pogody.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00269">mainwindow.cpp:269</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a1d7405dc6db1e9f3329ef5ccfe2712fc"><div class="ttname"><a href="class_main_window.html#a1d7405dc6db1e9f3329ef5ccfe2712fc">MainWindow::myURL2</a></div><div class="ttdeci">QString myURL2</div><div class="ttdoc">Link do aktualnej pogody dla jeziora Koronowskiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00187">mainwindow.h:187</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdoc">Interfejs użytkownika.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00213">mainwindow.h:213</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a356578805ed1248a7f2807434cb0e5ee"><div class="ttname"><a href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">MainWindow::timer</a></div><div class="ttdeci">QTimer * timer</div><div class="ttdoc">Sluzy do animacji strzalek.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00222">mainwindow.h:222</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a51ac2b126495216832501cea3929c6f6"><div class="ttname"><a href="class_main_window.html#a51ac2b126495216832501cea3929c6f6">MainWindow::scene</a></div><div class="ttdeci">QGraphicsScene * scene</div><div class="ttdoc">Scena do animacji strzałek.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00218">mainwindow.h:218</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a56eafc79c2a3a17068d786653355ebb1"><div class="ttname"><a href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1">MainWindow::check_for_an_update2</a></div><div class="ttdeci">bool check_for_an_update2()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Koronowskiego - aktualna pogoda.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00286">mainwindow.cpp:286</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a58d00edde9b974b539c5f5750a3912bf"><div class="ttname"><a href="class_main_window.html#a58d00edde9b974b539c5f5750a3912bf">MainWindow::myURL22</a></div><div class="ttdeci">QString myURL22</div><div class="ttdoc">Link do prognozowanej pogody dla jeziora Koronowskiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00208">mainwindow.h:208</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a5fc3b6a8f1eadf887fc7bda33c61eee8"><div class="ttname"><a href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">MainWindow::page3</a></div><div class="ttdeci">void page3()</div><div class="ttdoc">Strona szczegółowa jeziora Roś</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00353">mainwindow.cpp:353</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a66646290aba8774217eaa3f501dd7f51"><div class="ttname"><a href="class_main_window.html#a66646290aba8774217eaa3f501dd7f51">MainWindow::myURL1</a></div><div class="ttdeci">QString myURL1</div><div class="ttdoc">Link do aktualnej pogody dla jeziora Roś</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00182">mainwindow.h:182</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a67e91bd10742922d2350cafa3e20e84e"><div class="ttname"><a href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e">MainWindow::check_for_an_update1</a></div><div class="ttdeci">bool check_for_an_update1()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Roś - aktualna pogoda.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00252">mainwindow.cpp:252</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a6e42d9d26ad3239db2bf053527f950bd"><div class="ttname"><a href="class_main_window.html#a6e42d9d26ad3239db2bf053527f950bd">MainWindow::myURL11</a></div><div class="ttdeci">QString myURL11</div><div class="ttdoc">Link do prognozowanej pogody dla jeziora Roś</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00203">mainwindow.h:203</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a7be71462af296329114d19a0a503f522"><div class="ttname"><a href="class_main_window.html#a7be71462af296329114d19a0a503f522">MainWindow::page2</a></div><div class="ttdeci">void page2()</div><div class="ttdoc">Strona szczegółowa jeziora Żywieckiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00324">mainwindow.cpp:324</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a83fcf8e7a1b36c87ba39186faf0d1319"><div class="ttname"><a href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">MainWindow::page1</a></div><div class="ttdeci">void page1()</div><div class="ttdoc">Strona glowna aplikacji, mapa Polski z jeziorami.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00316">mainwindow.cpp:316</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a996c5a2b6f77944776856f08ec30858d"><div class="ttname"><a href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=nullptr)</div><div class="ttdoc">Inicjalizuje pojęcie głównego okna.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00018">mainwindow.cpp:18</a></div></div>
+<div class="ttc" id="aclass_main_window_html_aaa37382c20a8a4c965883bae366e82b7"><div class="ttname"><a href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7">MainWindow::check_for_an_update_forecast2</a></div><div class="ttdeci">bool check_for_an_update_forecast2()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Koronowskiego - prognoza pogody.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00303">mainwindow.cpp:303</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ab0f03edc1734ad8368da8d18f13439c5"><div class="ttname"><a href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5">MainWindow::reload_data</a></div><div class="ttdeci">void reload_data(QNetworkReply *reply)</div><div class="ttdoc">Odebranie odpowiedzi z aktualna pogodą</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00081">mainwindow.cpp:81</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ac8a4c4ed47132ad98c70c55c7e7915e1"><div class="ttname"><a href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">MainWindow::page_loading</a></div><div class="ttdeci">void page_loading()</div><div class="ttdoc">Strona ładowania informacji, ekran oczekiwania.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00393">mainwindow.cpp:393</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae011301f6a94a4164df56eb5c208af66"><div class="ttname"><a href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66">MainWindow::check_for_an_update</a></div><div class="ttdeci">bool check_for_an_update()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Żywieckiego - aktualna pogoda.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00218">mainwindow.cpp:218</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae035353e3869c36a025bdb6216495d4e"><div class="ttname"><a href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e">MainWindow::check_for_an_update_forecast</a></div><div class="ttdeci">bool check_for_an_update_forecast()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Żywieckiego - prognoza pogody.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00235">mainwindow.cpp:235</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae12f8f63791595567b6250f8bb002bda"><div class="ttname"><a href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda">MainWindow::resizeEvent</a></div><div class="ttdeci">void resizeEvent(QResizeEvent *event)</div><div class="ttdoc">Ustala położenie elementów na wypadek zmiany rozmiaru ekranu.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00053">mainwindow.cpp:53</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae223473baf103350cb41a5f617bfc8d9"><div class="ttname"><a href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">MainWindow::data_weather</a></div><div class="ttdeci">Weather data_weather</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00166">mainwindow.h:166</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae3eb5b5eb2a1adf7e376b2087fdc3fa7"><div class="ttname"><a href="class_main_window.html#ae3eb5b5eb2a1adf7e376b2087fdc3fa7">MainWindow::myURL00</a></div><div class="ttdeci">QString myURL00</div><div class="ttdoc">Link do prognozowanej pogody dla jeziora Żywieckiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00198">mainwindow.h:198</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae88ae893fd0f85ccfbe6314bfe8eab36"><div class="ttname"><a href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36">MainWindow::reload_data_forecast</a></div><div class="ttdeci">void reload_data_forecast(QNetworkReply *reply)</div><div class="ttdoc">Odebranie odpwiedzi z prognoza pogody.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00161">mainwindow.cpp:161</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdoc">Metoda wywoływana przed usunięciem obiektu.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00044">mainwindow.cpp:44</a></div></div>
+<div class="ttc" id="aclass_main_window_html_aec475d89585a72d9862c0c7902d5903b"><div class="ttname"><a href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b">MainWindow::page_content</a></div><div class="ttdeci">void page_content(int page_number)</div><div class="ttdoc">Funkcja obsługująca zawartosc danej strony.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00424">mainwindow.cpp:424</a></div></div>
+<div class="ttc" id="aclass_main_window_html_aee5b717a2cc4e3f09e76f6f09d74dc49"><div class="ttname"><a href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">MainWindow::page4</a></div><div class="ttdeci">void page4()</div><div class="ttdoc">Strona szczegółowa jeziora Koronowskiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00372">mainwindow.cpp:372</a></div></div>
+<div class="ttc" id="aclass_weather_html"><div class="ttname"><a href="class_weather.html">Weather</a></div><div class="ttdoc">Klasa porzechowująca informacje o pogodzie.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00052">mainwindow.h:53</a></div></div>
+<div class="ttc" id="aclass_weather_html_a033c4d36b69f0d2b0acfbba3015cff6a"><div class="ttname"><a href="class_weather.html#a033c4d36b69f0d2b0acfbba3015cff6a">Weather::temp_min</a></div><div class="ttdeci">double temp_min</div><div class="ttdoc">Temperatura minimalna, wyrażana w stopniach Celcjusza.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00070">mainwindow.h:70</a></div></div>
+<div class="ttc" id="aclass_weather_html_a080ffa5bc630d1af193d2411b66bbaf8"><div class="ttname"><a href="class_weather.html#a080ffa5bc630d1af193d2411b66bbaf8">Weather::humidity</a></div><div class="ttdeci">double humidity</div><div class="ttdoc">Wilgotność, wyrażana w [%].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00086">mainwindow.h:86</a></div></div>
+<div class="ttc" id="aclass_weather_html_a3793950c05f6bdd6ffd0814913efd346"><div class="ttname"><a href="class_weather.html#a3793950c05f6bdd6ffd0814913efd346">Weather::pressure</a></div><div class="ttdeci">double pressure</div><div class="ttdoc">Ciśnienie, wyrażane w [hPa].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00082">mainwindow.h:82</a></div></div>
+<div class="ttc" id="aclass_weather_html_a4e74ab63f3fef565b430322bccb815b6"><div class="ttname"><a href="class_weather.html#a4e74ab63f3fef565b430322bccb815b6">Weather::cloudiness</a></div><div class="ttdeci">int cloudiness</div><div class="ttdoc">Zachmurzenie, wyrażane w [%].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00124">mainwindow.h:124</a></div></div>
+<div class="ttc" id="aclass_weather_html_a58c75ba794d123fe3446ba4604ce252f"><div class="ttname"><a href="class_weather.html#a58c75ba794d123fe3446ba4604ce252f">Weather::wind_angle_deg</a></div><div class="ttdeci">int wind_angle_deg</div><div class="ttdoc">Kąt kierunku wiatru, wyrażany w stopniach.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00120">mainwindow.h:120</a></div></div>
+<div class="ttc" id="aclass_weather_html_a62d3461c8561c8ff21ebea18ca1e7d24"><div class="ttname"><a href="class_weather.html#a62d3461c8561c8ff21ebea18ca1e7d24">Weather::description</a></div><div class="ttdeci">QString description</div><div class="ttdoc">Opis pogody.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00058">mainwindow.h:58</a></div></div>
+<div class="ttc" id="aclass_weather_html_a652542d035943d58edc5a1e0d1985b01"><div class="ttname"><a href="class_weather.html#a652542d035943d58edc5a1e0d1985b01">Weather::speed_forecast</a></div><div class="ttdeci">double speed_forecast[20]</div><div class="ttdoc">Tablica przechowująca prognozowane wartości szybkości wiatru, wyrażane w [m/s].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00104">mainwindow.h:104</a></div></div>
+<div class="ttc" id="aclass_weather_html_a6e312f122da386cbc6c4bfc7ba70f0f8"><div class="ttname"><a href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">Weather::icon</a></div><div class="ttdeci">QString icon</div><div class="ttdoc">Ikona ilustrująca pogodę</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00062">mainwindow.h:62</a></div></div>
+<div class="ttc" id="aclass_weather_html_a846e047a3943acfc3e9310728db6d594"><div class="ttname"><a href="class_weather.html#a846e047a3943acfc3e9310728db6d594">Weather::rain1h_forecast</a></div><div class="ttdeci">double rain1h_forecast[20]</div><div class="ttdoc">Tablica przechowująca prognozowane wartości opadu deszczu, wyrażane w [mm].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00112">mainwindow.h:112</a></div></div>
+<div class="ttc" id="aclass_weather_html_a96c8767d0f085cb8dd3c1e4bcd173f40"><div class="ttname"><a href="class_weather.html#a96c8767d0f085cb8dd3c1e4bcd173f40">Weather::temp_max</a></div><div class="ttdeci">double temp_max</div><div class="ttdoc">Temperatura maksymalna, wyrażana w stopniach Celcjusza.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00074">mainwindow.h:74</a></div></div>
+<div class="ttc" id="aclass_weather_html_aa699168dc321b15a50fa9cbd9bfec789"><div class="ttname"><a href="class_weather.html#aa699168dc321b15a50fa9cbd9bfec789">Weather::data_time</a></div><div class="ttdeci">quint32 data_time[20]</div><div class="ttdoc">Tablica przechowująca czas danych prognozowanych.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00116">mainwindow.h:116</a></div></div>
+<div class="ttc" id="aclass_weather_html_ab679b951879b0f8cc8882a9eb6ade7fe"><div class="ttname"><a href="class_weather.html#ab679b951879b0f8cc8882a9eb6ade7fe">Weather::visibility</a></div><div class="ttdeci">int visibility</div><div class="ttdoc">Widoczność, wyrażana w [m].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00128">mainwindow.h:128</a></div></div>
+<div class="ttc" id="aclass_weather_html_ac2f82193ebc3b5c5635c47db00e0d827"><div class="ttname"><a href="class_weather.html#ac2f82193ebc3b5c5635c47db00e0d827">Weather::rain1h</a></div><div class="ttdeci">double rain1h</div><div class="ttdoc">Opady deszczu w ciągu najbliższej godziny, wyrażane w [mm].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00090">mainwindow.h:90</a></div></div>
+<div class="ttc" id="aclass_weather_html_ae39bc0304c4329d58b75e908386c47e8"><div class="ttname"><a href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">Weather::speed</a></div><div class="ttdeci">double speed</div><div class="ttdoc">Szybkość wiatru, wyrażana w [m/s].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00096">mainwindow.h:96</a></div></div>
+<div class="ttc" id="aclass_weather_html_af1b9d6fdc1eda0fc358dc3af1c65507c"><div class="ttname"><a href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">Weather::gust</a></div><div class="ttdeci">double gust</div><div class="ttdoc">Porywistość wiatru, wyrażana w [m/s].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00100">mainwindow.h:100</a></div></div>
+<div class="ttc" id="aclass_weather_html_af76815c6471edf864a79e0dab873b75e"><div class="ttname"><a href="class_weather.html#af76815c6471edf864a79e0dab873b75e">Weather::temp_realfeel</a></div><div class="ttdeci">double temp_realfeel</div><div class="ttdoc">Temperatura odczuwalna, wyrażana w stopniach Celcjusza.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00078">mainwindow.h:78</a></div></div>
+<div class="ttc" id="aclass_weather_html_afdac2f27873a3a32db764fccb8e4716a"><div class="ttname"><a href="class_weather.html#afdac2f27873a3a32db764fccb8e4716a">Weather::temp</a></div><div class="ttdeci">double temp</div><div class="ttdoc">Temperatura, wyrażana w stopniach Celcjusza.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00066">mainwindow.h:66</a></div></div>
+<div class="ttc" id="aclass_weather_html_aff429004bb381cfad27fce23a7fcf03e"><div class="ttname"><a href="class_weather.html#aff429004bb381cfad27fce23a7fcf03e">Weather::gust_forecast</a></div><div class="ttdeci">double gust_forecast[20]</div><div class="ttdoc">Tablica przechowująca prognozowane wartości porywistości wiatru, wyrażane w [m/s].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00108">mainwindow.h:108</a></div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00042">mainwindow.h:42</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="mainwindow_8h.html">mainwindow.h</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

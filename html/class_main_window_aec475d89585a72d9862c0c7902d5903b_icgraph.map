@@ -1,0 +1,9 @@
+<map id="MainWindow::page_content" name="MainWindow::page_content">
+<area shape="rect" id="node1" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="792,129,975,155"/>
+<area shape="rect" id="node2" href="$class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="605,15,744,42"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,142,371,169"/>
+<area shape="rect" id="node7" href="$class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="232,91,371,118"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,15,184,42"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="419,66,557,93"/>
+<area shape="rect" id="node6" href="$class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,91,180,118"/>
+</map>

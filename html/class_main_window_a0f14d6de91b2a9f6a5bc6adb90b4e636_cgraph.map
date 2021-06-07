@@ -1,0 +1,4 @@
+<map id="MainWindow::check_for_an_update_forecast1" name="MainWindow::check_for_an_update_forecast1">
+<area shape="rect" id="node1" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="5,5,165,47"/>
+<area shape="rect" id="node2" href="$class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="213,5,352,47"/>
+</map>

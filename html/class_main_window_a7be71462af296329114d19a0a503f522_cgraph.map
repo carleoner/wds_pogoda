@@ -1,0 +1,16 @@
+<map id="MainWindow::page2" name="MainWindow::page2">
+<area shape="rect" id="node1" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="5,221,144,247"/>
+<area shape="rect" id="node2" href="$class_main_window.html#ae011301f6a94a4164df56eb5c208af66" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="203,5,363,47"/>
+<area shape="rect" id="node4" href="$class_main_window.html#ae035353e3869c36a025bdb6216495d4e" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; prognoza pogody." alt="" coords="423,397,583,439"/>
+<area shape="rect" id="node6" href="$class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="651,347,790,374"/>
+<area shape="rect" id="node7" href="$class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="192,221,375,247"/>
+<area shape="rect" id="node11" href="$class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1" title="Strona ładowania informacji, ekran oczekiwania." alt="" coords="631,99,811,126"/>
+<area shape="rect" id="node3" href="$class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="859,41,1029,67"/>
+<area shape="rect" id="node5" href="$class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="875,281,1013,323"/>
+<area shape="rect" id="node8" href="$class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="433,166,572,193"/>
+<area shape="rect" id="node12" href="$class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="433,221,572,247"/>
+<area shape="rect" id="node9" href="$class_main_window.html#a67e91bd10742922d2350cafa3e20e84e" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="641,33,801,75"/>
+<area shape="rect" id="node10" href="$class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="641,151,801,192"/>
+<area shape="rect" id="node13" href="$class_main_window.html#a56eafc79c2a3a17068d786653355ebb1" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="641,216,801,257"/>
+<area shape="rect" id="node14" href="$class_main_window.html#aaa37382c20a8a4c965883bae366e82b7" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; prognoza pogody." alt="" coords="641,281,801,323"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="MainWindow" name="MainWindow">
+<area shape="rect" id="node1" title="Klasa zawiera informacje o linkach do wysłania zapytań do strony: openweathermap.org." alt="" coords="67,95,163,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node3" href="$class_weather.html" title="Klasa porzechowująca informacje o pogodzie." alt="" coords="137,5,207,32"/>
+</map>

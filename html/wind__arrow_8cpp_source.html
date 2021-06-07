@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pogoda: Plik źródłowy wind_arrow.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pogoda
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('wind__arrow_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">wind_arrow.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="wind__arrow_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="wind__arrow_8h.html">wind_arrow.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;QtMath&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QRandomGenerator&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_wind__arrow.html#ac919249f1cbd3857b14e59b6c08629de">   24</a></span>&#160;<a class="code" href="class_wind__arrow.html#ac919249f1cbd3857b14e59b6c08629de">Wind_arrow::Wind_arrow</a>(<span class="keywordtype">double</span> speed, <span class="keywordtype">int</span> angle_deg)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">//random start of position and speed</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_wind__arrow.html#a083094fee4e9b95ad83f6ec5b8b73fca">wind_speed</a> = speed;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a> = angle_deg + 180;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//setTransformOriginPoint(0,0);</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    setRotation(QRandomGenerator::global()-&gt;bounded(360 * 16));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//angle = 0; //can be random</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//setRotation(angle);</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//int StartX = scene-&gt;sceneRect().center().toPoint().x();</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//int StartX = 300; //-320 środek -20 lewa -620 prawa</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//int StartY = 300; //-300 środek -125 góra -480 dół</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> StartX = -620 + rand() % 600;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> StartY = -480 + rand() % 355;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    setPos(mapToParent(StartX, StartY));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_wind__arrow.html#a0916c8e92b3b9616c924d36b1e80b4a5">   46</a></span>&#160;<a class="code" href="class_wind__arrow.html#a0916c8e92b3b9616c924d36b1e80b4a5">Wind_arrow::~Wind_arrow</a>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_wind__arrow.html#a2bc02b650c0b5172d3560f0e84f5b03c">   54</a></span>&#160;QRectF <a class="code" href="class_wind__arrow.html#a2bc02b650c0b5172d3560f0e84f5b03c">Wind_arrow::boundingRect</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">/*qreal adjust = 0.5;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    return QRectF(-18 - adjust, -22 - adjust,</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">                  36 + adjust, 60 + adjust);</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">                  */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> QRect(0,0,120,120);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_wind__arrow.html#a69299a6bc7f912e5b0ba366ddcf5c99e">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_wind__arrow.html#a69299a6bc7f912e5b0ba366ddcf5c99e">Wind_arrow::paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *, QWidget *)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//https://forum.qt.io/topic/109749/how-to-create-an-arrow-in-qt/6</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    QPoint start = QPoint(10, 50);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    QPoint end = QPoint(10, 0);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    painter-&gt;setRenderHint(QPainter::Antialiasing, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    qreal arrowSize = 20; <span class="comment">// size of head</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    painter-&gt;setPen(Qt::black);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    painter-&gt;setBrush(Qt::black);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    painter-&gt;setOpacity(0.4);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QLineF line(end, start);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a> = std::atan2(-line.dy(), line.dx());</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    QPointF arrowP1 = line.p1() + QPointF(sin(<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a> + M_PI / 3) * arrowSize,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                            cos(<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a> + M_PI / 3) * arrowSize);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    QPointF arrowP2 = line.p1() + QPointF(sin(<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a> + M_PI - M_PI / 3) * arrowSize,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                            cos(<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a> + M_PI - M_PI / 3) * arrowSize);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    QPolygonF arrowHead;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    arrowHead.clear();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    arrowHead &lt;&lt; line.p1() &lt;&lt; arrowP1 &lt;&lt; arrowP2;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    painter-&gt;drawLine(line);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    painter-&gt;drawPolygon(arrowHead);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">//zakomentowane rysowanie chmury</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">    //painter-&gt;setOpacity(0.5);</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">    QRadialGradient radialGrad(QPointF(60, 50), 30);</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">    radialGrad.setColorAt(0, Qt::gray);</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">    radialGrad.setColorAt(0.5, Qt::transparent);</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">    radialGrad.setColorAt(1, Qt::transparent);</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">    QRect rect_radial(0,0,100,100);</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">    painter-&gt;fillRect(rect_radial, radialGrad);</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">    QRadialGradient radialGrad1(QPointF(50, 50), 20);</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">    radialGrad1.setColorAt(0, Qt::gray);</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">    radialGrad1.setColorAt(0.5, Qt::transparent);</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">    radialGrad1.setColorAt(1, Qt::transparent);</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">    QRect rect_radial1(0,0,100,100);</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">    painter-&gt;fillRect(rect_radial1, radialGrad1);</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">    QRadialGradient radialGrad2(QPointF(70, 55), 25);</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">    radialGrad2.setColorAt(0, Qt::gray);</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">    radialGrad2.setColorAt(0.5, Qt::transparent);</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">    radialGrad2.setColorAt(1, Qt::transparent);</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">    QRect rect_radial2(0,0,100,100);</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">    painter-&gt;fillRect(rect_radial2, radialGrad2);</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">    QRectF rec = boundingRect();</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">    QBrush Brush(Qt::gray);</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">    if(!scene()-&gt;collidingItems(this).isEmpty())</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">        Collision();</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">    painter-&gt;setOpacity(0.5);</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">    painter-&gt;fillRect(rec, Brush);</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">    painter-&gt;drawRect(rec);</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="class_wind__arrow.html#aee5978e48520d14f5979a0da7ed46c48">  141</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_wind__arrow.html#aee5978e48520d14f5979a0da7ed46c48">Wind_arrow::advance</a>(<span class="keywordtype">int</span> phase)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">//jesli nie ma kroku</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">if</span>(!phase)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    QPointF location = this-&gt;pos();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">//qDebug() &lt;&lt; location;</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    setRotation(<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">//qDebug() &lt;&lt; angle;</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    setPos(mapToParent(0,-(<a class="code" href="class_wind__arrow.html#a083094fee4e9b95ad83f6ec5b8b73fca">wind_speed</a>)));</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">//setting coordinates X Y for Wind_arrow respawn</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">int</span> x=0,y=0;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">if</span>(angle &lt; 540 &amp;&amp; angle &gt;= 450)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        x = 300 + (540-<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a>)*300/90;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        y = (540-<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a>)*300/90;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span>(angle &lt; 450 &amp;&amp; angle &gt;= 360)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        x = 300 + (450-<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a>)*300/90;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        y = (450-<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a>)*300/90;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">if</span>(angle &lt; 360 &amp;&amp; angle &gt;= 270)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        x = 300 - (360-<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a>)*300/90;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        y = (360-<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a>)*300/90;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">if</span>(angle &lt; 270 &amp;&amp; angle &gt;= 180)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        x = (270-<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a>)*300/90;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        y = 300 + (270-<a class="code" href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">angle</a>)*300/90;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">//przesuniecie chmury w tyl</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    QLineF LineToStart(QPointF(x-300, y-300), location);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">if</span>(LineToStart.length() &gt; 400)</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        setPos(mapToParent(0, 600));</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">// * \brief Funkcja kolizji</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">// *</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">// */</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">//void Wind_arrow::Collision()</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">//{</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">//    //this-&gt;wind_speed = 0;</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">//    //delete this;</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">//}</span></div>
+<div class="ttc" id="aclass_wind__arrow_html_a083094fee4e9b95ad83f6ec5b8b73fca"><div class="ttname"><a href="class_wind__arrow.html#a083094fee4e9b95ad83f6ec5b8b73fca">Wind_arrow::wind_speed</a></div><div class="ttdeci">qreal wind_speed</div><div class="ttdoc">Zadana szybkość poruszania się obiektu, wyrażana w [m/s].</div><div class="ttdef"><b>Definition:</b> <a href="wind__arrow_8h_source.html#l00070">wind_arrow.h:70</a></div></div>
+<div class="ttc" id="aclass_wind__arrow_html_a0916c8e92b3b9616c924d36b1e80b4a5"><div class="ttname"><a href="class_wind__arrow.html#a0916c8e92b3b9616c924d36b1e80b4a5">Wind_arrow::~Wind_arrow</a></div><div class="ttdeci">~Wind_arrow()</div><div class="ttdoc">Metoda wywoływana przed usunięciem obiektu.</div><div class="ttdef"><b>Definition:</b> <a href="wind__arrow_8cpp_source.html#l00046">wind_arrow.cpp:46</a></div></div>
+<div class="ttc" id="aclass_wind__arrow_html_a2bc02b650c0b5172d3560f0e84f5b03c"><div class="ttname"><a href="class_wind__arrow.html#a2bc02b650c0b5172d3560f0e84f5b03c">Wind_arrow::boundingRect</a></div><div class="ttdeci">QRectF boundingRect() const override</div><div class="ttdoc">Funkcja ogranicza pole rysowania.</div><div class="ttdef"><b>Definition:</b> <a href="wind__arrow_8cpp_source.html#l00054">wind_arrow.cpp:54</a></div></div>
+<div class="ttc" id="aclass_wind__arrow_html_a69299a6bc7f912e5b0ba366ddcf5c99e"><div class="ttname"><a href="class_wind__arrow.html#a69299a6bc7f912e5b0ba366ddcf5c99e">Wind_arrow::paint</a></div><div class="ttdeci">void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override</div><div class="ttdoc">Metoda rysująca kształt strzałki.</div><div class="ttdef"><b>Definition:</b> <a href="wind__arrow_8cpp_source.html#l00068">wind_arrow.cpp:68</a></div></div>
+<div class="ttc" id="aclass_wind__arrow_html_a9ef7fcc5843062e2247e1a35798073d2"><div class="ttname"><a href="class_wind__arrow.html#a9ef7fcc5843062e2247e1a35798073d2">Wind_arrow::angle</a></div><div class="ttdeci">qreal angle</div><div class="ttdoc">Zadany kąt kierunku przesuwania się obiektu, wyrażany w stopniach.</div><div class="ttdef"><b>Definition:</b> <a href="wind__arrow_8h_source.html#l00066">wind_arrow.h:66</a></div></div>
+<div class="ttc" id="aclass_wind__arrow_html_ac919249f1cbd3857b14e59b6c08629de"><div class="ttname"><a href="class_wind__arrow.html#ac919249f1cbd3857b14e59b6c08629de">Wind_arrow::Wind_arrow</a></div><div class="ttdeci">Wind_arrow(double speed, int angle_deg)</div><div class="ttdoc">Inicjalizuje kąt kierunku i szybkość animowanego obiektu.</div><div class="ttdef"><b>Definition:</b> <a href="wind__arrow_8cpp_source.html#l00024">wind_arrow.cpp:24</a></div></div>
+<div class="ttc" id="aclass_wind__arrow_html_aee5978e48520d14f5979a0da7ed46c48"><div class="ttname"><a href="class_wind__arrow.html#aee5978e48520d14f5979a0da7ed46c48">Wind_arrow::advance</a></div><div class="ttdeci">virtual void advance(int phase) override</div><div class="ttdoc">Metoda aktualizuje położenie animowanego obiektu.</div><div class="ttdef"><b>Definition:</b> <a href="wind__arrow_8cpp_source.html#l00141">wind_arrow.cpp:141</a></div></div>
+<div class="ttc" id="awind__arrow_8h_html"><div class="ttname"><a href="wind__arrow_8h.html">wind_arrow.h</a></div><div class="ttdoc">Definicja klasy Wind_arrow.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="wind__arrow_8cpp.html">wind_arrow.cpp</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,904 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pogoda: Plik źródłowy mainwindow.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pogoda
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('mainwindow_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">mainwindow.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mainwindow_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mainwindow_8h.html">mainwindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;ui_mainwindow.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="wind__arrow_8h.html">wind_arrow.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QElapsedTimer&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">   18</a></span>&#160;<a class="code" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a>(QWidget *parent)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    : QMainWindow(parent)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    , ui(new <a class="code" href="namespace_ui.html">Ui</a>::<a class="code" href="class_main_window.html">MainWindow</a>)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    QPixmap image(<span class="stringliteral">&quot;:/images/map.png&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_map_big-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_map_big-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stackedWidget-&gt;setCurrentWidget(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;page_1);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_zywieckie, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a7be71462af296329114d19a0a503f522">page2</a>()));</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_ros, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">page3</a>()));</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_koronowskie, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">page4</a>()));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_zywieckie, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a7be71462af296329114d19a0a503f522">page2</a>()));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_ros, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">page3</a>()));</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_koronowskie, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">page4</a>()));</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_home2, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">page1</a>()));</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_home2_2, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">page1</a>()));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_home2_3, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">page1</a>()));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">   44</a></span>&#160;<a class="code" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a>()</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda">MainWindow::resizeEvent</a>(QResizeEvent *event)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    QMainWindow::resizeEvent(event);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">//QWidget *temp = new QWidget();</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">//temp = ui-&gt;stackedWidget-&gt;currentWidget();</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">//ui-&gt;stackedWidget-&gt;setCurrentWidget(ui-&gt;page_1);</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_zywieckie-&gt;setGeometry(width()/2-50,height()/2+100, 45, 45);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_ros-&gt;setGeometry(width()/2+80,height()/2-190, 45, 45);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_koronowskie-&gt;setGeometry(width()/2-60,height()/2-140, 45, 45);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_zywieckie, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a7be71462af296329114d19a0a503f522">page2</a>()));</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_ros, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">page3</a>()));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_koronowskie, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">page4</a>()));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    QLabel *label_date = <span class="keyword">new</span> QLabel(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    label_date-&gt;setParent(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;page_1);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    label_date-&gt;setGeometry(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;graphicsView-&gt;geometry());</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5">   81</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5">MainWindow::reload_data</a>(QNetworkReply *reply)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//if there is no errors</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (!reply-&gt;error()) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        QJsonParseError jsonError;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        QJsonDocument document = QJsonDocument::fromJson(reply-&gt;readAll(), &amp;jsonError);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">if</span>(jsonError.error != QJsonParseError::NoError){</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            qDebug() &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; jsonError.errorString();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="comment">//return;</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">//check if the document is an object {} / if [] dosument is an Array</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span> (document.isObject())</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            QJsonObject obj = document.object();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            QJsonObject tempObject;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            QJsonArray tempArray;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            QJsonValue val;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">if</span> (obj.contains(QStringLiteral(<span class="stringliteral">&quot;weather&quot;</span>)))</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                val = obj.value(QStringLiteral(<span class="stringliteral">&quot;weather&quot;</span>));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                tempArray = val.toArray();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                val = tempArray.at(0);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                tempObject = val.toObject();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a62d3461c8561c8ff21ebea18ca1e7d24">description</a> = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;description&quot;</span>)).toString();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> = tempObject.value(<span class="stringliteral">&quot;icon&quot;</span>).toString();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                qDebug() &lt;&lt; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a62d3461c8561c8ff21ebea18ca1e7d24">description</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span> (obj.contains(QStringLiteral(<span class="stringliteral">&quot;main&quot;</span>)))</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                val = obj.value(QStringLiteral(<span class="stringliteral">&quot;main&quot;</span>));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                tempObject = val.toObject();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#afdac2f27873a3a32db764fccb8e4716a">temp</a> = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;temp&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a033c4d36b69f0d2b0acfbba3015cff6a">temp_min</a> = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;temp_min&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a96c8767d0f085cb8dd3c1e4bcd173f40">temp_max</a> = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;temp_max&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af76815c6471edf864a79e0dab873b75e">temp_realfeel</a> = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;feels_like&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a3793950c05f6bdd6ffd0814913efd346">pressure</a> = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;pressure&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a080ffa5bc630d1af193d2411b66bbaf8">humidity</a> = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;humidity&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                qDebug() &lt;&lt; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#afdac2f27873a3a32db764fccb8e4716a">temp</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">if</span> (obj.contains(QStringLiteral(<span class="stringliteral">&quot;visibility&quot;</span>)))</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                val = obj.value(QStringLiteral(<span class="stringliteral">&quot;visibility&quot;</span>));</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ab679b951879b0f8cc8882a9eb6ade7fe">visibility</a> = val.toInt();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">if</span> (obj.contains(QStringLiteral(<span class="stringliteral">&quot;wind&quot;</span>)))</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                val = obj.value(QStringLiteral(<span class="stringliteral">&quot;wind&quot;</span>));</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                tempObject = val.toObject();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a> = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;speed&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a> = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;gust&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a58c75ba794d123fe3446ba4604ce252f">wind_angle_deg</a> = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;deg&quot;</span>)).toInt();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                qDebug() &lt;&lt; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a58c75ba794d123fe3446ba4604ce252f">wind_angle_deg</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">if</span> (obj.contains(QStringLiteral(<span class="stringliteral">&quot;clouds&quot;</span>)))</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a4e74ab63f3fef565b430322bccb815b6">cloudiness</a> =  obj.value(QStringLiteral(<span class="stringliteral">&quot;clouds&quot;</span>)).toObject().value(QStringLiteral(<span class="stringliteral">&quot;all&quot;</span>)).toInt();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">if</span>  (obj.contains(QStringLiteral(<span class="stringliteral">&quot;rain&quot;</span>)))</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                val = obj.value(QStringLiteral(<span class="stringliteral">&quot;rain&quot;</span>));</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                tempObject = val.toObject();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ac2f82193ebc3b5c5635c47db00e0d827">rain1h</a> = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;1h&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                qDebug() &lt;&lt; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ac2f82193ebc3b5c5635c47db00e0d827">rain1h</a>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                qDebug() &lt;&lt; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a58c75ba794d123fe3446ba4604ce252f">wind_angle_deg</a>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    reply-&gt;deleteLater();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36">  161</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36">MainWindow::reload_data_forecast</a>(QNetworkReply *reply)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;{</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">if</span> (!reply-&gt;error()) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        QJsonParseError jsonError;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        QJsonDocument document = QJsonDocument::fromJson(reply-&gt;readAll(), &amp;jsonError);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">if</span>(jsonError.error != QJsonParseError::NoError){</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            qDebug() &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; jsonError.errorString();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">if</span> (document.isObject())</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            QJsonObject obj = document.object();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            QJsonObject tempObject;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            QJsonArray tempArray;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            QJsonValue val;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">if</span> (obj.contains(QStringLiteral(<span class="stringliteral">&quot;hourly&quot;</span>)))</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                val = obj.value(QStringLiteral(<span class="stringliteral">&quot;hourly&quot;</span>));</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                tempArray = val.toArray();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;6;i++){</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    val = tempArray.at(i);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                    tempObject = val.toObject();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                    <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#aa699168dc321b15a50fa9cbd9bfec789">data_time</a>[i] = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;dt&quot;</span>)).toInt();</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a652542d035943d58edc5a1e0d1985b01">speed_forecast</a>[i] = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;wind_speed&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#aff429004bb381cfad27fce23a7fcf03e">gust_forecast</a>[i] = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;wind_gust&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    <span class="keywordflow">if</span>  (tempObject.contains(QStringLiteral(<span class="stringliteral">&quot;rain&quot;</span>)))</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                        val = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;rain&quot;</span>));</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                        tempObject = val.toObject();</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                        <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a846e047a3943acfc3e9310728db6d594">rain1h_forecast</a>[i] = tempObject.value(QStringLiteral(<span class="stringliteral">&quot;1h&quot;</span>)).toDouble();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                        <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a846e047a3943acfc3e9310728db6d594">rain1h_forecast</a>[i] = 0;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    qDebug() &lt;&lt; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a652542d035943d58edc5a1e0d1985b01">speed_forecast</a>[i] &lt;&lt; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a846e047a3943acfc3e9310728db6d594">rain1h_forecast</a>[i] &lt;&lt; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#aa699168dc321b15a50fa9cbd9bfec789">data_time</a>[i];</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">//                data_weather.rain1h_forecast[0] = 0.15;</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">//                data_weather.rain1h_forecast[1] = 0.25;</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">//                data_weather.rain1h_forecast[2] = 0.06;</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">//                data_weather.rain1h_forecast[3] = 0.21;</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">//                data_weather.rain1h_forecast[4] = 0.1;</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">//                data_weather.rain1h_forecast[5] = 0.12;</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    reply-&gt;deleteLater();</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66">  218</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66">MainWindow::check_for_an_update</a>()</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;{</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    QNetworkAccessManager *man = <span class="keyword">new</span> QNetworkAccessManager(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    connect(man, &amp;QNetworkAccessManager::finished, <span class="keyword">this</span>, &amp;<a class="code" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5">MainWindow::reload_data</a>);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">if</span> (!&amp;QNetworkAccessManager::finished)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">const</span> QUrl url = QUrl(<a class="code" href="class_main_window.html#a04895d129c822b8c15bd4f028ad1ad03">myURL0</a>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    QNetworkRequest request(url);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    man-&gt;get(request);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e">  235</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e">MainWindow::check_for_an_update_forecast</a>()</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;{</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    QNetworkAccessManager *man = <span class="keyword">new</span> QNetworkAccessManager(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    connect(man, &amp;QNetworkAccessManager::finished, <span class="keyword">this</span>, &amp;<a class="code" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36">MainWindow::reload_data_forecast</a>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">if</span> (!&amp;QNetworkAccessManager::finished)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keyword">const</span> QUrl url = QUrl(<a class="code" href="class_main_window.html#ae3eb5b5eb2a1adf7e376b2087fdc3fa7">myURL00</a>);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    QNetworkRequest request(url);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    man-&gt;get(request);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e">  252</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e">MainWindow::check_for_an_update1</a>()</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;{</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    QNetworkAccessManager *man = <span class="keyword">new</span> QNetworkAccessManager(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    connect(man, &amp;QNetworkAccessManager::finished, <span class="keyword">this</span>, &amp;<a class="code" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5">MainWindow::reload_data</a>);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">if</span> (!&amp;QNetworkAccessManager::finished)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keyword">const</span> QUrl url1 = QUrl(<a class="code" href="class_main_window.html#a66646290aba8774217eaa3f501dd7f51">myURL1</a>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    QNetworkRequest request1(url1);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    man-&gt;get(request1);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636">  269</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636">MainWindow::check_for_an_update_forecast1</a>()</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;{</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    QNetworkAccessManager *man = <span class="keyword">new</span> QNetworkAccessManager(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    connect(man, &amp;QNetworkAccessManager::finished, <span class="keyword">this</span>, &amp;<a class="code" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36">MainWindow::reload_data_forecast</a>);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">if</span> (!&amp;QNetworkAccessManager::finished)</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">const</span> QUrl url = QUrl(<a class="code" href="class_main_window.html#a6e42d9d26ad3239db2bf053527f950bd">myURL11</a>);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    QNetworkRequest request(url);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    man-&gt;get(request);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1">  286</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1">MainWindow::check_for_an_update2</a>()</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    QNetworkAccessManager *man = <span class="keyword">new</span> QNetworkAccessManager(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    connect(man, &amp;QNetworkAccessManager::finished, <span class="keyword">this</span>, &amp;<a class="code" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5">MainWindow::reload_data</a>);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">if</span> (!&amp;QNetworkAccessManager::finished)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keyword">const</span> QUrl url2 = QUrl(<a class="code" href="class_main_window.html#a1d7405dc6db1e9f3329ef5ccfe2712fc">myURL2</a>);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    QNetworkRequest request2(url2);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    man-&gt;get(request2);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7">  303</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7">MainWindow::check_for_an_update_forecast2</a>()</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;{</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    QNetworkAccessManager *man = <span class="keyword">new</span> QNetworkAccessManager(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    connect(man, &amp;QNetworkAccessManager::finished, <span class="keyword">this</span>, &amp;<a class="code" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36">MainWindow::reload_data_forecast</a>);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">if</span> (!&amp;QNetworkAccessManager::finished)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keyword">const</span> QUrl url = QUrl(<a class="code" href="class_main_window.html#a58d00edde9b974b539c5f5750a3912bf">myURL22</a>);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    QNetworkRequest request(url);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    man-&gt;get(request);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno"><a class="line" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">  316</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">MainWindow::page1</a>()</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;{</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_zywieckie, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a7be71462af296329114d19a0a503f522">page2</a>()));</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stackedWidget-&gt;setCurrentWidget(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;page_1);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;}</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="class_main_window.html#a7be71462af296329114d19a0a503f522">  324</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a7be71462af296329114d19a0a503f522">MainWindow::page2</a>()</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;{</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">bool</span> ready = <a class="code" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66">check_for_an_update</a>();</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">bool</span> ready_forecast = <a class="code" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e">check_for_an_update_forecast</a>();</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <a class="code" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">page_loading</a>();</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordflow">while</span>(ready == <span class="keyword">false</span> || ready_forecast == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <a class="code" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">page_loading</a>();</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_home2, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">page1</a>()));</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stackedWidget-&gt;setCurrentWidget(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;page_2);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    QPixmap image(<span class="stringliteral">&quot;:/images/zywieckie.png&quot;</span>);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="comment">//ui-&gt;label_zywieckie-&gt;setPixmap(image.scaled(ui-&gt;label_map_big-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <a class="code" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b">page_content</a>(2);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="comment">    //cloud</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="comment">    QPixmap image_cloud(&quot;:/images/oie_transparent.png&quot;);</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment">    ui-&gt;lbl_Clouds-&gt;setPixmap(image_cloud.scaled(ui-&gt;label_map_big-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">    animation = new QPropertyAnimation(ui-&gt;lbl_Clouds, &quot;geometry&quot;);</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">    animation-&gt;setStartValue(ui-&gt;lbl_Clouds-&gt;geometry());</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">    animation-&gt;start();</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;}</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
+<div class="line"><a name="l00353"></a><span class="lineno"><a class="line" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">  353</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">MainWindow::page3</a>()</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;{</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">bool</span> ready = <a class="code" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e">check_for_an_update1</a>();</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordtype">bool</span> ready_forecast = <a class="code" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636">check_for_an_update_forecast1</a>();</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <a class="code" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">page_loading</a>();</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">while</span>(ready == <span class="keyword">false</span> || ready_forecast == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <a class="code" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">page_loading</a>();</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_home2_2, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">page1</a>()));</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stackedWidget-&gt;setCurrentWidget(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;page_2);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    QPixmap image(<span class="stringliteral">&quot;:/images/ros.png&quot;</span>);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="comment">//ui-&gt;label_zywieckie-&gt;setPixmap(image.scaled(ui-&gt;label_map_big-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <a class="code" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b">page_content</a>(3);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
+<div class="line"><a name="l00372"></a><span class="lineno"><a class="line" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">  372</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">MainWindow::page4</a>()</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;{</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordtype">bool</span> ready = <a class="code" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1">check_for_an_update2</a>();</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordtype">bool</span> ready_forecast = <a class="code" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7">check_for_an_update_forecast2</a>();</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <a class="code" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">page_loading</a>();</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">while</span>(ready == <span class="keyword">false</span> || ready_forecast == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <a class="code" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">page_loading</a>();</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_home2_3, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">page1</a>()));</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stackedWidget-&gt;setCurrentWidget(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;page_2);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    QPixmap image(<span class="stringliteral">&quot;:/images/koronowskie.png&quot;</span>);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="comment">//ui-&gt;label_zywieckie-&gt;setPixmap(image.scaled(ui-&gt;label_map_big-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <a class="code" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b">page_content</a>(4);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;}</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno"><a class="line" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">  393</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">MainWindow::page_loading</a>()</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;{</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stackedWidget-&gt;setCurrentWidget(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;page_loading);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    QEventLoop loop;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    QTimer <a class="code" href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">timer</a>;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <a class="code" href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">timer</a>.setSingleShot(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    connect(&amp;<a class="code" href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">timer</a>, SIGNAL(timeout()), &amp;loop, SLOT(quit()));</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="comment">//connect(this, SIGNAL(replayReceived()), &amp;loop, SLOT(quit()));</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <a class="code" href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">timer</a>.start(1000);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    loop.exec();</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">timer</a>.isActive()) <span class="comment">//replay received before timer</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    {</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    }</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">else</span> <span class="comment">//timer elapsed, no replay from client</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    {</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    }</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="comment">//scene = new QGraphicsScene();</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="comment">//scene-&gt;clear();</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;}</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b">  424</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b">MainWindow::page_content</a>(<span class="keywordtype">int</span> page_number)</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;{</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    QPixmap image(<span class="stringliteral">&quot;:/images/map.png&quot;</span>);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_map_big-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_map_big-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stackedWidget-&gt;setCurrentWidget(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;page_2);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_zywieckie, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a7be71462af296329114d19a0a503f522">page2</a>()));</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_ros, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">page3</a>()));</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_koronowskie, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">page4</a>()));</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_zywieckie, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a7be71462af296329114d19a0a503f522">page2</a>()));</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_ros, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">page3</a>()));</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lake_icon_koronowskie, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">page4</a>()));</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160; </div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_home2, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">page1</a>()));</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_home2_2, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">page1</a>()));</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    QObject::connect(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;Button_home2_3, SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(<a class="code" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">page1</a>()));</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="comment">//    QDateTime timestamp = QDateTime::currentDateTime();</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="comment">//    int hour = timestamp.time().hour();</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="comment">//    qDebug() &lt;&lt; hour;</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="comment">//    quint32 unixtime = data_weather.data_time[1];</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="comment">//    QDateTime myDateTime;</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="comment">//    myDateTime.setTime_t(unixtime);</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="comment">//    int hour = myDateTime.time().hour();</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="comment">//    qDebug() &lt;&lt; hour;</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160; </div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160; </div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160; </div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160; </div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    QLineSeries *series = <span class="keyword">new</span> QLineSeries();</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    QLineSeries *series1 = <span class="keyword">new</span> QLineSeries();</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;6;i++){</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        series-&gt;append(i, <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a652542d035943d58edc5a1e0d1985b01">speed_forecast</a>[i]);</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        series1-&gt;append(i, <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#aff429004bb381cfad27fce23a7fcf03e">gust_forecast</a>[i]);</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    }</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="comment">// Create chart, add data, show legend, and add axis</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    QChart *chart = <span class="keyword">new</span> QChart();</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    chart-&gt;legend()-&gt;setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    chart-&gt;legend()-&gt;setAlignment(Qt::AlignBottom);</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    chart-&gt;addSeries(series);</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    chart-&gt;addSeries(series1);</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    chart-&gt;createDefaultAxes();</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160; </div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    <span class="comment">// Customize the title font</span></div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    QFont font;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    font.setPixelSize(15);</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    chart-&gt;setTitleFont(font);</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    chart-&gt;setTitleBrush(QBrush(Qt::black));</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    chart-&gt;setTitle(<span class="stringliteral">&quot;Prognoza wiatru&quot;</span>);</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160; </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    <span class="comment">// Change the line color and weight</span></div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    QPen pen(QRgb(0x000000));</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    pen.setWidth(2);</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    series-&gt;setPen(pen);</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    series-&gt;setName(<span class="stringliteral">&quot;Średnia prędędkość wiatru&quot;</span>);</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    QPen pen1(QColor( 0xFF, 0xA0, 0x00 ));</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="comment">//pen1.setColor(&quot;orange&quot;);</span></div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    pen1.setWidth(2);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    series1-&gt;setPen(QPen(Qt::darkGreen, 2));</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    series1-&gt;setName(<span class="stringliteral">&quot;Porywistość wiatru&quot;</span>);</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160; </div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160; </div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    chart-&gt;setAnimationOptions(QChart::AllAnimations);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160; </div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keywordtype">int</span> hours;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    QDateTime myDateTime;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    quint32 unixtime;</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    QString s;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160; </div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    QCategoryAxis *axisX = <span class="keyword">new</span> QCategoryAxis();</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;6;i++){</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        unixtime = <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#aa699168dc321b15a50fa9cbd9bfec789">data_time</a>[i];</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        myDateTime.setTime_t(unixtime);</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        hours = myDateTime.time().hour();</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        s = QString::number(hours);</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        axisX-&gt;append(s,i);</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    }</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    axisX-&gt;setTitleText(<span class="stringliteral">&quot;Godzina&quot;</span>);</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    chart-&gt;setAxisX(axisX, series);</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    chart-&gt;setAxisX(axisX, series1);</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160; </div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="comment">//Wyznaczanie maksymalnej wartości osi Y</span></div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <span class="keywordtype">double</span> max_val = 0, temp;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;6;i++){</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        temp = <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a652542d035943d58edc5a1e0d1985b01">speed_forecast</a>[i];</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="keywordflow">if</span>(max_val&lt;temp)</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;            max_val = temp;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        temp = <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#aff429004bb381cfad27fce23a7fcf03e">gust_forecast</a>[i];</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        <span class="keywordflow">if</span>(max_val&lt;temp)</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;            max_val = temp;</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    }</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    qDebug() &lt;&lt; max_val;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160; </div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    QValueAxis *axisY = <span class="keyword">new</span> QValueAxis();</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    axisY-&gt;setTitleText(<span class="stringliteral">&quot;Prędkość [m/s]&quot;</span>);</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    axisY-&gt;setLabelFormat(<span class="stringliteral">&quot;%g&quot;</span>);</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    axisY-&gt;setRange(0,max_val);</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    <span class="comment">//axisY-&gt;setBase(8.0);</span></div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <span class="comment">//axisY-&gt;setMinorTickCount(-1);</span></div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    chart-&gt;addAxis(axisY, Qt::AlignLeft);</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <span class="comment">//series-&gt;attachAxis(axisY);</span></div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    chart-&gt;setAxisY(axisY, series);</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    chart-&gt;setAxisY(axisY, series1);</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160; </div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <span class="comment">// Used to display the chart</span></div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    QChartView *chartView = <span class="keyword">new</span> QChartView(chart);</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    chartView-&gt;setRenderHint(QPainter::Antialiasing);</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    chartView-&gt;setParent(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;horizontalFrame);</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    chartView-&gt;setFixedSize(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;horizontalFrame-&gt;size());</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160; </div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160; </div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160; </div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160; </div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160; </div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160; </div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160; </div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160; </div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160; </div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    <span class="comment">//Wykres z opadami</span></div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160; </div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    QBarSet *set0 = <span class="keyword">new</span> QBarSet(<span class="stringliteral">&quot;Opady [mm]&quot;</span>);</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160; </div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;6;i++){</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        *set0 &lt;&lt; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a846e047a3943acfc3e9310728db6d594">rain1h_forecast</a>[i];</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    }</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160; </div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    QBarSeries *series_rain = <span class="keyword">new</span> QBarSeries();</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160; </div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    series_rain-&gt;append(set0);</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160; </div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    QChart *chart1 = <span class="keyword">new</span> QChart();</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    chart1-&gt;addSeries(series_rain);</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    chart1-&gt;legend()-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    chart1-&gt;legend()-&gt;setAlignment(Qt::AlignBottom);</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160; </div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    chart1-&gt;setTitle(<span class="stringliteral">&quot;Prognoza opadów&quot;</span>);</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    chart1-&gt;setAnimationOptions(QChart::AllAnimations);</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160; </div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    QStringList categories;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="comment">//QCategoryAxis *axisX1 = new QCategoryAxis();</span></div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;6;i++){</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;        unixtime = <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#aa699168dc321b15a50fa9cbd9bfec789">data_time</a>[i];</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        myDateTime.setTime_t(unixtime);</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;        hours = myDateTime.time().hour();</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;        s = QString::number(hours);</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        categories &lt;&lt; s;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;        <span class="comment">//axisX1-&gt;append(s,i);</span></div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    }</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    <span class="comment">//chart-&gt;setAxisX(axisX1, series_rain);</span></div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160; </div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    QBarCategoryAxis *axisX1 = <span class="keyword">new</span> QBarCategoryAxis();</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    axisX1-&gt;setTitleText(<span class="stringliteral">&quot;Godzina&quot;</span>);</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    axisX1-&gt;append(categories);</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    chart1-&gt;createDefaultAxes();</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160; </div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    chart1-&gt;setAxisX(axisX1, series_rain);</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160; </div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    <span class="comment">//stacked bar chart</span></div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    <span class="comment">//chart-&gt;setAxisY(axisX1, series_rain);</span></div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160; </div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160; </div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    <span class="comment">//wyznaczanie maksymalnej wartości osi Y</span></div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    <span class="keywordtype">double</span> max_val1 = 0;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    <span class="keywordtype">double</span> temp1 = 0;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;6;i++){</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        temp1 = <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a846e047a3943acfc3e9310728db6d594">rain1h_forecast</a>[i];</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;        <span class="keywordflow">if</span>(max_val1&lt;temp1)</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;            max_val1 = temp1;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    }</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    qDebug() &lt;&lt; max_val1;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160; </div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    QValueAxis *axisY1 = <span class="keyword">new</span> QValueAxis();</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    axisY1-&gt;setTitleText(<span class="stringliteral">&quot;Opady [mm]&quot;</span>);</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    axisY1-&gt;setLabelFormat(<span class="stringliteral">&quot;%g&quot;</span>);</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    axisY1-&gt;setRange(0,max_val1);</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;    axisY1-&gt;setMin(0);</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    <span class="comment">//axisY-&gt;setBase(8.0);</span></div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    <span class="comment">//axisY-&gt;setMinorTickCount(-1);</span></div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    chart1-&gt;addAxis(axisY1, Qt::AlignLeft);</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;    <span class="comment">//series-&gt;attachAxis(axisY);</span></div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    chart1-&gt;setAxisY(axisY1, series_rain);</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160; </div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160; </div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160; </div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    QChartView *chartView1 = <span class="keyword">new</span> QChartView(chart1);</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    chartView1-&gt;setRenderHint(QPainter::Antialiasing);</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    chartView1-&gt;setParent(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;horizontalFrame_2);</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    chartView1-&gt;setFixedSize(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;horizontalFrame_2-&gt;size());</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160; </div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160; </div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160; </div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160; </div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    <span class="comment">//ustawienie napisóW</span></div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_deg-&gt;setText(<span class="stringliteral">&quot;Opis: &quot;</span>);</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_temp-&gt;setText(<span class="stringliteral">&quot;Temperatura: &quot;</span>);</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_speed-&gt;setText(<span class="stringliteral">&quot;Pręd. wiatru: &quot;</span>);</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_cloudiness-&gt;setText(<span class="stringliteral">&quot;Zachmurzenie: &quot;</span>);</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_humidity-&gt;setText(<span class="stringliteral">&quot;Wilgotność: &quot;</span>);</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_pressure-&gt;setText(<span class="stringliteral">&quot;Ciśnienie: &quot;</span>);</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_gust-&gt;setText(<span class="stringliteral">&quot;Porywistość: &quot;</span>);</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_visibility-&gt;setText(<span class="stringliteral">&quot;Widoczność: &quot;</span>);</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160; </div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    <span class="comment">//wypełnienie napisów danymi</span></div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_cloudiness_2-&gt;setText(QString::number(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a4e74ab63f3fef565b430322bccb815b6">cloudiness</a>) + <span class="stringliteral">&quot;%&quot;</span>);</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_cloudiness_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : white; color : darkBlue; }&quot;</span>);</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_humidity_2-&gt;setText(QString::number(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a080ffa5bc630d1af193d2411b66bbaf8">humidity</a>) + <span class="stringliteral">&quot;%&quot;</span>);</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_humidity_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : white; color : magenta; }&quot;</span>);</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_pressure_2-&gt;setText(QString::number(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a3793950c05f6bdd6ffd0814913efd346">pressure</a>) + <span class="stringliteral">&quot; hPa&quot;</span>);</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_pressure_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : white; color : gray; }&quot;</span>);</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_visibility_2-&gt;setText(QString::number(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ab679b951879b0f8cc8882a9eb6ade7fe">visibility</a>) + <span class="stringliteral">&quot; m&quot;</span>);</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_visibility_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : white; color : green; }&quot;</span>);</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_deg_2-&gt;setText(QString(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a62d3461c8561c8ff21ebea18ca1e7d24">description</a> + <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_deg_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : white; color : blue; }&quot;</span>);</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_temp_2-&gt;setText(QString::number(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af76815c6471edf864a79e0dab873b75e">temp_realfeel</a>) + <span class="stringliteral">&quot;°C&quot;</span>);</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_temp_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : white; color : darkCyan; }&quot;</span>);</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160; </div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160; </div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    <span class="comment">//kolorowanie pola prędkośći wiatru w zależności od prędkości</span></div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_speed_2-&gt;setText(QString::number(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>) + <span class="stringliteral">&quot; m/s&quot;</span>);</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_speed_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { color : black;}&quot;</span>);</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160; </div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&lt;2){</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_speed_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(70,253,136)}&quot;</span>);</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    }</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&gt;2 &amp;&amp; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&lt;3){</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_speed_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(150,253,136)}&quot;</span>);</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    }</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&gt;3 &amp;&amp; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&lt;4){</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_speed_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(200,253,136)}&quot;</span>);</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    }</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&gt;4 &amp;&amp; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&lt;6){</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_speed_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(250,253,136)}&quot;</span>);</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    }</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&gt;6 &amp;&amp; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&lt;8){</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_speed_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(253,200,136)}&quot;</span>);</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    }</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&gt;8 &amp;&amp; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&lt;10){</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_speed_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(253,150,136)}&quot;</span>);</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    }</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>&gt;10){</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_speed_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(253,136,136)}&quot;</span>);</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    }</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160; </div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160; </div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    <span class="comment">//kolorowanie pola porywistości wiatru w zależności od prędkości</span></div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_gust_2-&gt;setText(QString::number(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>) + <span class="stringliteral">&quot; m/s&quot;</span>);</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_gust_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { color : black;}&quot;</span>);</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160; </div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&lt;2){</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_gust_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(70,253,136)}&quot;</span>);</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    }</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&gt;2 &amp;&amp; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&lt;3){</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_gust_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(150,253,136)}&quot;</span>);</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    }</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&gt;3 &amp;&amp; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&lt;4){</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_gust_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(200,253,136)}&quot;</span>);</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    }</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&gt;4 &amp;&amp; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&lt;6){</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_gust_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(250,253,136)}&quot;</span>);</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    }</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&gt;6 &amp;&amp; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&lt;8){</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_gust_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(253,200,136)}&quot;</span>);</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    }</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&gt;8 &amp;&amp; <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&lt;10){</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_gust_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(253,150,136)}&quot;</span>);</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    }</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">gust</a>&gt;10){</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_gust_2-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color : rgb(253,136,136)}&quot;</span>);</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    }</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160; </div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160; </div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    <span class="comment">//QDateTime now = QDateTime::currentDateTime();</span></div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    QDate cd = QDate::currentDate();</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    <span class="comment">//ui-&gt;label_date_loca-&gt;setText(cd.toString(&quot;dd.MM.yyyy&quot;));</span></div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160; </div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160; </div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <span class="comment">//ui-&gt;lcdNumber-&gt;display(data_weather.gust);</span></div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160; </div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <span class="comment">//ustawienie ikony pogody</span></div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;01d&quot;</span>){</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/01d.png&quot;</span>);</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    }</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;01n&quot;</span>){</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/01n.png&quot;</span>);</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    }</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;02d&quot;</span>){</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/02d.png&quot;</span>);</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;    }</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;02n&quot;</span>){</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/02n.png&quot;</span>);</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    }</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;03d&quot;</span> || <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;03n&quot;</span>){</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/03d.png&quot;</span>);</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    }</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;04d&quot;</span> || <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;04n&quot;</span>){</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/04d.png&quot;</span>);</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    }</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;09d&quot;</span> || <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;09n&quot;</span>){</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/09d.png&quot;</span>);</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    }</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;10d&quot;</span>){</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/10d.png&quot;</span>);</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;    }</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;10n&quot;</span>){</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/10n.png&quot;</span>);</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    }</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;11d&quot;</span> || <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;11n&quot;</span>){</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/11d.png&quot;</span>);</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    }</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;13d&quot;</span> || <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;13n&quot;</span>){</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/13d.png&quot;</span>);</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    }</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;50d&quot;</span> || <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">icon</a> == <span class="stringliteral">&quot;50n&quot;</span>){</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/50d.png&quot;</span>);</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    }</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;        QPixmap image(<span class="stringliteral">&quot;:/images/02d.png&quot;</span>);</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;setPixmap(image.scaled(<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;label_icon-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    }</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160; </div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160; </div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;    <span class="comment">//ustawnienie sceny</span></div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;    <a class="code" href="class_main_window.html#a51ac2b126495216832501cea3929c6f6">scene</a> = <span class="keyword">new</span> QGraphicsScene();</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;graphicsView-&gt;setScene(<a class="code" href="class_main_window.html#a51ac2b126495216832501cea3929c6f6">scene</a>);</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;graphicsView-&gt;setRenderHint(QPainter::Antialiasing);</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160; </div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    <span class="comment">//scene-&gt;setSceneRect(20,130,200,200);</span></div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160; </div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160; </div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    <span class="comment">//poprawne</span></div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    <span class="comment">//scene-&gt;setSceneRect(ui-&gt;label_zywieckie-&gt;geometry());</span></div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160; </div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160; </div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160; </div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160; </div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160; </div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    <span class="comment">//scene-&gt;setSceneRect(this-&gt;frameGeometry());</span></div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160; </div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    <span class="comment">//ustawienie mapy danego zbiornika</span></div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    <span class="keywordflow">if</span>(page_number == 2){</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;graphicsView-&gt;setStyleSheet(<span class="stringliteral">&quot;border-image: url(:/images/zywieckie.png);&quot;</span>);</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        <span class="comment">//QPixmap images(&quot;:/images/zywieckie.png&quot;);</span></div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        <span class="comment">//ui-&gt;label_zye-&gt;setPixmap(images.scaled(ui-&gt;label_map_big-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</span></div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    }</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(page_number == 3){</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;graphicsView-&gt;setStyleSheet(<span class="stringliteral">&quot;border-image: url(:/images/ros.png);&quot;</span>);</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;        <span class="comment">//QPixmap images(&quot;:/images/ros.png&quot;);</span></div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        <span class="comment">//ui-&gt;label_zywieckie-&gt;setPixmap(images.scaled(ui-&gt;label_map_big-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</span></div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    }</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(page_number == 4){</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;graphicsView-&gt;setStyleSheet(<span class="stringliteral">&quot;border-image: url(:/images/koronowskie.png);&quot;</span>);</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        <span class="comment">//QPixmap images(&quot;:/images/koronowskie.png&quot;);</span></div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        <span class="comment">//ui-&gt;label_zywieckie-&gt;setPixmap(images.scaled(ui-&gt;label_map_big-&gt;size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));</span></div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;    }</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        qDebug() &lt;&lt; <span class="stringliteral">&quot;error content&quot;</span>;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160; </div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;    <span class="comment">//ui-&gt;graphicsView-&gt;setStyleSheet(&quot;background: transparent&quot;);</span></div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;graphicsView-&gt;setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    <a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;graphicsView-&gt;setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160; </div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160; </div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    <span class="comment">//utworzenie obiektów do animacji</span></div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    <span class="keywordtype">int</span> CloudCount = <a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a4e74ab63f3fef565b430322bccb815b6">cloudiness</a> + 20;</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;CloudCount; i++)</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    {</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;        <a class="code" href="class_wind__arrow.html">Wind_arrow</a> *arrow = <span class="keyword">new</span> <a class="code" href="class_wind__arrow.html">Wind_arrow</a>(<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">speed</a>,<a class="code" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a>.<a class="code" href="class_weather.html#a58c75ba794d123fe3446ba4604ce252f">wind_angle_deg</a>);</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;        <a class="code" href="class_main_window.html#a51ac2b126495216832501cea3929c6f6">scene</a>-&gt;addItem(arrow);</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    }</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160; </div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;    <a class="code" href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">timer</a> = <span class="keyword">new</span> QTimer(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;    connect(<a class="code" href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">timer</a>, SIGNAL(timeout()), <a class="code" href="class_main_window.html#a51ac2b126495216832501cea3929c6f6">scene</a>, SLOT(advance()));</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    <a class="code" href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">timer</a>-&gt;start(100);</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;}</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160; </div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160; </div>
+<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdoc">Klasa zawiera informacje o linkach do wysłania zapytań do strony: openweathermap.org.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00141">mainwindow.h:142</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a04895d129c822b8c15bd4f028ad1ad03"><div class="ttname"><a href="class_main_window.html#a04895d129c822b8c15bd4f028ad1ad03">MainWindow::myURL0</a></div><div class="ttdeci">QString myURL0</div><div class="ttdoc">Link do aktualnej pogody dla jeziora Żywieckiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00177">mainwindow.h:177</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a0f14d6de91b2a9f6a5bc6adb90b4e636"><div class="ttname"><a href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636">MainWindow::check_for_an_update_forecast1</a></div><div class="ttdeci">bool check_for_an_update_forecast1()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Roś - prognoza pogody.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00269">mainwindow.cpp:269</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a1d7405dc6db1e9f3329ef5ccfe2712fc"><div class="ttname"><a href="class_main_window.html#a1d7405dc6db1e9f3329ef5ccfe2712fc">MainWindow::myURL2</a></div><div class="ttdeci">QString myURL2</div><div class="ttdoc">Link do aktualnej pogody dla jeziora Koronowskiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00187">mainwindow.h:187</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdoc">Interfejs użytkownika.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00213">mainwindow.h:213</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a356578805ed1248a7f2807434cb0e5ee"><div class="ttname"><a href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">MainWindow::timer</a></div><div class="ttdeci">QTimer * timer</div><div class="ttdoc">Sluzy do animacji strzalek.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00222">mainwindow.h:222</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a51ac2b126495216832501cea3929c6f6"><div class="ttname"><a href="class_main_window.html#a51ac2b126495216832501cea3929c6f6">MainWindow::scene</a></div><div class="ttdeci">QGraphicsScene * scene</div><div class="ttdoc">Scena do animacji strzałek.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00218">mainwindow.h:218</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a56eafc79c2a3a17068d786653355ebb1"><div class="ttname"><a href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1">MainWindow::check_for_an_update2</a></div><div class="ttdeci">bool check_for_an_update2()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Koronowskiego - aktualna pogoda.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00286">mainwindow.cpp:286</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a58d00edde9b974b539c5f5750a3912bf"><div class="ttname"><a href="class_main_window.html#a58d00edde9b974b539c5f5750a3912bf">MainWindow::myURL22</a></div><div class="ttdeci">QString myURL22</div><div class="ttdoc">Link do prognozowanej pogody dla jeziora Koronowskiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00208">mainwindow.h:208</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a5fc3b6a8f1eadf887fc7bda33c61eee8"><div class="ttname"><a href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">MainWindow::page3</a></div><div class="ttdeci">void page3()</div><div class="ttdoc">Strona szczegółowa jeziora Roś</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00353">mainwindow.cpp:353</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a66646290aba8774217eaa3f501dd7f51"><div class="ttname"><a href="class_main_window.html#a66646290aba8774217eaa3f501dd7f51">MainWindow::myURL1</a></div><div class="ttdeci">QString myURL1</div><div class="ttdoc">Link do aktualnej pogody dla jeziora Roś</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00182">mainwindow.h:182</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a67e91bd10742922d2350cafa3e20e84e"><div class="ttname"><a href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e">MainWindow::check_for_an_update1</a></div><div class="ttdeci">bool check_for_an_update1()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Roś - aktualna pogoda.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00252">mainwindow.cpp:252</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a6e42d9d26ad3239db2bf053527f950bd"><div class="ttname"><a href="class_main_window.html#a6e42d9d26ad3239db2bf053527f950bd">MainWindow::myURL11</a></div><div class="ttdeci">QString myURL11</div><div class="ttdoc">Link do prognozowanej pogody dla jeziora Roś</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00203">mainwindow.h:203</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a7be71462af296329114d19a0a503f522"><div class="ttname"><a href="class_main_window.html#a7be71462af296329114d19a0a503f522">MainWindow::page2</a></div><div class="ttdeci">void page2()</div><div class="ttdoc">Strona szczegółowa jeziora Żywieckiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00324">mainwindow.cpp:324</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a83fcf8e7a1b36c87ba39186faf0d1319"><div class="ttname"><a href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">MainWindow::page1</a></div><div class="ttdeci">void page1()</div><div class="ttdoc">Strona glowna aplikacji, mapa Polski z jeziorami.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00316">mainwindow.cpp:316</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a996c5a2b6f77944776856f08ec30858d"><div class="ttname"><a href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=nullptr)</div><div class="ttdoc">Inicjalizuje pojęcie głównego okna.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00018">mainwindow.cpp:18</a></div></div>
+<div class="ttc" id="aclass_main_window_html_aaa37382c20a8a4c965883bae366e82b7"><div class="ttname"><a href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7">MainWindow::check_for_an_update_forecast2</a></div><div class="ttdeci">bool check_for_an_update_forecast2()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Koronowskiego - prognoza pogody.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00303">mainwindow.cpp:303</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ab0f03edc1734ad8368da8d18f13439c5"><div class="ttname"><a href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5">MainWindow::reload_data</a></div><div class="ttdeci">void reload_data(QNetworkReply *reply)</div><div class="ttdoc">Odebranie odpowiedzi z aktualna pogodą</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00081">mainwindow.cpp:81</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ac8a4c4ed47132ad98c70c55c7e7915e1"><div class="ttname"><a href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">MainWindow::page_loading</a></div><div class="ttdeci">void page_loading()</div><div class="ttdoc">Strona ładowania informacji, ekran oczekiwania.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00393">mainwindow.cpp:393</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae011301f6a94a4164df56eb5c208af66"><div class="ttname"><a href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66">MainWindow::check_for_an_update</a></div><div class="ttdeci">bool check_for_an_update()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Żywieckiego - aktualna pogoda.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00218">mainwindow.cpp:218</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae035353e3869c36a025bdb6216495d4e"><div class="ttname"><a href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e">MainWindow::check_for_an_update_forecast</a></div><div class="ttdeci">bool check_for_an_update_forecast()</div><div class="ttdoc">Wysłanie zapytania dla jeziora Żywieckiego - prognoza pogody.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00235">mainwindow.cpp:235</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae12f8f63791595567b6250f8bb002bda"><div class="ttname"><a href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda">MainWindow::resizeEvent</a></div><div class="ttdeci">void resizeEvent(QResizeEvent *event)</div><div class="ttdoc">Ustala położenie elementów na wypadek zmiany rozmiaru ekranu.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00053">mainwindow.cpp:53</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae223473baf103350cb41a5f617bfc8d9"><div class="ttname"><a href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">MainWindow::data_weather</a></div><div class="ttdeci">Weather data_weather</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00166">mainwindow.h:166</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae3eb5b5eb2a1adf7e376b2087fdc3fa7"><div class="ttname"><a href="class_main_window.html#ae3eb5b5eb2a1adf7e376b2087fdc3fa7">MainWindow::myURL00</a></div><div class="ttdeci">QString myURL00</div><div class="ttdoc">Link do prognozowanej pogody dla jeziora Żywieckiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00198">mainwindow.h:198</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae88ae893fd0f85ccfbe6314bfe8eab36"><div class="ttname"><a href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36">MainWindow::reload_data_forecast</a></div><div class="ttdeci">void reload_data_forecast(QNetworkReply *reply)</div><div class="ttdoc">Odebranie odpwiedzi z prognoza pogody.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00161">mainwindow.cpp:161</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdoc">Metoda wywoływana przed usunięciem obiektu.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00044">mainwindow.cpp:44</a></div></div>
+<div class="ttc" id="aclass_main_window_html_aec475d89585a72d9862c0c7902d5903b"><div class="ttname"><a href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b">MainWindow::page_content</a></div><div class="ttdeci">void page_content(int page_number)</div><div class="ttdoc">Funkcja obsługująca zawartosc danej strony.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00424">mainwindow.cpp:424</a></div></div>
+<div class="ttc" id="aclass_main_window_html_aee5b717a2cc4e3f09e76f6f09d74dc49"><div class="ttname"><a href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">MainWindow::page4</a></div><div class="ttdeci">void page4()</div><div class="ttdoc">Strona szczegółowa jeziora Koronowskiego.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00372">mainwindow.cpp:372</a></div></div>
+<div class="ttc" id="aclass_weather_html_a033c4d36b69f0d2b0acfbba3015cff6a"><div class="ttname"><a href="class_weather.html#a033c4d36b69f0d2b0acfbba3015cff6a">Weather::temp_min</a></div><div class="ttdeci">double temp_min</div><div class="ttdoc">Temperatura minimalna, wyrażana w stopniach Celcjusza.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00070">mainwindow.h:70</a></div></div>
+<div class="ttc" id="aclass_weather_html_a080ffa5bc630d1af193d2411b66bbaf8"><div class="ttname"><a href="class_weather.html#a080ffa5bc630d1af193d2411b66bbaf8">Weather::humidity</a></div><div class="ttdeci">double humidity</div><div class="ttdoc">Wilgotność, wyrażana w [%].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00086">mainwindow.h:86</a></div></div>
+<div class="ttc" id="aclass_weather_html_a3793950c05f6bdd6ffd0814913efd346"><div class="ttname"><a href="class_weather.html#a3793950c05f6bdd6ffd0814913efd346">Weather::pressure</a></div><div class="ttdeci">double pressure</div><div class="ttdoc">Ciśnienie, wyrażane w [hPa].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00082">mainwindow.h:82</a></div></div>
+<div class="ttc" id="aclass_weather_html_a4e74ab63f3fef565b430322bccb815b6"><div class="ttname"><a href="class_weather.html#a4e74ab63f3fef565b430322bccb815b6">Weather::cloudiness</a></div><div class="ttdeci">int cloudiness</div><div class="ttdoc">Zachmurzenie, wyrażane w [%].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00124">mainwindow.h:124</a></div></div>
+<div class="ttc" id="aclass_weather_html_a58c75ba794d123fe3446ba4604ce252f"><div class="ttname"><a href="class_weather.html#a58c75ba794d123fe3446ba4604ce252f">Weather::wind_angle_deg</a></div><div class="ttdeci">int wind_angle_deg</div><div class="ttdoc">Kąt kierunku wiatru, wyrażany w stopniach.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00120">mainwindow.h:120</a></div></div>
+<div class="ttc" id="aclass_weather_html_a62d3461c8561c8ff21ebea18ca1e7d24"><div class="ttname"><a href="class_weather.html#a62d3461c8561c8ff21ebea18ca1e7d24">Weather::description</a></div><div class="ttdeci">QString description</div><div class="ttdoc">Opis pogody.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00058">mainwindow.h:58</a></div></div>
+<div class="ttc" id="aclass_weather_html_a652542d035943d58edc5a1e0d1985b01"><div class="ttname"><a href="class_weather.html#a652542d035943d58edc5a1e0d1985b01">Weather::speed_forecast</a></div><div class="ttdeci">double speed_forecast[20]</div><div class="ttdoc">Tablica przechowująca prognozowane wartości szybkości wiatru, wyrażane w [m/s].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00104">mainwindow.h:104</a></div></div>
+<div class="ttc" id="aclass_weather_html_a6e312f122da386cbc6c4bfc7ba70f0f8"><div class="ttname"><a href="class_weather.html#a6e312f122da386cbc6c4bfc7ba70f0f8">Weather::icon</a></div><div class="ttdeci">QString icon</div><div class="ttdoc">Ikona ilustrująca pogodę</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00062">mainwindow.h:62</a></div></div>
+<div class="ttc" id="aclass_weather_html_a846e047a3943acfc3e9310728db6d594"><div class="ttname"><a href="class_weather.html#a846e047a3943acfc3e9310728db6d594">Weather::rain1h_forecast</a></div><div class="ttdeci">double rain1h_forecast[20]</div><div class="ttdoc">Tablica przechowująca prognozowane wartości opadu deszczu, wyrażane w [mm].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00112">mainwindow.h:112</a></div></div>
+<div class="ttc" id="aclass_weather_html_a96c8767d0f085cb8dd3c1e4bcd173f40"><div class="ttname"><a href="class_weather.html#a96c8767d0f085cb8dd3c1e4bcd173f40">Weather::temp_max</a></div><div class="ttdeci">double temp_max</div><div class="ttdoc">Temperatura maksymalna, wyrażana w stopniach Celcjusza.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00074">mainwindow.h:74</a></div></div>
+<div class="ttc" id="aclass_weather_html_aa699168dc321b15a50fa9cbd9bfec789"><div class="ttname"><a href="class_weather.html#aa699168dc321b15a50fa9cbd9bfec789">Weather::data_time</a></div><div class="ttdeci">quint32 data_time[20]</div><div class="ttdoc">Tablica przechowująca czas danych prognozowanych.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00116">mainwindow.h:116</a></div></div>
+<div class="ttc" id="aclass_weather_html_ab679b951879b0f8cc8882a9eb6ade7fe"><div class="ttname"><a href="class_weather.html#ab679b951879b0f8cc8882a9eb6ade7fe">Weather::visibility</a></div><div class="ttdeci">int visibility</div><div class="ttdoc">Widoczność, wyrażana w [m].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00128">mainwindow.h:128</a></div></div>
+<div class="ttc" id="aclass_weather_html_ac2f82193ebc3b5c5635c47db00e0d827"><div class="ttname"><a href="class_weather.html#ac2f82193ebc3b5c5635c47db00e0d827">Weather::rain1h</a></div><div class="ttdeci">double rain1h</div><div class="ttdoc">Opady deszczu w ciągu najbliższej godziny, wyrażane w [mm].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00090">mainwindow.h:90</a></div></div>
+<div class="ttc" id="aclass_weather_html_ae39bc0304c4329d58b75e908386c47e8"><div class="ttname"><a href="class_weather.html#ae39bc0304c4329d58b75e908386c47e8">Weather::speed</a></div><div class="ttdeci">double speed</div><div class="ttdoc">Szybkość wiatru, wyrażana w [m/s].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00096">mainwindow.h:96</a></div></div>
+<div class="ttc" id="aclass_weather_html_af1b9d6fdc1eda0fc358dc3af1c65507c"><div class="ttname"><a href="class_weather.html#af1b9d6fdc1eda0fc358dc3af1c65507c">Weather::gust</a></div><div class="ttdeci">double gust</div><div class="ttdoc">Porywistość wiatru, wyrażana w [m/s].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00100">mainwindow.h:100</a></div></div>
+<div class="ttc" id="aclass_weather_html_af76815c6471edf864a79e0dab873b75e"><div class="ttname"><a href="class_weather.html#af76815c6471edf864a79e0dab873b75e">Weather::temp_realfeel</a></div><div class="ttdeci">double temp_realfeel</div><div class="ttdoc">Temperatura odczuwalna, wyrażana w stopniach Celcjusza.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00078">mainwindow.h:78</a></div></div>
+<div class="ttc" id="aclass_weather_html_afdac2f27873a3a32db764fccb8e4716a"><div class="ttname"><a href="class_weather.html#afdac2f27873a3a32db764fccb8e4716a">Weather::temp</a></div><div class="ttdeci">double temp</div><div class="ttdoc">Temperatura, wyrażana w stopniach Celcjusza.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00066">mainwindow.h:66</a></div></div>
+<div class="ttc" id="aclass_weather_html_aff429004bb381cfad27fce23a7fcf03e"><div class="ttname"><a href="class_weather.html#aff429004bb381cfad27fce23a7fcf03e">Weather::gust_forecast</a></div><div class="ttdeci">double gust_forecast[20]</div><div class="ttdoc">Tablica przechowująca prognozowane wartości porywistości wiatru, wyrażane w [m/s].</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00108">mainwindow.h:108</a></div></div>
+<div class="ttc" id="aclass_wind__arrow_html"><div class="ttname"><a href="class_wind__arrow.html">Wind_arrow</a></div><div class="ttdoc">Klasa modeluje pojęcie obiektu - strzałkę</div><div class="ttdef"><b>Definition:</b> <a href="wind__arrow_8h_source.html#l00030">wind_arrow.h:31</a></div></div>
+<div class="ttc" id="amainwindow_8h_html"><div class="ttname"><a href="mainwindow_8h.html">mainwindow.h</a></div><div class="ttdoc">W pliku znajduje się definicja klasy głównego okna oraz definicja klasy Weather.</div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00042">mainwindow.h:42</a></div></div>
+<div class="ttc" id="awind__arrow_8h_html"><div class="ttname"><a href="wind__arrow_8h.html">wind_arrow.h</a></div><div class="ttdoc">Definicja klasy Wind_arrow.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="mainwindow_8cpp.html">mainwindow.cpp</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

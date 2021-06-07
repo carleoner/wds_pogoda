@@ -1,0 +1,1451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pogoda: Dokumentacja klasy MainWindow</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pogoda
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_main_window.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-slots">Sloty prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_main_window-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy MainWindow</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa zawiera informacje o linkach do wysłania zapytań do strony: openweathermap.org.  
+ <a href="class_main_window.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla MainWindow</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window__inherit__graph.png" border="0" usemap="#a_main_window_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_main_window_inherit__map" id="a_main_window_inherit__map">
+<area shape="rect" title="Klasa zawiera informacje o linkach do wysłania zapytań do strony: openweathermap.org." alt="" coords="11,80,107,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,112,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<div class="dynheader">
+Diagram współpracy dla MainWindow:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window__coll__graph.png" border="0" usemap="#a_main_window_coll__map" alt="Collaboration graph"/></div>
+<map name="a_main_window_coll__map" id="a_main_window_coll__map">
+<area shape="rect" title="Klasa zawiera informacje o linkach do wysłania zapytań do strony: openweathermap.org." alt="" coords="67,95,163,121"/>
+<area shape="rect" title=" " alt="" coords="5,5,112,32"/>
+<area shape="rect" href="class_weather.html" title="Klasa porzechowująca informacje o pogodzie." alt="" coords="137,5,207,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a996c5a2b6f77944776856f08ec30858d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a996c5a2b6f77944776856f08ec30858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicjalizuje pojęcie głównego okna.  <a href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">Więcej...</a><br /></td></tr>
+<tr class="separator:a996c5a2b6f77944776856f08ec30858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
+<tr class="memdesc:ae98d00a93bc118200eeef9f9bba1dba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda wywoływana przed usunięciem obiektu.  <a href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">Więcej...</a><br /></td></tr>
+<tr class="separator:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae12f8f63791595567b6250f8bb002bda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda">resizeEvent</a> (QResizeEvent *event)</td></tr>
+<tr class="memdesc:ae12f8f63791595567b6250f8bb002bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustala położenie elementów na wypadek zmiany rozmiaru ekranu.  <a href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda">Więcej...</a><br /></td></tr>
+<tr class="separator:ae12f8f63791595567b6250f8bb002bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
+Sloty prywatne</h2></td></tr>
+<tr class="memitem:ab0f03edc1734ad8368da8d18f13439c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5">reload_data</a> (QNetworkReply *reply)</td></tr>
+<tr class="memdesc:ab0f03edc1734ad8368da8d18f13439c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odebranie odpowiedzi z aktualna pogodą  <a href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5">Więcej...</a><br /></td></tr>
+<tr class="separator:ab0f03edc1734ad8368da8d18f13439c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae88ae893fd0f85ccfbe6314bfe8eab36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36">reload_data_forecast</a> (QNetworkReply *reply)</td></tr>
+<tr class="memdesc:ae88ae893fd0f85ccfbe6314bfe8eab36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odebranie odpwiedzi z prognoza pogody.  <a href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36">Więcej...</a><br /></td></tr>
+<tr class="separator:ae88ae893fd0f85ccfbe6314bfe8eab36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae011301f6a94a4164df56eb5c208af66"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66">check_for_an_update</a> ()</td></tr>
+<tr class="memdesc:ae011301f6a94a4164df56eb5c208af66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wysłanie zapytania dla jeziora Żywieckiego - aktualna pogoda.  <a href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66">Więcej...</a><br /></td></tr>
+<tr class="separator:ae011301f6a94a4164df56eb5c208af66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae035353e3869c36a025bdb6216495d4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e">check_for_an_update_forecast</a> ()</td></tr>
+<tr class="memdesc:ae035353e3869c36a025bdb6216495d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wysłanie zapytania dla jeziora Żywieckiego - prognoza pogody.  <a href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e">Więcej...</a><br /></td></tr>
+<tr class="separator:ae035353e3869c36a025bdb6216495d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e91bd10742922d2350cafa3e20e84e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e">check_for_an_update1</a> ()</td></tr>
+<tr class="memdesc:a67e91bd10742922d2350cafa3e20e84e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wysłanie zapytania dla jeziora Roś - aktualna pogoda.  <a href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e">Więcej...</a><br /></td></tr>
+<tr class="separator:a67e91bd10742922d2350cafa3e20e84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f14d6de91b2a9f6a5bc6adb90b4e636"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636">check_for_an_update_forecast1</a> ()</td></tr>
+<tr class="memdesc:a0f14d6de91b2a9f6a5bc6adb90b4e636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wysłanie zapytania dla jeziora Roś - prognoza pogody.  <a href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636">Więcej...</a><br /></td></tr>
+<tr class="separator:a0f14d6de91b2a9f6a5bc6adb90b4e636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56eafc79c2a3a17068d786653355ebb1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1">check_for_an_update2</a> ()</td></tr>
+<tr class="memdesc:a56eafc79c2a3a17068d786653355ebb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wysłanie zapytania dla jeziora Koronowskiego - aktualna pogoda.  <a href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1">Więcej...</a><br /></td></tr>
+<tr class="separator:a56eafc79c2a3a17068d786653355ebb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa37382c20a8a4c965883bae366e82b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7">check_for_an_update_forecast2</a> ()</td></tr>
+<tr class="memdesc:aaa37382c20a8a4c965883bae366e82b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wysłanie zapytania dla jeziora Koronowskiego - prognoza pogody.  <a href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7">Więcej...</a><br /></td></tr>
+<tr class="separator:aaa37382c20a8a4c965883bae366e82b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83fcf8e7a1b36c87ba39186faf0d1319"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">page1</a> ()</td></tr>
+<tr class="memdesc:a83fcf8e7a1b36c87ba39186faf0d1319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strona glowna aplikacji, mapa Polski z jeziorami.  <a href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319">Więcej...</a><br /></td></tr>
+<tr class="separator:a83fcf8e7a1b36c87ba39186faf0d1319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be71462af296329114d19a0a503f522"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a7be71462af296329114d19a0a503f522">page2</a> ()</td></tr>
+<tr class="memdesc:a7be71462af296329114d19a0a503f522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strona szczegółowa jeziora Żywieckiego.  <a href="class_main_window.html#a7be71462af296329114d19a0a503f522">Więcej...</a><br /></td></tr>
+<tr class="separator:a7be71462af296329114d19a0a503f522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fc3b6a8f1eadf887fc7bda33c61eee8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">page3</a> ()</td></tr>
+<tr class="memdesc:a5fc3b6a8f1eadf887fc7bda33c61eee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strona szczegółowa jeziora Roś  <a href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8">Więcej...</a><br /></td></tr>
+<tr class="separator:a5fc3b6a8f1eadf887fc7bda33c61eee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5b717a2cc4e3f09e76f6f09d74dc49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">page4</a> ()</td></tr>
+<tr class="memdesc:aee5b717a2cc4e3f09e76f6f09d74dc49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strona szczegółowa jeziora Koronowskiego.  <a href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49">Więcej...</a><br /></td></tr>
+<tr class="separator:aee5b717a2cc4e3f09e76f6f09d74dc49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8a4c4ed47132ad98c70c55c7e7915e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">page_loading</a> ()</td></tr>
+<tr class="memdesc:ac8a4c4ed47132ad98c70c55c7e7915e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strona ładowania informacji, ekran oczekiwania.  <a href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1">Więcej...</a><br /></td></tr>
+<tr class="separator:ac8a4c4ed47132ad98c70c55c7e7915e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec475d89585a72d9862c0c7902d5903b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b">page_content</a> (int page_number)</td></tr>
+<tr class="memdesc:aec475d89585a72d9862c0c7902d5903b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja obsługująca zawartosc danej strony.  <a href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b">Więcej...</a><br /></td></tr>
+<tr class="separator:aec475d89585a72d9862c0c7902d5903b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:ae223473baf103350cb41a5f617bfc8d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_weather.html">Weather</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae223473baf103350cb41a5f617bfc8d9">data_weather</a></td></tr>
+<tr class="separator:ae223473baf103350cb41a5f617bfc8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04895d129c822b8c15bd4f028ad1ad03"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a04895d129c822b8c15bd4f028ad1ad03">myURL0</a> = &quot;http://api.openweathermap.org/data/2.5/weather?q=%C5%BBywiec&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td></tr>
+<tr class="memdesc:a04895d129c822b8c15bd4f028ad1ad03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link do aktualnej pogody dla jeziora Żywieckiego.  <a href="class_main_window.html#a04895d129c822b8c15bd4f028ad1ad03">Więcej...</a><br /></td></tr>
+<tr class="separator:a04895d129c822b8c15bd4f028ad1ad03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66646290aba8774217eaa3f501dd7f51"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a66646290aba8774217eaa3f501dd7f51">myURL1</a> = &quot;http://api.openweathermap.org/data/2.5/weather?q=Pisz&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td></tr>
+<tr class="memdesc:a66646290aba8774217eaa3f501dd7f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link do aktualnej pogody dla jeziora Roś  <a href="class_main_window.html#a66646290aba8774217eaa3f501dd7f51">Więcej...</a><br /></td></tr>
+<tr class="separator:a66646290aba8774217eaa3f501dd7f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d7405dc6db1e9f3329ef5ccfe2712fc"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a1d7405dc6db1e9f3329ef5ccfe2712fc">myURL2</a> = &quot;http://api.openweathermap.org/data/2.5/weather?q=Koronowo&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td></tr>
+<tr class="memdesc:a1d7405dc6db1e9f3329ef5ccfe2712fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link do aktualnej pogody dla jeziora Koronowskiego.  <a href="class_main_window.html#a1d7405dc6db1e9f3329ef5ccfe2712fc">Więcej...</a><br /></td></tr>
+<tr class="separator:a1d7405dc6db1e9f3329ef5ccfe2712fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3eb5b5eb2a1adf7e376b2087fdc3fa7"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae3eb5b5eb2a1adf7e376b2087fdc3fa7">myURL00</a> = &quot;https://api.openweathermap.org/data/2.5/onecall?lat=49.6853&amp;lon=19.1924&amp;exclude=daily,alerts,minutely&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td></tr>
+<tr class="memdesc:ae3eb5b5eb2a1adf7e376b2087fdc3fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link do prognozowanej pogody dla jeziora Żywieckiego.  <a href="class_main_window.html#ae3eb5b5eb2a1adf7e376b2087fdc3fa7">Więcej...</a><br /></td></tr>
+<tr class="separator:ae3eb5b5eb2a1adf7e376b2087fdc3fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e42d9d26ad3239db2bf053527f950bd"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a6e42d9d26ad3239db2bf053527f950bd">myURL11</a> = &quot;https://api.openweathermap.org/data/2.5/onecall?lat=53.6274&amp;lon=21.8125&amp;exclude=daily,alerts,minutely&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td></tr>
+<tr class="memdesc:a6e42d9d26ad3239db2bf053527f950bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link do prognozowanej pogody dla jeziora Roś  <a href="class_main_window.html#a6e42d9d26ad3239db2bf053527f950bd">Więcej...</a><br /></td></tr>
+<tr class="separator:a6e42d9d26ad3239db2bf053527f950bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d00edde9b974b539c5f5750a3912bf"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a58d00edde9b974b539c5f5750a3912bf">myURL22</a> = &quot;https://api.openweathermap.org/data/2.5/onecall?lat=53.3137&amp;lon=17.937&amp;exclude=daily,alerts,minutely&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td></tr>
+<tr class="memdesc:a58d00edde9b974b539c5f5750a3912bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link do prognozowanej pogody dla jeziora Koronowskiego.  <a href="class_main_window.html#a58d00edde9b974b539c5f5750a3912bf">Więcej...</a><br /></td></tr>
+<tr class="separator:a58d00edde9b974b539c5f5750a3912bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35466a70ed47252a0191168126a352a5"><td class="memItemLeft" align="right" valign="top">Ui::MainWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a></td></tr>
+<tr class="memdesc:a35466a70ed47252a0191168126a352a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interfejs użytkownika.  <a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">Więcej...</a><br /></td></tr>
+<tr class="separator:a35466a70ed47252a0191168126a352a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51ac2b126495216832501cea3929c6f6"><td class="memItemLeft" align="right" valign="top">QGraphicsScene *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a51ac2b126495216832501cea3929c6f6">scene</a></td></tr>
+<tr class="memdesc:a51ac2b126495216832501cea3929c6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scena do animacji strzałek.  <a href="class_main_window.html#a51ac2b126495216832501cea3929c6f6">Więcej...</a><br /></td></tr>
+<tr class="separator:a51ac2b126495216832501cea3929c6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356578805ed1248a7f2807434cb0e5ee"><td class="memItemLeft" align="right" valign="top">QTimer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">timer</a></td></tr>
+<tr class="memdesc:a356578805ed1248a7f2807434cb0e5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sluzy do animacji strzalek.  <a href="class_main_window.html#a356578805ed1248a7f2807434cb0e5ee">Więcej...</a><br /></td></tr>
+<tr class="separator:a356578805ed1248a7f2807434cb0e5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa zawiera informacje o linkach do wysłania zapytań do strony: openweathermap.org. </p>
+<p>W klasie sa definicje funkcji odpowiedzialne za wysłanie zapytania, odebranie go i przerobienie. Posiada też definicje każdej ze stron oraz definicję funkcji określającej zawartość określonej strony. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00141">141</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a996c5a2b6f77944776856f08ec30858d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a996c5a2b6f77944776856f08ec30858d">&#9670;&nbsp;</a></span>MainWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MainWindow::MainWindow </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicjalizuje pojęcie głównego okna. </p>
+<p>Ustawia ui, podłącza przyciski, dodaje obraz na główny ekran</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Rodzic</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00018">18</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph.png" border="0" usemap="#aclass_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph" alt=""/></div>
+<map name="aclass_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph" id="aclass_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph">
+<area shape="rect" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,181,184,207"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="232,206,371,233"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="419,181,557,207"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="847,250,985,277"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="847,130,985,157"/>
+<area shape="rect" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="836,5,996,47"/>
+<area shape="rect" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; prognoza pogody." alt="" coords="617,384,777,425"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="605,231,788,258"/>
+<area shape="rect" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1" title="Strona ładowania informacji, ekran oczekiwania." alt="" coords="1044,191,1224,218"/>
+<area shape="rect" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="1272,67,1443,94"/>
+<area shape="rect" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="1288,308,1427,349"/>
+<area shape="rect" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="1054,243,1214,284"/>
+<area shape="rect" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="1054,308,1214,349"/>
+<area shape="rect" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="1054,60,1214,101"/>
+<area shape="rect" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; prognoza pogody." alt="" coords="1054,125,1214,167"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae98d00a93bc118200eeef9f9bba1dba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98d00a93bc118200eeef9f9bba1dba7">&#9670;&nbsp;</a></span>~MainWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MainWindow::~MainWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda wywoływana przed usunięciem obiektu. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00044">44</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="ae011301f6a94a4164df56eb5c208af66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae011301f6a94a4164df56eb5c208af66">&#9670;&nbsp;</a></span>check_for_an_update</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::check_for_an_update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wysłanie zapytania dla jeziora Żywieckiego - aktualna pogoda. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>- udane </td></tr>
+    <tr><td class="paramname">false</td><td>- nieudane </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00218">218</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_ae011301f6a94a4164df56eb5c208af66_cgraph.png" border="0" usemap="#aclass_main_window_ae011301f6a94a4164df56eb5c208af66_cgraph" alt=""/></div>
+<map name="aclass_main_window_ae011301f6a94a4164df56eb5c208af66_cgraph" id="aclass_main_window_ae011301f6a94a4164df56eb5c208af66_cgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="5,5,165,47"/>
+<area shape="rect" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="213,13,384,39"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_ae011301f6a94a4164df56eb5c208af66_icgraph.png" border="0" usemap="#aclass_main_window_ae011301f6a94a4164df56eb5c208af66_icgraph" alt=""/></div>
+<map name="aclass_main_window_ae011301f6a94a4164df56eb5c208af66_icgraph" id="aclass_main_window_ae011301f6a94a4164df56eb5c208af66_icgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="1209,169,1369,210"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="1023,176,1161,203"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,68,184,95"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="836,144,975,171"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="419,195,601,221"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,195,180,221"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,195,371,221"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="649,93,788,120"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a67e91bd10742922d2350cafa3e20e84e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e91bd10742922d2350cafa3e20e84e">&#9670;&nbsp;</a></span>check_for_an_update1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::check_for_an_update1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wysłanie zapytania dla jeziora Roś - aktualna pogoda. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>- udane </td></tr>
+    <tr><td class="paramname">false</td><td>- nieudane </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00252">252</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a67e91bd10742922d2350cafa3e20e84e_cgraph.png" border="0" usemap="#aclass_main_window_a67e91bd10742922d2350cafa3e20e84e_cgraph" alt=""/></div>
+<map name="aclass_main_window_a67e91bd10742922d2350cafa3e20e84e_cgraph" id="aclass_main_window_a67e91bd10742922d2350cafa3e20e84e_cgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="5,5,165,47"/>
+<area shape="rect" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="213,13,384,39"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a67e91bd10742922d2350cafa3e20e84e_icgraph.png" border="0" usemap="#aclass_main_window_a67e91bd10742922d2350cafa3e20e84e_icgraph" alt=""/></div>
+<map name="aclass_main_window_a67e91bd10742922d2350cafa3e20e84e_icgraph" id="aclass_main_window_a67e91bd10742922d2350cafa3e20e84e_icgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="1209,137,1369,178"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="1023,144,1161,171"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,68,184,95"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="792,144,975,171"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,200,180,227"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="605,144,744,171"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="232,200,371,227"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="419,43,557,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a56eafc79c2a3a17068d786653355ebb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56eafc79c2a3a17068d786653355ebb1">&#9670;&nbsp;</a></span>check_for_an_update2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::check_for_an_update2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wysłanie zapytania dla jeziora Koronowskiego - aktualna pogoda. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>- udane </td></tr>
+    <tr><td class="paramname">false</td><td>- nieudane </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00286">286</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a56eafc79c2a3a17068d786653355ebb1_cgraph.png" border="0" usemap="#aclass_main_window_a56eafc79c2a3a17068d786653355ebb1_cgraph" alt=""/></div>
+<map name="aclass_main_window_a56eafc79c2a3a17068d786653355ebb1_cgraph" id="aclass_main_window_a56eafc79c2a3a17068d786653355ebb1_cgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="5,5,165,47"/>
+<area shape="rect" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="213,13,384,39"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a56eafc79c2a3a17068d786653355ebb1_icgraph.png" border="0" usemap="#aclass_main_window_a56eafc79c2a3a17068d786653355ebb1_icgraph" alt=""/></div>
+<map name="aclass_main_window_a56eafc79c2a3a17068d786653355ebb1_icgraph" id="aclass_main_window_a56eafc79c2a3a17068d786653355ebb1_icgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="1209,137,1369,178"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="1023,144,1161,171"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,68,184,95"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="792,144,975,171"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,200,180,227"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="605,144,744,171"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,200,371,227"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="419,43,557,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae035353e3869c36a025bdb6216495d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae035353e3869c36a025bdb6216495d4e">&#9670;&nbsp;</a></span>check_for_an_update_forecast</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::check_for_an_update_forecast </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wysłanie zapytania dla jeziora Żywieckiego - prognoza pogody. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>- udane </td></tr>
+    <tr><td class="paramname">false</td><td>- nieudane </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00235">235</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_ae035353e3869c36a025bdb6216495d4e_cgraph.png" border="0" usemap="#aclass_main_window_ae035353e3869c36a025bdb6216495d4e_cgraph" alt=""/></div>
+<map name="aclass_main_window_ae035353e3869c36a025bdb6216495d4e_cgraph" id="aclass_main_window_ae035353e3869c36a025bdb6216495d4e_cgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; prognoza pogody." alt="" coords="5,5,165,47"/>
+<area shape="rect" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="213,5,352,47"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_ae035353e3869c36a025bdb6216495d4e_icgraph.png" border="0" usemap="#aclass_main_window_ae035353e3869c36a025bdb6216495d4e_icgraph" alt=""/></div>
+<map name="aclass_main_window_ae035353e3869c36a025bdb6216495d4e_icgraph" id="aclass_main_window_ae035353e3869c36a025bdb6216495d4e_icgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; prognoza pogody." alt="" coords="1209,169,1369,210"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="1023,176,1161,203"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,68,184,95"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="836,144,975,171"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="419,195,601,221"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,195,180,221"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,195,371,221"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="649,93,788,120"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f14d6de91b2a9f6a5bc6adb90b4e636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f14d6de91b2a9f6a5bc6adb90b4e636">&#9670;&nbsp;</a></span>check_for_an_update_forecast1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::check_for_an_update_forecast1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wysłanie zapytania dla jeziora Roś - prognoza pogody. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>- udane </td></tr>
+    <tr><td class="paramname">false</td><td>- nieudane </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00269">269</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a0f14d6de91b2a9f6a5bc6adb90b4e636_cgraph.png" border="0" usemap="#aclass_main_window_a0f14d6de91b2a9f6a5bc6adb90b4e636_cgraph" alt=""/></div>
+<map name="aclass_main_window_a0f14d6de91b2a9f6a5bc6adb90b4e636_cgraph" id="aclass_main_window_a0f14d6de91b2a9f6a5bc6adb90b4e636_cgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="5,5,165,47"/>
+<area shape="rect" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="213,5,352,47"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a0f14d6de91b2a9f6a5bc6adb90b4e636_icgraph.png" border="0" usemap="#aclass_main_window_a0f14d6de91b2a9f6a5bc6adb90b4e636_icgraph" alt=""/></div>
+<map name="aclass_main_window_a0f14d6de91b2a9f6a5bc6adb90b4e636_icgraph" id="aclass_main_window_a0f14d6de91b2a9f6a5bc6adb90b4e636_icgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="1209,137,1369,178"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="1023,144,1161,171"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,68,184,95"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="792,144,975,171"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,200,180,227"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="605,144,744,171"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="232,200,371,227"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="419,43,557,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaa37382c20a8a4c965883bae366e82b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa37382c20a8a4c965883bae366e82b7">&#9670;&nbsp;</a></span>check_for_an_update_forecast2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::check_for_an_update_forecast2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wysłanie zapytania dla jeziora Koronowskiego - prognoza pogody. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>- udane </td></tr>
+    <tr><td class="paramname">false</td><td>- nieudane </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00303">303</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_aaa37382c20a8a4c965883bae366e82b7_cgraph.png" border="0" usemap="#aclass_main_window_aaa37382c20a8a4c965883bae366e82b7_cgraph" alt=""/></div>
+<map name="aclass_main_window_aaa37382c20a8a4c965883bae366e82b7_cgraph" id="aclass_main_window_aaa37382c20a8a4c965883bae366e82b7_cgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; prognoza pogody." alt="" coords="5,5,165,47"/>
+<area shape="rect" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="213,5,352,47"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_aaa37382c20a8a4c965883bae366e82b7_icgraph.png" border="0" usemap="#aclass_main_window_aaa37382c20a8a4c965883bae366e82b7_icgraph" alt=""/></div>
+<map name="aclass_main_window_aaa37382c20a8a4c965883bae366e82b7_icgraph" id="aclass_main_window_aaa37382c20a8a4c965883bae366e82b7_icgraph">
+<area shape="rect" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; prognoza pogody." alt="" coords="1209,137,1369,178"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="1023,144,1161,171"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,68,184,95"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="792,144,975,171"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,200,180,227"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="605,144,744,171"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,200,371,227"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="419,43,557,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a83fcf8e7a1b36c87ba39186faf0d1319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83fcf8e7a1b36c87ba39186faf0d1319">&#9670;&nbsp;</a></span>page1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::page1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Strona glowna aplikacji, mapa Polski z jeziorami. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00316">316</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a83fcf8e7a1b36c87ba39186faf0d1319_cgraph.png" border="0" usemap="#aclass_main_window_a83fcf8e7a1b36c87ba39186faf0d1319_cgraph" alt=""/></div>
+<map name="aclass_main_window_a83fcf8e7a1b36c87ba39186faf0d1319_cgraph" id="aclass_main_window_a83fcf8e7a1b36c87ba39186faf0d1319_cgraph">
+<area shape="rect" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="5,122,144,149"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="192,122,331,149"/>
+<area shape="rect" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="390,5,550,47"/>
+<area shape="rect" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; prognoza pogody." alt="" coords="609,340,769,381"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="379,173,561,199"/>
+<area shape="rect" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1" title="Strona ładowania informacji, ekran oczekiwania." alt="" coords="817,99,997,126"/>
+<area shape="rect" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="1045,158,1216,185"/>
+<area shape="rect" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="1061,347,1200,388"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="620,173,759,199"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="620,223,759,250"/>
+<area shape="rect" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="827,151,987,192"/>
+<area shape="rect" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="827,281,987,323"/>
+<area shape="rect" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="827,216,987,257"/>
+<area shape="rect" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; prognoza pogody." alt="" coords="827,347,987,388"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a83fcf8e7a1b36c87ba39186faf0d1319_icgraph.png" border="0" usemap="#aclass_main_window_a83fcf8e7a1b36c87ba39186faf0d1319_icgraph" alt=""/></div>
+<map name="aclass_main_window_a83fcf8e7a1b36c87ba39186faf0d1319_icgraph" id="aclass_main_window_a83fcf8e7a1b36c87ba39186faf0d1319_icgraph">
+<area shape="rect" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="836,58,975,85"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,33,184,60"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="649,84,788,110"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="419,84,601,110"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,58,371,85"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="232,109,371,136"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,109,180,136"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7be71462af296329114d19a0a503f522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be71462af296329114d19a0a503f522">&#9670;&nbsp;</a></span>page2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::page2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Strona szczegółowa jeziora Żywieckiego. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00324">324</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a7be71462af296329114d19a0a503f522_cgraph.png" border="0" usemap="#aclass_main_window_a7be71462af296329114d19a0a503f522_cgraph" alt=""/></div>
+<map name="aclass_main_window_a7be71462af296329114d19a0a503f522_cgraph" id="aclass_main_window_a7be71462af296329114d19a0a503f522_cgraph">
+<area shape="rect" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="5,221,144,247"/>
+<area shape="rect" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="203,5,363,47"/>
+<area shape="rect" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; prognoza pogody." alt="" coords="423,397,583,439"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="651,347,790,374"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="192,221,375,247"/>
+<area shape="rect" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1" title="Strona ładowania informacji, ekran oczekiwania." alt="" coords="631,99,811,126"/>
+<area shape="rect" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="859,41,1029,67"/>
+<area shape="rect" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="875,281,1013,323"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="433,166,572,193"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="433,221,572,247"/>
+<area shape="rect" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="641,33,801,75"/>
+<area shape="rect" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="641,151,801,192"/>
+<area shape="rect" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="641,216,801,257"/>
+<area shape="rect" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; prognoza pogody." alt="" coords="641,281,801,323"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a7be71462af296329114d19a0a503f522_icgraph.png" border="0" usemap="#aclass_main_window_a7be71462af296329114d19a0a503f522_icgraph" alt=""/></div>
+<map name="aclass_main_window_a7be71462af296329114d19a0a503f522_icgraph" id="aclass_main_window_a7be71462af296329114d19a0a503f522_icgraph">
+<area shape="rect" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="1023,176,1161,203"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,68,184,95"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="836,144,975,171"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="419,195,601,221"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,195,180,221"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,195,371,221"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="649,93,788,120"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5fc3b6a8f1eadf887fc7bda33c61eee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fc3b6a8f1eadf887fc7bda33c61eee8">&#9670;&nbsp;</a></span>page3</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::page3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Strona szczegółowa jeziora Roś </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00353">353</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a5fc3b6a8f1eadf887fc7bda33c61eee8_cgraph.png" border="0" usemap="#aclass_main_window_a5fc3b6a8f1eadf887fc7bda33c61eee8_cgraph" alt=""/></div>
+<map name="aclass_main_window_a5fc3b6a8f1eadf887fc7bda33c61eee8_cgraph" id="aclass_main_window_a5fc3b6a8f1eadf887fc7bda33c61eee8_cgraph">
+<area shape="rect" title="Strona szczegółowa jeziora Roś" alt="" coords="5,141,144,167"/>
+<area shape="rect" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="379,5,539,47"/>
+<area shape="rect" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="817,448,977,489"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="192,197,331,223"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="587,81,769,107"/>
+<area shape="rect" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1" title="Strona ładowania informacji, ekran oczekiwania." alt="" coords="1025,254,1205,281"/>
+<area shape="rect" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="1253,71,1424,98"/>
+<area shape="rect" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="1269,383,1408,424"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="389,197,528,223"/>
+<area shape="rect" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="598,132,758,173"/>
+<area shape="rect" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; prognoza pogody." alt="" coords="817,383,977,424"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="828,142,967,169"/>
+<area shape="rect" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="1035,123,1195,164"/>
+<area shape="rect" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; prognoza pogody." alt="" coords="1035,188,1195,229"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_a5fc3b6a8f1eadf887fc7bda33c61eee8_icgraph.png" border="0" usemap="#aclass_main_window_a5fc3b6a8f1eadf887fc7bda33c61eee8_icgraph" alt=""/></div>
+<map name="aclass_main_window_a5fc3b6a8f1eadf887fc7bda33c61eee8_icgraph" id="aclass_main_window_a5fc3b6a8f1eadf887fc7bda33c61eee8_icgraph">
+<area shape="rect" title="Strona szczegółowa jeziora Roś" alt="" coords="1023,144,1161,171"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,68,184,95"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="792,144,975,171"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,200,180,227"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="605,144,744,171"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="232,200,371,227"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="419,43,557,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aee5b717a2cc4e3f09e76f6f09d74dc49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5b717a2cc4e3f09e76f6f09d74dc49">&#9670;&nbsp;</a></span>page4</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::page4 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Strona szczegółowa jeziora Koronowskiego. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00372">372</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_aee5b717a2cc4e3f09e76f6f09d74dc49_cgraph.png" border="0" usemap="#aclass_main_window_aee5b717a2cc4e3f09e76f6f09d74dc49_cgraph" alt=""/></div>
+<map name="aclass_main_window_aee5b717a2cc4e3f09e76f6f09d74dc49_cgraph" id="aclass_main_window_aee5b717a2cc4e3f09e76f6f09d74dc49_cgraph">
+<area shape="rect" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="5,141,144,167"/>
+<area shape="rect" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="379,5,539,47"/>
+<area shape="rect" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; prognoza pogody." alt="" coords="817,448,977,489"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="192,197,331,223"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="587,81,769,107"/>
+<area shape="rect" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1" title="Strona ładowania informacji, ekran oczekiwania." alt="" coords="1025,254,1205,281"/>
+<area shape="rect" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="1253,71,1424,98"/>
+<area shape="rect" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="1269,383,1408,424"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="389,197,528,223"/>
+<area shape="rect" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="598,132,758,173"/>
+<area shape="rect" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; prognoza pogody." alt="" coords="817,383,977,424"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="828,142,967,169"/>
+<area shape="rect" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="1035,123,1195,164"/>
+<area shape="rect" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="1035,188,1195,229"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_aee5b717a2cc4e3f09e76f6f09d74dc49_icgraph.png" border="0" usemap="#aclass_main_window_aee5b717a2cc4e3f09e76f6f09d74dc49_icgraph" alt=""/></div>
+<map name="aclass_main_window_aee5b717a2cc4e3f09e76f6f09d74dc49_icgraph" id="aclass_main_window_aee5b717a2cc4e3f09e76f6f09d74dc49_icgraph">
+<area shape="rect" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="1023,144,1161,171"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,68,184,95"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="792,144,975,171"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,200,180,227"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="605,144,744,171"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,200,371,227"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="419,43,557,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aec475d89585a72d9862c0c7902d5903b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec475d89585a72d9862c0c7902d5903b">&#9670;&nbsp;</a></span>page_content</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::page_content </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>page_number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Funkcja obsługująca zawartosc danej strony. </p>
+<p>W funkcji znajduje się ustawiwenie napisów oraz wywołanie animacji. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">page_number</td><td>- identyfikator wyświetlanej strony aplikacji </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00424">424</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_aec475d89585a72d9862c0c7902d5903b_cgraph.png" border="0" usemap="#aclass_main_window_aec475d89585a72d9862c0c7902d5903b_cgraph" alt=""/></div>
+<map name="aclass_main_window_aec475d89585a72d9862c0c7902d5903b_cgraph" id="aclass_main_window_aec475d89585a72d9862c0c7902d5903b_cgraph">
+<area shape="rect" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="5,129,188,155"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="433,78,572,105"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="641,78,780,105"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="236,129,375,155"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="236,238,375,265"/>
+<area shape="rect" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="849,5,1009,47"/>
+<area shape="rect" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; prognoza pogody." alt="" coords="849,71,1009,112"/>
+<area shape="rect" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1" title="Strona ładowania informacji, ekran oczekiwania." alt="" coords="839,137,1019,163"/>
+<area shape="rect" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="1067,187,1237,214"/>
+<area shape="rect" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="1083,239,1221,280"/>
+<area shape="rect" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="631,180,791,221"/>
+<area shape="rect" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="423,231,583,272"/>
+<area shape="rect" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="631,348,791,389"/>
+<area shape="rect" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; prognoza pogody." alt="" coords="423,403,583,444"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_aec475d89585a72d9862c0c7902d5903b_icgraph.png" border="0" usemap="#aclass_main_window_aec475d89585a72d9862c0c7902d5903b_icgraph" alt=""/></div>
+<map name="aclass_main_window_aec475d89585a72d9862c0c7902d5903b_icgraph" id="aclass_main_window_aec475d89585a72d9862c0c7902d5903b_icgraph">
+<area shape="rect" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="792,129,975,155"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="605,15,744,42"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,142,371,169"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="232,91,371,118"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,15,184,42"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="419,66,557,93"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,91,180,118"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac8a4c4ed47132ad98c70c55c7e7915e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8a4c4ed47132ad98c70c55c7e7915e1">&#9670;&nbsp;</a></span>page_loading</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::page_loading </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Strona ładowania informacji, ekran oczekiwania. </p>
+<p>Funkcja posiada licznik czasu. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00393">393</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_ac8a4c4ed47132ad98c70c55c7e7915e1_icgraph.png" border="0" usemap="#aclass_main_window_ac8a4c4ed47132ad98c70c55c7e7915e1_icgraph" alt=""/></div>
+<map name="aclass_main_window_ac8a4c4ed47132ad98c70c55c7e7915e1_icgraph" id="aclass_main_window_ac8a4c4ed47132ad98c70c55c7e7915e1_icgraph">
+<area shape="rect" title="Strona ładowania informacji, ekran oczekiwania." alt="" coords="1209,118,1389,145"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="1023,118,1161,145"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,80,371,106"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="649,212,788,238"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,17,184,44"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="836,86,975,113"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="419,110,601,137"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,212,180,238"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab0f03edc1734ad8368da8d18f13439c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f03edc1734ad8368da8d18f13439c5">&#9670;&nbsp;</a></span>reload_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::reload_data </td>
+          <td>(</td>
+          <td class="paramtype">QNetworkReply *&#160;</td>
+          <td class="paramname"><em>reply</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Odebranie odpowiedzi z aktualna pogodą </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">reply</td><td>- Odpowiedź z danymi o aktualnej pogodzie </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Sprawdza typ odpowiedzi {} (object) / [] (array) Przekazuje dane do zmiennych z klasy <a class="el" href="class_weather.html" title="Klasa porzechowująca informacje o pogodzie.">Weather</a></p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00081">81</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_ab0f03edc1734ad8368da8d18f13439c5_icgraph.png" border="0" usemap="#aclass_main_window_ab0f03edc1734ad8368da8d18f13439c5_icgraph" alt=""/></div>
+<map name="aclass_main_window_ab0f03edc1734ad8368da8d18f13439c5_icgraph" id="aclass_main_window_ab0f03edc1734ad8368da8d18f13439c5_icgraph">
+<area shape="rect" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="1460,255,1631,282"/>
+<area shape="rect" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="1252,248,1412,289"/>
+<area shape="rect" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="836,5,996,47"/>
+<area shape="rect" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="1044,340,1204,381"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="1055,255,1193,282"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,166,184,193"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="847,223,985,250"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="419,247,601,274"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,349,180,375"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,210,371,237"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="649,349,788,375"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae88ae893fd0f85ccfbe6314bfe8eab36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae88ae893fd0f85ccfbe6314bfe8eab36">&#9670;&nbsp;</a></span>reload_data_forecast</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::reload_data_forecast </td>
+          <td>(</td>
+          <td class="paramtype">QNetworkReply *&#160;</td>
+          <td class="paramname"><em>reply</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Odebranie odpwiedzi z prognoza pogody. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">reply</td><td>- Odpowiedź z danymi o prognozowanej pogodzie </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>check if the document is an object {} / if [] dosument is an Array</p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00161">161</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_ae88ae893fd0f85ccfbe6314bfe8eab36_icgraph.png" border="0" usemap="#aclass_main_window_ae88ae893fd0f85ccfbe6314bfe8eab36_icgraph" alt=""/></div>
+<map name="aclass_main_window_ae88ae893fd0f85ccfbe6314bfe8eab36_icgraph" id="aclass_main_window_ae88ae893fd0f85ccfbe6314bfe8eab36_icgraph">
+<area shape="rect" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="1460,248,1599,289"/>
+<area shape="rect" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; prognoza pogody." alt="" coords="1252,248,1412,289"/>
+<area shape="rect" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="836,5,996,47"/>
+<area shape="rect" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; prognoza pogody." alt="" coords="1044,340,1204,381"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="1055,255,1193,282"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Inicjalizuje pojęcie głównego okna." alt="" coords="5,166,184,193"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="847,223,985,250"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="419,247,601,274"/>
+<area shape="rect" href="class_main_window.html#ae12f8f63791595567b6250f8bb002bda" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="9,349,180,375"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="232,210,371,237"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="649,349,788,375"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae12f8f63791595567b6250f8bb002bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae12f8f63791595567b6250f8bb002bda">&#9670;&nbsp;</a></span>resizeEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::resizeEvent </td>
+          <td>(</td>
+          <td class="paramtype">QResizeEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ustala położenie elementów na wypadek zmiany rozmiaru ekranu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Wydarzenie</td><td>zmiany rozmiaru okna </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00053">53</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_window_ae12f8f63791595567b6250f8bb002bda_cgraph.png" border="0" usemap="#aclass_main_window_ae12f8f63791595567b6250f8bb002bda_cgraph" alt=""/></div>
+<map name="aclass_main_window_ae12f8f63791595567b6250f8bb002bda_cgraph" id="aclass_main_window_ae12f8f63791595567b6250f8bb002bda_cgraph">
+<area shape="rect" title="Ustala położenie elementów na wypadek zmiany rozmiaru ekranu." alt="" coords="5,302,176,329"/>
+<area shape="rect" href="class_main_window.html#a7be71462af296329114d19a0a503f522" title="Strona szczegółowa jeziora Żywieckiego." alt="" coords="224,197,363,223"/>
+<area shape="rect" href="class_main_window.html#a5fc3b6a8f1eadf887fc7bda33c61eee8" title="Strona szczegółowa jeziora Roś" alt="" coords="652,247,791,274"/>
+<area shape="rect" href="class_main_window.html#aee5b717a2cc4e3f09e76f6f09d74dc49" title="Strona szczegółowa jeziora Koronowskiego." alt="" coords="652,197,791,223"/>
+<area shape="rect" href="class_main_window.html#ae011301f6a94a4164df56eb5c208af66" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; aktualna pogoda." alt="" coords="641,417,801,459"/>
+<area shape="rect" href="class_main_window.html#ae035353e3869c36a025bdb6216495d4e" title="Wysłanie zapytania dla jeziora Żywieckiego &#45; prognoza pogody." alt="" coords="422,5,582,47"/>
+<area shape="rect" href="class_main_window.html#a83fcf8e7a1b36c87ba39186faf0d1319" title="Strona glowna aplikacji, mapa Polski z jeziorami." alt="" coords="870,70,1009,97"/>
+<area shape="rect" href="class_main_window.html#aec475d89585a72d9862c0c7902d5903b" title="Funkcja obsługująca zawartosc danej strony." alt="" coords="411,197,593,223"/>
+<area shape="rect" href="class_main_window.html#ac8a4c4ed47132ad98c70c55c7e7915e1" title="Strona ładowania informacji, ekran oczekiwania." alt="" coords="849,318,1029,345"/>
+<area shape="rect" href="class_main_window.html#ab0f03edc1734ad8368da8d18f13439c5" title="Odebranie odpowiedzi z aktualna pogodą" alt="" coords="1077,377,1248,403"/>
+<area shape="rect" href="class_main_window.html#ae88ae893fd0f85ccfbe6314bfe8eab36" title="Odebranie odpwiedzi z prognoza pogody." alt="" coords="1093,121,1232,163"/>
+<area shape="rect" href="class_main_window.html#a67e91bd10742922d2350cafa3e20e84e" title="Wysłanie zapytania dla jeziora Roś &#45; aktualna pogoda." alt="" coords="859,369,1019,411"/>
+<area shape="rect" href="class_main_window.html#a0f14d6de91b2a9f6a5bc6adb90b4e636" title="Wysłanie zapytania dla jeziora Roś &#45; prognoza pogody." alt="" coords="859,252,1019,293"/>
+<area shape="rect" href="class_main_window.html#a56eafc79c2a3a17068d786653355ebb1" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; aktualna pogoda." alt="" coords="859,187,1019,228"/>
+<area shape="rect" href="class_main_window.html#aaa37382c20a8a4c965883bae366e82b7" title="Wysłanie zapytania dla jeziora Koronowskiego &#45; prognoza pogody." alt="" coords="859,121,1019,163"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="ae223473baf103350cb41a5f617bfc8d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae223473baf103350cb41a5f617bfc8d9">&#9670;&nbsp;</a></span>data_weather</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_weather.html">Weather</a> MainWindow::data_weather</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00166">166</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a04895d129c822b8c15bd4f028ad1ad03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04895d129c822b8c15bd4f028ad1ad03">&#9670;&nbsp;</a></span>myURL0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString MainWindow::myURL0 = &quot;http://api.openweathermap.org/data/2.5/weather?q=%C5%BBywiec&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Link do aktualnej pogody dla jeziora Żywieckiego. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00177">177</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="ae3eb5b5eb2a1adf7e376b2087fdc3fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3eb5b5eb2a1adf7e376b2087fdc3fa7">&#9670;&nbsp;</a></span>myURL00</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString MainWindow::myURL00 = &quot;https://api.openweathermap.org/data/2.5/onecall?lat=49.6853&amp;lon=19.1924&amp;exclude=daily,alerts,minutely&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Link do prognozowanej pogody dla jeziora Żywieckiego. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00198">198</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a66646290aba8774217eaa3f501dd7f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66646290aba8774217eaa3f501dd7f51">&#9670;&nbsp;</a></span>myURL1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString MainWindow::myURL1 = &quot;http://api.openweathermap.org/data/2.5/weather?q=Pisz&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Link do aktualnej pogody dla jeziora Roś </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00182">182</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a6e42d9d26ad3239db2bf053527f950bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e42d9d26ad3239db2bf053527f950bd">&#9670;&nbsp;</a></span>myURL11</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString MainWindow::myURL11 = &quot;https://api.openweathermap.org/data/2.5/onecall?lat=53.6274&amp;lon=21.8125&amp;exclude=daily,alerts,minutely&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Link do prognozowanej pogody dla jeziora Roś </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00203">203</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a1d7405dc6db1e9f3329ef5ccfe2712fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7405dc6db1e9f3329ef5ccfe2712fc">&#9670;&nbsp;</a></span>myURL2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString MainWindow::myURL2 = &quot;http://api.openweathermap.org/data/2.5/weather?q=Koronowo&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Link do aktualnej pogody dla jeziora Koronowskiego. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00187">187</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a58d00edde9b974b539c5f5750a3912bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58d00edde9b974b539c5f5750a3912bf">&#9670;&nbsp;</a></span>myURL22</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString MainWindow::myURL22 = &quot;https://api.openweathermap.org/data/2.5/onecall?lat=53.3137&amp;lon=17.937&amp;exclude=daily,alerts,minutely&amp;units=metric&amp;mode=json&amp;lang=pl&amp;appid=36496bad1955bf3365448965a42b9eac&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Link do prognozowanej pogody dla jeziora Koronowskiego. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00208">208</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a51ac2b126495216832501cea3929c6f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51ac2b126495216832501cea3929c6f6">&#9670;&nbsp;</a></span>scene</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QGraphicsScene* MainWindow::scene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Scena do animacji strzałek. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00218">218</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a356578805ed1248a7f2807434cb0e5ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a356578805ed1248a7f2807434cb0e5ee">&#9670;&nbsp;</a></span>timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer* MainWindow::timer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sluzy do animacji strzalek. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00222">222</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a35466a70ed47252a0191168126a352a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35466a70ed47252a0191168126a352a5">&#9670;&nbsp;</a></span>ui</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ui::MainWindow* MainWindow::ui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interfejs użytkownika. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00213">213</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="mainwindow_8h_source.html">mainwindow.h</a></li>
+<li><a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_main_window.html">MainWindow</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

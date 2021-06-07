@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="class_cloud" kind="class"><name>Cloud</name>
+    <member refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kind="variable"><name>angle</name></member>
+    <member refid="class_cloud_1aeef4c006e7b7d9999bfd25e5962339c4" kind="variable"><name>velocity</name></member>
+    <member refid="class_cloud_1aa959fea9fd633f9fd750ea7f55c05c65" kind="function"><name>Cloud</name></member>
+    <member refid="class_cloud_1ac3b4ccc03e48584cacf48d803c2c9737" kind="function"><name>~Cloud</name></member>
+    <member refid="class_cloud_1a7b2338e5c6f0eef552847e59d27c3c86" kind="function"><name>boundingRect</name></member>
+    <member refid="class_cloud_1a03c9d8d10c66776ef805a40c21df3f48" kind="function"><name>shape</name></member>
+    <member refid="class_cloud_1adf08c8d8750a5d961d94831d6e6b2e9a" kind="function"><name>paint</name></member>
+    <member refid="class_cloud_1ae3b380d8325307a925f8cba75ff388ba" kind="function"><name>advance</name></member>
+    <member refid="class_cloud_1aaed9dd75c8761f1760e6dfc2d52db77e" kind="function"><name>Collision</name></member>
+  </compound>
+  <compound refid="class_main_window" kind="class"><name>MainWindow</name>
+    <member refid="class_main_window_1ae223473baf103350cb41a5f617bfc8d9" kind="variable"><name>data_weather</name></member>
+    <member refid="class_main_window_1a1fd6d42eb6a8750123443b19bbcde58a" kind="variable"><name>myURL</name></member>
+    <member refid="class_main_window_1a66646290aba8774217eaa3f501dd7f51" kind="variable"><name>myURL1</name></member>
+    <member refid="class_main_window_1a1d7405dc6db1e9f3329ef5ccfe2712fc" kind="variable"><name>myURL2</name></member>
+    <member refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kind="variable"><name>ui</name></member>
+    <member refid="class_main_window_1a51ac2b126495216832501cea3929c6f6" kind="variable"><name>scene</name></member>
+    <member refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" kind="variable"><name>timer</name></member>
+    <member refid="class_main_window_1af322b8f680567bd1afb5cbf6a3a933c0" kind="variable"><name>animation</name></member>
+    <member refid="class_main_window_1abb0a7ab11c6ed6bb3ee72ec084977361" kind="variable"><name>animation_button</name></member>
+    <member refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" kind="function"><name>MainWindow</name></member>
+    <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kind="function"><name>~MainWindow</name></member>
+    <member refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" kind="slot"><name>reload_data</name></member>
+    <member refid="class_main_window_1ae011301f6a94a4164df56eb5c208af66" kind="slot"><name>check_for_an_update</name></member>
+    <member refid="class_main_window_1a67e91bd10742922d2350cafa3e20e84e" kind="slot"><name>check_for_an_update1</name></member>
+    <member refid="class_main_window_1a56eafc79c2a3a17068d786653355ebb1" kind="slot"><name>check_for_an_update2</name></member>
+    <member refid="class_main_window_1a83fcf8e7a1b36c87ba39186faf0d1319" kind="slot"><name>page1</name></member>
+    <member refid="class_main_window_1a7be71462af296329114d19a0a503f522" kind="slot"><name>page2</name></member>
+    <member refid="class_main_window_1a5fc3b6a8f1eadf887fc7bda33c61eee8" kind="slot"><name>page3</name></member>
+    <member refid="class_main_window_1aee5b717a2cc4e3f09e76f6f09d74dc49" kind="slot"><name>page4</name></member>
+    <member refid="class_main_window_1ac8a4c4ed47132ad98c70c55c7e7915e1" kind="slot"><name>page_loading</name></member>
+    <member refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" kind="slot"><name>page_content</name></member>
+  </compound>
+  <compound refid="class_weather" kind="class"><name>Weather</name>
+    <member refid="class_weather_1a62d3461c8561c8ff21ebea18ca1e7d24" kind="variable"><name>description</name></member>
+    <member refid="class_weather_1a6e312f122da386cbc6c4bfc7ba70f0f8" kind="variable"><name>icon</name></member>
+    <member refid="class_weather_1afdac2f27873a3a32db764fccb8e4716a" kind="variable"><name>temp</name></member>
+    <member refid="class_weather_1a033c4d36b69f0d2b0acfbba3015cff6a" kind="variable"><name>temp_min</name></member>
+    <member refid="class_weather_1a96c8767d0f085cb8dd3c1e4bcd173f40" kind="variable"><name>temp_max</name></member>
+    <member refid="class_weather_1af76815c6471edf864a79e0dab873b75e" kind="variable"><name>temp_realfeel</name></member>
+    <member refid="class_weather_1a3793950c05f6bdd6ffd0814913efd346" kind="variable"><name>pressure</name></member>
+    <member refid="class_weather_1a080ffa5bc630d1af193d2411b66bbaf8" kind="variable"><name>humidity</name></member>
+    <member refid="class_weather_1ae39bc0304c4329d58b75e908386c47e8" kind="variable"><name>speed</name></member>
+    <member refid="class_weather_1af1b9d6fdc1eda0fc358dc3af1c65507c" kind="variable"><name>gust</name></member>
+    <member refid="class_weather_1a80abcc10a63e788675fbd9cbcafeba88" kind="variable"><name>deg</name></member>
+    <member refid="class_weather_1a4e74ab63f3fef565b430322bccb815b6" kind="variable"><name>cloudiness</name></member>
+    <member refid="class_weather_1ab679b951879b0f8cc8882a9eb6ade7fe" kind="variable"><name>visibility</name></member>
+  </compound>
+  <compound refid="namespace_ui" kind="namespace"><name>Ui</name>
+  </compound>
+  <compound refid="cloud_8cpp" kind="file"><name>cloud.cpp</name>
+  </compound>
+  <compound refid="cloud_8h" kind="file"><name>cloud.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="mainwindow_8cpp" kind="file"><name>mainwindow.cpp</name>
+  </compound>
+  <compound refid="mainwindow_8h" kind="file"><name>mainwindow.h</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="cloud_8cpp" kind="file" language="C++">
+    <compoundname>cloud.cpp</compoundname>
+    <includes refid="cloud_8h" local="yes">cloud.h</includes>
+    <includes local="no">QtMath</includes>
+    <includes local="no">QDebug</includes>
+    <includes local="no">QRandomGenerator</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>QRandomGenerator</label>
+      </node>
+      <node id="2">
+        <label>cloud.h</label>
+        <link refid="cloud_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QGraphicsItem</label>
+      </node>
+      <node id="3">
+        <label>QPainter</label>
+      </node>
+      <node id="6">
+        <label>QtMath</label>
+      </node>
+      <node id="7">
+        <label>QDebug</label>
+      </node>
+      <node id="5">
+        <label>QGraphicsScene</label>
+      </node>
+      <node id="1">
+        <label>cloud.cpp</label>
+        <link refid="cloud_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cloud_8h" kindref="compound">cloud.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtMath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDebug&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QRandomGenerator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_cloud_1aa959fea9fd633f9fd750ea7f55c05c65" refkind="member"><highlight class="normal"><ref refid="class_cloud_1aa959fea9fd633f9fd750ea7f55c05c65" kindref="member">Cloud::Cloud</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>speed,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>deg)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cloud_1aeef4c006e7b7d9999bfd25e5962339c4" kindref="member">velocity</ref><sp/>=<sp/>speed;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kindref="member">angle</ref><sp/>=<sp/>deg<sp/>+<sp/>180;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//setTransformOriginPoint(0,0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>setRotation(QRandomGenerator::global()-&gt;bounded(360<sp/>*<sp/>16));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//angle<sp/>=<sp/>0;<sp/>//can<sp/>be<sp/>random</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//setRotation(angle);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>StartX<sp/>=<sp/>scene-&gt;sceneRect().center().toPoint().x();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>StartX<sp/>=<sp/>300;<sp/>//-320<sp/>środek<sp/>-20<sp/>lewa<sp/>-620<sp/>prawa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>StartY<sp/>=<sp/>300;<sp/>//-300<sp/>środek<sp/>-125<sp/>góra<sp/>-480<sp/>dół</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>StartX<sp/>=<sp/>-620<sp/>+<sp/>rand()<sp/>%<sp/>600;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>StartY<sp/>=<sp/>-480<sp/>+<sp/>rand()<sp/>%<sp/>355;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>setPos(mapToParent(StartX,<sp/>StartY));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_cloud_1ac3b4ccc03e48584cacf48d803c2c9737" refkind="member"><highlight class="normal"><ref refid="class_cloud_1ac3b4ccc03e48584cacf48d803c2c9737" kindref="member">Cloud::~Cloud</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_cloud_1a7b2338e5c6f0eef552847e59d27c3c86" refkind="member"><highlight class="normal">QRectF<sp/><ref refid="class_cloud_1a7b2338e5c6f0eef552847e59d27c3c86" kindref="member">Cloud::boundingRect</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="58"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*qreal<sp/>adjust<sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>QRectF(-18<sp/>-<sp/>adjust,<sp/>-22<sp/>-<sp/>adjust,</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>36<sp/>+<sp/>adjust,<sp/>60<sp/>+<sp/>adjust);</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QRect(0,0,120,120);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_cloud_1a03c9d8d10c66776ef805a40c21df3f48" refkind="member"><highlight class="normal">QPainterPath<sp/><ref refid="class_cloud_1a03c9d8d10c66776ef805a40c21df3f48" kindref="member">Cloud::shape</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="67"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>QPainterPath<sp/>path;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>path.addRect(-10,<sp/>-20,<sp/>20,<sp/>40);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_cloud_1adf08c8d8750a5d961d94831d6e6b2e9a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cloud_1adf08c8d8750a5d961d94831d6e6b2e9a" kindref="member">Cloud::paint</ref>(QPainter<sp/>*painter,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QStyleOptionGraphicsItem<sp/>*,<sp/>QWidget<sp/>*)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//painter-&gt;setOpacity(0.5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>QRadialGradient<sp/>radialGrad(QPointF(60,<sp/>50),<sp/>30);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>radialGrad.setColorAt(0,<sp/>Qt::gray);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>radialGrad.setColorAt(0.5,<sp/>Qt::transparent);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>radialGrad.setColorAt(1,<sp/>Qt::transparent);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>QRect<sp/>rect_radial(0,0,100,100);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>painter-&gt;fillRect(rect_radial,<sp/>radialGrad);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>QRadialGradient<sp/>radialGrad1(QPointF(50,<sp/>50),<sp/>20);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>radialGrad1.setColorAt(0,<sp/>Qt::gray);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>radialGrad1.setColorAt(0.5,<sp/>Qt::transparent);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>radialGrad1.setColorAt(1,<sp/>Qt::transparent);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>QRect<sp/>rect_radial1(0,0,100,100);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>painter-&gt;fillRect(rect_radial1,<sp/>radialGrad1);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>QRadialGradient<sp/>radialGrad2(QPointF(70,<sp/>55),<sp/>25);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>radialGrad2.setColorAt(0,<sp/>Qt::gray);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>radialGrad2.setColorAt(0.5,<sp/>Qt::transparent);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>radialGrad2.setColorAt(1,<sp/>Qt::transparent);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>QRect<sp/>rect_radial2(0,0,100,100);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>painter-&gt;fillRect(rect_radial2,<sp/>radialGrad2);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/>QRectF<sp/>rec<sp/>=<sp/>boundingRect();</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/>QBrush<sp/>Brush(Qt::gray);</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"></highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/>if(!scene()-&gt;collidingItems(this).isEmpty())</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Collision();</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"></highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/>painter-&gt;setOpacity(0.5);</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/>painter-&gt;fillRect(rec,<sp/>Brush);</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/>painter-&gt;drawRect(rec);</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="class_cloud_1ae3b380d8325307a925f8cba75ff388ba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cloud_1ae3b380d8325307a925f8cba75ff388ba" kindref="member">Cloud::advance</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>phase)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!phase)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>QPointF<sp/>location<sp/>=<sp/>this-&gt;pos();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//qDebug()<sp/>&lt;&lt;<sp/>location;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>setRotation(<ref refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kindref="member">angle</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//qDebug()<sp/>&lt;&lt;<sp/>angle;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>setPos(mapToParent(0,-(<ref refid="class_cloud_1aeef4c006e7b7d9999bfd25e5962339c4" kindref="member">velocity</ref>)));</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x=0,y=0;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(angle<sp/>&lt;<sp/>540<sp/>&amp;&amp;<sp/>angle<sp/>&gt;=<sp/>450)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>300<sp/>+<sp/>(540-<ref refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kindref="member">angle</ref>)*300/90;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>(540-<ref refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kindref="member">angle</ref>)*300/90;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(angle<sp/>&lt;<sp/>450<sp/>&amp;&amp;<sp/>angle<sp/>&gt;=<sp/>360)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>300<sp/>+<sp/>(450-<ref refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kindref="member">angle</ref>)*300/90;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>(450-<ref refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kindref="member">angle</ref>)*300/90;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(angle<sp/>&lt;<sp/>360<sp/>&amp;&amp;<sp/>angle<sp/>&gt;=<sp/>270)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>300<sp/>-<sp/>(360-<ref refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kindref="member">angle</ref>)*300/90;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>(360-<ref refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kindref="member">angle</ref>)*300/90;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(angle<sp/>&lt;<sp/>270<sp/>&amp;&amp;<sp/>angle<sp/>&gt;=<sp/>180)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>(270-<ref refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kindref="member">angle</ref>)*300/90;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>300<sp/>+<sp/>(270-<ref refid="class_cloud_1a6f306af82fb1e571739198df32f5fcf5" kindref="member">angle</ref>)*300/90;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineF<sp/>LineToStart(QPointF(x-100,<sp/>y+200),<sp/>location);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(LineToStart.length()<sp/>&gt;<sp/>400)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setPos(mapToParent(0,<sp/>600));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="class_cloud_1aaed9dd75c8761f1760e6dfc2d52db77e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cloud_1aaed9dd75c8761f1760e6dfc2d52db77e" kindref="member">Cloud::Collision</ref>()</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this-&gt;velocity<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//delete<sp/>this;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="cloud.cpp"/>
+  </compounddef>
+</doxygen>

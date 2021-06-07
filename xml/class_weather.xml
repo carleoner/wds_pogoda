@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_weather" kind="class" language="C++" prot="public">
+    <compoundname>Weather</compoundname>
+    <includes refid="mainwindow_8h" local="no">mainwindow.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_weather_1a62d3461c8561c8ff21ebea18ca1e7d24" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString Weather::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="31" column="13" bodyfile="mainwindow.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1a6e312f122da386cbc6c4bfc7ba70f0f8" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString Weather::icon</definition>
+        <argsstring></argsstring>
+        <name>icon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="32" column="13" bodyfile="mainwindow.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1afdac2f27873a3a32db764fccb8e4716a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Weather::temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="33" column="12" bodyfile="mainwindow.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1a033c4d36b69f0d2b0acfbba3015cff6a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Weather::temp_min</definition>
+        <argsstring></argsstring>
+        <name>temp_min</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="33" column="17" bodyfile="mainwindow.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1a96c8767d0f085cb8dd3c1e4bcd173f40" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Weather::temp_max</definition>
+        <argsstring></argsstring>
+        <name>temp_max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="33" column="26" bodyfile="mainwindow.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1af76815c6471edf864a79e0dab873b75e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Weather::temp_realfeel</definition>
+        <argsstring></argsstring>
+        <name>temp_realfeel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="33" column="35" bodyfile="mainwindow.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" compoundref="mainwindow_8cpp" startline="302" endline="338">MainWindow::page_content</referencedby>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1a3793950c05f6bdd6ffd0814913efd346" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Weather::pressure</definition>
+        <argsstring></argsstring>
+        <name>pressure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="33" column="49" bodyfile="mainwindow.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1a080ffa5bc630d1af193d2411b66bbaf8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Weather::humidity</definition>
+        <argsstring></argsstring>
+        <name>humidity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="33" column="58" bodyfile="mainwindow.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1ae39bc0304c4329d58b75e908386c47e8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Weather::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="36" column="12" bodyfile="mainwindow.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" compoundref="mainwindow_8cpp" startline="302" endline="338">MainWindow::page_content</referencedby>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1af1b9d6fdc1eda0fc358dc3af1c65507c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Weather::gust</definition>
+        <argsstring></argsstring>
+        <name>gust</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="36" column="18" bodyfile="mainwindow.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1a80abcc10a63e788675fbd9cbcafeba88" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Weather::deg</definition>
+        <argsstring></argsstring>
+        <name>deg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="37" column="9" bodyfile="mainwindow.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" compoundref="mainwindow_8cpp" startline="302" endline="338">MainWindow::page_content</referencedby>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1a4e74ab63f3fef565b430322bccb815b6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Weather::cloudiness</definition>
+        <argsstring></argsstring>
+        <name>cloudiness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="37" column="13" bodyfile="mainwindow.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6ad24dc5c69e135df1535ae685503a81" compoundref="mainwindow_8cpp" startline="302" endline="338">MainWindow::page_content</referencedby>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_weather_1ab679b951879b0f8cc8882a9eb6ade7fe" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Weather::visibility</definition>
+        <argsstring></argsstring>
+        <name>visibility</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="37" column="24" bodyfile="mainwindow.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_main_window_1a6aca3ef93f552a99bb3df18f6789f161" compoundref="mainwindow_8cpp" startline="56" endline="121">MainWindow::reload_data</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_weather" kindref="compound">Weather</ref> class Klasa przechowująca informacje o pogodzie w danym miejscu. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Weather</label>
+        <link refid="class_weather"/>
+      </node>
+    </collaborationgraph>
+    <location file="mainwindow.h" line="28" column="1" bodyfile="mainwindow.h" bodystart="29" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_weather_1a4e74ab63f3fef565b430322bccb815b6" prot="public" virt="non-virtual"><scope>Weather</scope><name>cloudiness</name></member>
+      <member refid="class_weather_1a80abcc10a63e788675fbd9cbcafeba88" prot="public" virt="non-virtual"><scope>Weather</scope><name>deg</name></member>
+      <member refid="class_weather_1a62d3461c8561c8ff21ebea18ca1e7d24" prot="public" virt="non-virtual"><scope>Weather</scope><name>description</name></member>
+      <member refid="class_weather_1af1b9d6fdc1eda0fc358dc3af1c65507c" prot="public" virt="non-virtual"><scope>Weather</scope><name>gust</name></member>
+      <member refid="class_weather_1a080ffa5bc630d1af193d2411b66bbaf8" prot="public" virt="non-virtual"><scope>Weather</scope><name>humidity</name></member>
+      <member refid="class_weather_1a6e312f122da386cbc6c4bfc7ba70f0f8" prot="public" virt="non-virtual"><scope>Weather</scope><name>icon</name></member>
+      <member refid="class_weather_1a3793950c05f6bdd6ffd0814913efd346" prot="public" virt="non-virtual"><scope>Weather</scope><name>pressure</name></member>
+      <member refid="class_weather_1ae39bc0304c4329d58b75e908386c47e8" prot="public" virt="non-virtual"><scope>Weather</scope><name>speed</name></member>
+      <member refid="class_weather_1afdac2f27873a3a32db764fccb8e4716a" prot="public" virt="non-virtual"><scope>Weather</scope><name>temp</name></member>
+      <member refid="class_weather_1a96c8767d0f085cb8dd3c1e4bcd173f40" prot="public" virt="non-virtual"><scope>Weather</scope><name>temp_max</name></member>
+      <member refid="class_weather_1a033c4d36b69f0d2b0acfbba3015cff6a" prot="public" virt="non-virtual"><scope>Weather</scope><name>temp_min</name></member>
+      <member refid="class_weather_1af76815c6471edf864a79e0dab873b75e" prot="public" virt="non-virtual"><scope>Weather</scope><name>temp_realfeel</name></member>
+      <member refid="class_weather_1ab679b951879b0f8cc8882a9eb6ade7fe" prot="public" virt="non-virtual"><scope>Weather</scope><name>visibility</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
